@@ -86,6 +86,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://CERG-C.github.io/cerg-c/changelog/</loc>
+         <lastmod>2022-07-24</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://CERG-C.github.io/cerg-c/contribute/</loc>
          <lastmod>2022-07-24</lastmod>
          <changefreq>daily</changefreq>
