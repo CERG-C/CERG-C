@@ -12,13 +12,33 @@ pip install mike -->
 
 ## Deploy
 
-From the root of the `CERG-C` repository, run from the terminal:
+We use [mike](https://github.com/jimporter/mike) to keep track of [versions](versions.md). The active version is always set with the `latest` label, so make sure it is set by default. From the root of the `CERG-C` repository, run from the terminal:
 
-```bash
-mkdocs gh-deploy
+```
+mike set-default latest
 ```
 
-### Old version
+When working on a new version, push the website using a dummy label - here `test`.
+
+```
+mike deploy --push --update-aliases 2022.1 test
+```
+
+When happy with your changes, use the `latest` label.
+
+```
+mike deploy --push --update-aliases 2022.1 latest
+```
+
+Different versions are accessible with their version numbers. For instance, the url of version `2022.1` is https://cerg-c.github.io/CERG-C/2022.1/. 
+
+!!! warning "Keep track of versions!"
+
+    Log the purpose of the versions [here](versions.md)]!
+
+
+
+### Old website version
 
 The website was initially stored as an [organisation site Github page](https://pages.github.com) in the repo [CERG-C.github.io](https://github.com/CERG-C/CERG-C.github.io), for which deployment was done with:
 
