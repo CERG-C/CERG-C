@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-and-update-this-website" class="md-skip">
+        <a href="#contribute-to-the-teaching-material" class="md-skip">
           Skip to content
         </a>
       
@@ -685,18 +685,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
+  <a href="#installing-the-website" class="md-nav__link">
+    Installing the website
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the website">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-an-environment" class="md-nav__link">
+    Setting up an environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-dependencies" class="md-nav__link">
+    Installing dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-to-the-course" class="md-nav__link">
+    Contributing to the course
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    Deploy
+  <a href="#deploying-the-website" class="md-nav__link">
+    Deploying the website
   </a>
   
-    <nav class="md-nav" aria-label="Deploy">
+    <nav class="md-nav" aria-label="Deploying the website">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -781,18 +808,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    Dependencies
+  <a href="#installing-the-website" class="md-nav__link">
+    Installing the website
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the website">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-an-environment" class="md-nav__link">
+    Setting up an environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-dependencies" class="md-nav__link">
+    Installing dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-to-the-course" class="md-nav__link">
+    Contributing to the course
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    Deploy
+  <a href="#deploying-the-website" class="md-nav__link">
+    Deploying the website
   </a>
   
-    <nav class="md-nav" aria-label="Deploy">
+    <nav class="md-nav" aria-label="Deploying the website">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -821,15 +875,19 @@
                 
 
 
-<h1 id="install-and-update-this-website">Install and update this website</h1>
-<p>This website is stored as a <a href="https://pages.github.com">project site Github page</a> and is stored on the <a href="https://github.com/CERG-C/CERG-C">CERG-C</a> github repository.</p>
-<h2 id="dependencies">Dependencies</h2>
+<h1 id="contribute-to-the-teaching-material">Contribute to the teaching material</h1>
+<p>This website is stored as a <a href="https://pages.github.com">project site Github page</a> and is stored on the <a href="https://github.com/CERG-C/CERG-C">CERG-C</a> github repository. The documentation is written in <a href="https://www.markdownguide.org">Markdown</a>, and built into a website using the static website generator <a href="https://www.mkdocs.org">MkDocs</a> with the <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> theme. Building and deploying the website requires some knowledge of <a href="https://www.python.org">Python</a> and <a href="https://git-scm.com">Git</a>.</p>
+<h2 id="installing-the-website">Installing the website</h2>
+<p>It is recommended to setup the website in a <a href="https://docs.conda.io/projects/conda/en/latest/index.html">Conda</a> environment rather than on the system's Python distribution.</p>
+<h3 id="setting-up-an-environment">Setting up an environment</h3>
+<h3 id="installing-dependencies">Installing dependencies</h3>
 <!-- mkpdfs-mkdocs
 pip install weasyprint==52.5
 pip install mkdocs-encryptcontent-plugin
 pip install mike -->
 
-<h2 id="deploy">Deploy</h2>
+<h2 id="contributing-to-the-course">Contributing to the course</h2>
+<h2 id="deploying-the-website">Deploying the website</h2>
 <p>We use <a href="https://github.com/jimporter/mike">mike</a> to keep track of <a href="../versions/">versions</a>. The active version is always set with the <code>latest</code> label, so make sure it is set by default. From the root of the <code>CERG-C</code> repository, run from the terminal:</p>
 <div class="highlight"><pre><span></span><code>mike set-default latest
 </code></pre></div>
