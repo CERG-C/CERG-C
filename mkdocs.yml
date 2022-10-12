@@ -50,10 +50,10 @@ nav:
       # - Beyond scenarios: Hazard_tephra_beyond.md
       - Instructor's notes: Hazard_tephra_notes.md
   - Resources: resources.md
-  - Contribute: contribute.md
-
+  - Contribute:
+    - Contribute: contribute.md
+    - Changelog: changelog.md
   # - Demo: MASTER_example.py
-  # - Changelog: changelog.md
   # - Tips: tips.md
   # - volcGIS API:
   #   - Module eruption: volcGIS_eruption.md

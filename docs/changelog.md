@@ -1,0 +1,5 @@
+# Changelog
+
+## 2022-07-24
+
+- The website was moved from an **organisation** (CERG-C.github.io) to a **project** (CERG-C) Github page.
