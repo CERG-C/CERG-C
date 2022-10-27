@@ -1,4 +1,4 @@
-site_name: CERG-C Volcanic Risk Module
+site_name: Physical Volcanology and Volcanic Risk @ UNIGE
 site_url: https://CERG-C.github.io/cerg-c
 
 theme:
@@ -113,8 +113,9 @@ extra_javascript:
 extra:
   version:
     provider: mike
+    default: latest
 
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2022 Sébastien Biasse / CERG-C / University of Geneva / CC BY-NC-SA
+copyright: Copyright &copy; 2022 / CERG-C / University of Geneva / CC BY-NC-SA

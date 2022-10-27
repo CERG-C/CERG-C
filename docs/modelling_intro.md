@@ -44,3 +44,9 @@ The evaluation of the Fall and the Spring sessions will be combined as follows:
 
 - Fall (50% of the final grade): exercises during lectures + reports of various activities
 - Spring (50% of the final grade): presentations during field trip + report of the field trip + written exam in June 
+
+## Teaching material
+
+### Class 1 / characterisation of eruptions and their deposits 
+
+- [Link to teaching material](https://kdrive.infomaniak.com/app/share/250506/9f8f8572-02a0-4783-905c-c0a9487b21cb)
