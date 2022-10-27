@@ -155,9 +155,9 @@ No model is yet able to capture the ensemble of these parameters, and therefore 
 
 !!! warning "Modeling natural phenomena"
 
-    Don't forget the famous aphorism:
+    Don't forget what the statistician George Box wrote in his 1987 book *Empirical Model-Building and Response Surfaces*:
 
-    > All models are wrong, but some are useful!
+    > Essentially, all models are wrong, but some are useful.
 
 ### The 2016 eruption of Pu‘u ‘Ō‘ō
 
