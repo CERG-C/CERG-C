@@ -31,6 +31,10 @@ nav:
     - Modelling volcanic processes:
       - Introduction: modelling_intro.md
       - Eruption characterization: Pyroclast_story_intro.md
+      - Analogue modelling:
+        - Introduction: Analogue_modelling_intro.md
+        - Scaling analysis: Analogue_modelling_scaling.md
+        - Modelling pyroclastic density currents in the laboratory: Analogue_modelling_PDC.md
         # - The story of a pyroclast: 
     - CERG-C:
       - QGIS basics: QGIS_Intro.md
