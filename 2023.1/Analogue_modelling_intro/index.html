@@ -1,0 +1,1395 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://CERG-C.github.io/cerg-c/2023.1/Analogue_modelling_intro/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Introduction - Physical Volcanology and Volcanic Risk @ UNIGE</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="pink">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#analogue-modelling-of-volcanic-processes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Physical Volcanology and Volcanic Risk @ UNIGE" class="md-header__button md-logo" aria-label="Physical Volcanology and Volcanic Risk @ UNIGE" data-md-component="logo">
+      
+  <img src="../img/volcano.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Physical Volcanology and Volcanic Risk @ UNIGE
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../bachelor_2nd-year_pyhsical_volcanology_2023/" class="md-tabs__link md-tabs__link--active">
+        Teaching
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../resources/" class="md-tabs__link">
+      Resources
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contribute/" class="md-tabs__link">
+        Contribute
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Physical Volcanology and Volcanic Risk @ UNIGE" class="md-nav__button md-logo" aria-label="Physical Volcanology and Volcanic Risk @ UNIGE" data-md-component="logo">
+      
+  <img src="../img/volcano.svg" alt="logo">
+
+    </a>
+    Physical Volcanology and Volcanic Risk @ UNIGE
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Teaching
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teaching" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teaching
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Bachelor
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bachelor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Bachelor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_1">
+          2nd Year
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2nd Year" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          2nd Year
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bachelor_2nd-year_pyhsical_volcanology_2023/" class="md-nav__link">
+        Physical Volcanology
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Master
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Master" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Master
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_1" type="checkbox" id="__nav_2_2_1" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_1">
+          Modelling volcanic processes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Modelling volcanic processes" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Modelling volcanic processes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelling_intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pyroclast_story_intro/" class="md-nav__link">
+        Eruption characterization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_1_3" type="checkbox" id="__nav_2_2_1_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_1_3">
+          Analogue modelling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Analogue modelling" data-md-level="4">
+        <label class="md-nav__title" for="__nav_2_2_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Analogue modelling
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Introduction
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+     Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+     References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Analogue_modelling_scaling/" class="md-nav__link">
+        Scaling analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Analogue_modelling_PDC/" class="md-nav__link">
+        Modelling pyroclastic density currents in the laboratory
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          CERG-C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CERG-C" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          CERG-C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QGIS_Intro/" class="md-nav__link">
+        QGIS basics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../QGIS_Setup/" class="md-nav__link">
+        Setting up QGIS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_3" type="checkbox" id="__nav_2_3_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_3">
+          Lava hazard
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lava hazard" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Lava hazard
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_config/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_steepest-descent/" class="md-nav__link">
+        Path of steepest descent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_modeling/" class="md-nav__link">
+        Modelling lava flows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_probabilistic1/" class="md-nav__link">
+        Probabilistic modeling part I
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_Q-LavHA/" class="md-nav__link">
+        Q-LavHA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_lava_notes/" class="md-nav__link">
+        [Protected] Instructor's notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3_4" type="checkbox" id="__nav_2_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_4">
+          Tephra hazard
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tephra hazard" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tephra hazard
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_modeling/" class="md-nav__link">
+        Modeling tephra transport
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_probabilistic2/" class="md-nav__link">
+        Probabilistic modeling part II
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_exercise/" class="md-nav__link">
+        Hazard modelling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_temporal/" class="md-nav__link">
+        The temporal component
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hazard_tephra_notes/" class="md-nav__link">
+        [Protected] Instructor's notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Contribute
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribute" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../versions/" class="md-nav__link">
+        Versions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+     Objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+     References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="analogue-modelling-of-volcanic-processes">Analogue modelling of volcanic processes</h1>
+<p><a href="https://en.wikipedia.org/wiki/Analogue_modelling_(geology)">Analogue modelling</a> (also referred to as laboratory modelling) is an experimental approach that is used in the Earth Sciences to investigate geological processes in a <strong>laboratory</strong> at convenient time and length scales<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. In volcanology, analogue modelling is a <strong>major tool</strong> to understand the physics of volcanic processes in complement to field, theoretical and numerical works. In fact, it is not always possible to observe volcanic phenomena, and observations do not provide directly all the information on processes, notably because volcanic eruptions and specific phenomena are relatively rare, often dangerous to study and sometimes happen in remote areas<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. Moreover, <strong>natural volcanic phenomena are very complex</strong> and involve several processes simultaneously, possibly leading to equivocal interpretation of their dynamics.</p>
+<p>The strength of laboratory experiments is to provide <strong>simple</strong> and <strong>repeatable</strong> analogue models of volcanic phenomena that involve <strong>few</strong>, <strong>well-characterised</strong> and <strong>well-controlled</strong> physical parameters. Volcanologists have therefore used analogue modelling to study many processes<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>. Examples are shown below.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Magma convection, mixing and rise</label><label for="__tabbed_1_2">Lava flows and domes</label><label for="__tabbed_1_3">Explosive eruptions</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="magma_analogue" src="../img/analog/magma_analogs.jpg" />
+<figcaption>Figure 1: Analogue modelling of magmatic processes investigating the physics of: magma mixing<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>(<strong>A1-A5</strong>), convection<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>(<strong>B</strong>), magmatic intrusions<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>(<strong>C</strong>) and gas bubble ascent into a volcanic conduit<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>(<strong>D</strong>). The central sketch is inspired by Deegan (2010)<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup> </figcaption>
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="lava_analogs" src="../img/analog/lava_analogs.jpg" />
+<figcaption>Figure 2: Analogue modelling of lava flows and domes. <strong>A</strong>: Lava flow on the flank of Kilauea volcano (Hawaii, US) in 2018<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup> and laboratory analogues of lava flows (<strong>A1</strong>: molten wax in water<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup> <strong>A2</strong>: golden syrup on a slope<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup>; <strong>A3</strong>: interaction between basaltic melt and ice<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup>). <strong>B</strong>: Rhyolitic lava dome at Chaitén volcano (Chile) during its 2008-2010 eruption (Picture: S. Beebe) and analogue laboratory experiments<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup>. </figcaption>
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><figure markdown>
+<img alt="explosive_analogs" src="../img/analog/explosive_analogs.jpg" />
+<figcaption>Figure 3: Analogue modelling of processes associated with explosive eruptions. <strong>A</strong>: Eruption of Mayon volcano (Phillipines) in 1984 (Picture: C.G. Newhall). <strong>B</strong>: Analogue models of the plume rise and collapse (<strong>B1</strong>: sustained buoyant plume <sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup>, <strong>B2</strong>: short unsteady plume <sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup>, <strong>B3-B5</strong>: collapse of an eruption column<sup id="fnref2:16"><a class="footnote-ref" href="#fn:16">16</a></sup>). <strong>C</strong>: Models of pyroclastic flows (<strong>C1-C2</strong>: experiments on mixing in pyroclastic currents<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup>, <strong>C3</strong>: pyroclastic flows on a slope<sup id="fnref2:18"><a class="footnote-ref" href="#fn:18">18</a></sup>, <strong>C4-C5</strong>: channelised pyroclastic flow generated from column collapse<sup id="fnref:19"><a class="footnote-ref" href="#fn:19">19</a></sup>). <strong>D</strong>: Laboratory experiments on cloud spreading (<strong>D1-D3</strong>: plume and cloud in a crossflow<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">20</a></sup>, <strong>D4</strong>: plume and cloud in a quiescent environment<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">21</a></sup>). <strong>E</strong>: Analogue models of tephra sedimentation (<strong>E1</strong>: volcanic ash settling from a volcanic cloud<sup id="fnref:22"><a class="footnote-ref" href="#fn:22">22</a></sup>, <strong>E2</strong>: tephra deposition in oceans<sup id="fnref:23"><a class="footnote-ref" href="#fn:23">23</a></sup>). </figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<div class="admonition help">
+<p class="admonition-title">Is a volcano made of baking soda and vinegar a good analogue model of a real volcano?</p>
+</div>
+<p>It depends on the purpose of the model. Some very simple models can help to illustrate fundamental physical processes driving volcanic phenomena (e.g., <a href="https://fun-science.org.uk/vinegar-volcano-experiment/">"vinegar volcanoes"</a> illustrate the role of gases in the triggering of eruptions). The goal of these models is to visualise processes <strong>qualitatively</strong>, but analogue modelling can also be used to study these processes <strong>quantitatively</strong>, by measuring variables and assessing the influence of particular parameters on model's results. Quantitative models are widely used to understand the physics involved in natural processes.</p>
+<div class="admonition help">
+<p class="admonition-title">How is it possible to learn something on natural processes from small scale analogue models?</p>
+</div>
+<p>By definition, <strong>a model never equals the complexity of the real world</strong> and is never a complete representation of the world; i.e. "all models are inherently wrong, but some are useful"<sup id="fnref:24"><a class="footnote-ref" href="#fn:24">24</a></sup>. Critical differences exist between natural processes and their laboratory analogues. In fact, for <strong>large scale natural processes</strong> such as volcanic eruptions, experimental models are inevitably spatially and temporally <strong>simplified</strong> and <strong>reduced</strong> to be conceivable at the scale of a laboratory. Even "large scale experiments" (i.e., with sizes up to several 10s of meters<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup><sup id="fnref:18"><a class="footnote-ref" href="#fn:18">18</a></sup>), which try to better approach natural scales, are orders of magnitude smaller than natural phenomena.</p>
+<p>In order to assess the reliability of small-scale analogue models to simulate natural processes, and design appropriate models, experimental modellers need to ensure that laboratory experiments correctly <strong>reproduce the balance of forces</strong> acting in natural systems by conducting a <strong>scaling analysis</strong>. If the ratio of forces acting on experimental models is matching that acting on natural systems, models are <strong>dynamically similar</strong> to natural processes. Hence, the dynamics of <strong>scaled</strong> experimental models can be characteristic of much larger systems. </p>
+<div class="admonition info">
+<p class="admonition-title">The relation between analogue and numerical modelling<p>Like other approches, analogue modelling is not sufficient to fully understand complex volcanic phenomena alone. <strong>Multidisciplinary</strong> efforts, including field observations, numerical modelling, and analogue modelling are therefore classically used in volcanology. Observations and measurements from natural volcanic phenomena provide the parameters and initial conditions for analogue and <a href="https://en.wikipedia.org/wiki/Numerical_modeling_(geology)">numerical models</a>. These models are then tested against nature, with analogue models also aiding the development of numerical models<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</p>
+</p>
+</div>
+<figure>
+<p><img alt="modelling" src="../img/analog/modelling.png" /></p>
+<figcaption>Figure 4: A flow diagram to represent the optimal approach to use analogue and numerical modelling in volcanology. Adapted from Kavanagh et al. (2018). </figcaption>
+</figure>
+<!--## Case-study: La Palma -->
+
+<h2 id="objectives"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3V5m2 2v2h2V7H5m6 0h10v2H11V7m0 8h10v2H11v-2m-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14l-6 6z"/></svg></span> Objectives</h2>
+<p>The objectives of this lesson are to:</p>
+<ul>
+<li>Define analogue modelling and present its uses in volcanology</li>
+<li>Introduce the importance of scaling analysis</li>
+<li>Give an example of analogue modelling for pyroclastic density currents </li>
+</ul>
+<h2 id="references"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg></span> References</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Schellart, W. P., &amp; Strak, V. (2016). A review of analogue modelling of geodynamic processes: Approaches, scaling, materials and quantification, with an application to subduction experiments. Journal of Geodynamics, 100, 7-32.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Roche, O., &amp; Carazzo, G. (2019). The contribution of experimental volcanology to the study of the physics of eruptive processes, and related scaling issues: A review. Journal of Volcanology and Geothermal Research, 384, 103-150.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Kavanagh, J. L., Engwell, S. L., &amp; Martin, S. A. (2018). A review of laboratory and numerical modelling in volcanology. Solid Earth, 9(2), 531-571.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Woods, A. W., &amp; Cowan, A. (2009). Magma mixing triggered during volcanic eruptions. Earth and Planetary Science Letters, 288(1-2), 132-137.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Huppert, H. E., &amp; Sparks, R. S. J. (1988). The generation of granitic magmas by intrusion of basalt into continental crust. Journal of Petrology, 29(3), 599-624.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Chanceaux, L., &amp; Menand, T. (2014). Solidification effects on sill formation: An experimental approach. Earth and Planetary Science Letters, 403, 79-88.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Manta, F., Emadzadeh, A., &amp; Taisne, B. (2019). New Insight Into a Volcanic System: Analogue Investigation of Bubble‐Driven Deformation in an Elastic Conduit. Journal of Geophysical Research: Solid Earth, 124(11), 11274-11289.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Deegan,F. M. (2010). Processes of Magma-crust Intereaction. Insights from Geochemistry and Experimental Petrology. Acta Universitatis Upsaliensis. Digital Comprehensive Summaries of Uppsala Dissertations from the Faculty of Science and Technology 777.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>Loomis, I. (2018), Faster lava flows, explosive eruptions begin at Kīlauea, Eos, 99, https://doi.org/10.1029/2018EO099655.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>Kerr, R. C., Griffiths, R. W., &amp; Cashman, K. V. (2006). Formation of channelized lava flows on an unconfined slope. Journal of Geophysical Research: Solid Earth, 111(B10).&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>Castruccio, A., Rust, A. C., &amp; Sparks, R. S. J. (2014). Assessing lava flow evolution from post-eruption field data using Herschel–Bulkley rheology. Journal of Volcanology and Geothermal Research, 275, 71-84.&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>Edwards, B. R., Karson, J., Wysocki, R., Lev, E., Bindeman, I., &amp; Kueppers, U. (2013). Insights on lava–ice/snow interactions from large-scale basaltic melt experiments. Geology, 41(8), 851-854.&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>Griffiths, R. W., &amp; Fink, J. H. (1997). Solidifying Bingham extrusions: a model for the growth of silicic lava domes. Journal of Fluid Mechanics, 347, 13-36.&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>Morton, B. R., Taylor, G. I., &amp; Turner, J. S. (1956). Turbulent gravitational convection from maintained and instantaneous sources. Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences, 234(1196), 1-23.&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>Chojnicki, K. N., Clarke, A. B., Phillips, J. C., &amp; Adrian, R. J. (2015). Rise dynamics of unsteady laboratory jets with implications for volcanic plumes. Earth and Planetary Science Letters, 412, 186-196.&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>Dellino, P., Büttner, R., Dioguardi, F., Doronzo, D. M., La Volpe, L., Mele, D., Sonder, I., Sulpizio, R., &amp; Zimanowski, B. (2010). Experimental evidence links volcanic particle characteristics to pyroclastic flow hazard. Earth and Planetary Science Letters, 295(1-2), 314-320.&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>Sher, D., &amp; Woods, A. W. (2017). Experiments on mixing in pyroclastic density currents generated from short-lived volcanic explosions. Earth and Planetary Science Letters, 467, 138-148.&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:18">
+<p>Lube, G., Breard, E. C. P., Cronin, S. J., &amp; Jones, J. (2015). Synthesizing large‐scale pyroclastic flows: Experimental design, scaling, and first results from PELE. Journal of Geophysical Research: Solid Earth, 120(3), 1487-1502.&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:18" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:19">
+<p>Fries, A., Roche, O., &amp; Carazzo, G. (2021). Granular mixture deflation and generation of pore fluid pressure at the impact zone of a pyroclastic fountain: Experimental insights. Journal of Volcanology and Geothermal Research, 414, 107226.&#160;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:20">
+<p>Carazzo, G., Girault, F., Aubry, T., Bouquerel, H., &amp; Kaminski, E. (2014). Laboratory experiments of forced plumes in a density‐stratified crossflow and implications for volcanic plumes. Geophysical Research Letters, 41(24), 8759-8766.&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:21">
+<p>Carazzo, G., &amp; Jellinek, A. M. (2012). A new view of the dynamics, stability and longevity of volcanic clouds. Earth and Planetary Science Letters, 325, 39-51.&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p>Fries, A., Lemus, J., Jarvis, P. A., Clarke, A. B., Phillips, J. C., Manzella, I., &amp; Bonadonna, C. (2021). The Influence of Particle Concentration on the Formation of Settling-Driven Gravitational Instabilities at the Base of Volcanic Clouds. Frontiers in Earth Science, 407.&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p>Manville, V., &amp; Wilson, C. J. N. (2004). Vertical density currents: a review of their potential role in the deposition and interpretation of deep-sea ash layers. Journal of the Geological Society, 161(6), 947-958.&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:24">
+<p>Van Zelst, I., Crameri, F., Pusok, A. E., Glerum, A., Dannberg, J., &amp; Thieulot, C. (2022). 101 geodynamic modelling: how to design, interpret, and communicate numerical studies of the solid Earth. Solid Earth, 13(3), 583-637.&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Pyroclast_story_intro/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Eruption characterization" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Eruption characterization
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Analogue_modelling_scaling/" class="md-footer__link md-footer__link--next" aria-label="Next: Scaling analysis" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Scaling analysis
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 / CERG-C / University of Geneva / CC BY-NC-SA
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"default": "latest", "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
