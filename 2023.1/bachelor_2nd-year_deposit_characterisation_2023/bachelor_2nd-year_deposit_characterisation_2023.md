@@ -10,9 +10,11 @@
 
 The aim of this lab is to apply techniques to quantify eruption source parameters (ESP) from tephra fall deposits. This includes:
 
-- Processing field measurements;
-- Calculating critical ESP such as plume height, tephra volume and mass, mass eruption rate, eruption duration;
+- From field measurements at the outcrop level, producing **isopach** and **isopleth maps**;
+- Calculating critical ESP such as plume height, tephra volume and mass and mass eruption rate;
 - Estimating the *magnitude* and the *intensity* of an eruption;
+
+![](img/deposit/field_characterisation.png)
 
 Compute all parameters and discuss all points that are `highlighted` in the text. The lab uses the tephra fall deposit *Layer 5* of Cotopaxi volcano in Ecuador, which is a black scoriaceous lapilli fallout with an age of 1,180±80 years B.P. and a whole-rock silica content of 58 wt.% [@Barberi1995; @Biass2011]. *Thickness* and *maximum clast* measurements at each outcrop are provided. It is time consuming to estimate the areas of isopach and isopleth, so use the data provided separately.
 
