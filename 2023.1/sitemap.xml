@@ -106,16 +106,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://CERG-C.github.io/cerg-c/2023.1/bachelor_2nd-year_deposit_characterisation_2023/</loc>
-         <lastmod>2023-04-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://CERG-C.github.io/cerg-c/2023.1/bachelor_2nd-year_pyhsical_volcanology_2023/</loc>
-         <lastmod>2023-04-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://CERG-C.github.io/cerg-c/2023.1/changelog/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
@@ -142,6 +132,16 @@
     </url>
     <url>
          <loc>https://CERG-C.github.io/cerg-c/2023.1/versions/</loc>
+         <lastmod>2023-04-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://CERG-C.github.io/cerg-c/2023.1/Teaching/Bachelor/2ndYear/PhysicalVolcanology/</loc>
+         <lastmod>2023-04-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://CERG-C.github.io/cerg-c/2023.1/Teaching/Bachelor/2ndYear/PhysicalVolcanology/deposit_characterisation/</loc>
          <lastmod>2023-04-21</lastmod>
          <changefreq>daily</changefreq>
     </url>

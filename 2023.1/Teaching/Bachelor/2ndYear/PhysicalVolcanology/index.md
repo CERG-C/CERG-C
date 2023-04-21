@@ -10,4 +10,4 @@
 
 ## Class 9: Volcanic hazards and Risk
 
-- TP: [Deposit characterisation](bachelor_2nd-year_deposit_characterisation_2023.md)
+- TP: [Deposit characterisation](deposit_characterisation.md)

@@ -20,9 +20,9 @@ Compute all parameters and discuss all points that are `highlighted` in the text
 
 You are provided with the following files:
 
-- <a href="../files/deposit/isopach.csv", target="_blank">Isopach data</a>
-- <a href="../files/deposit/ML.pdf", target="_blank">A map of maximum lithics measurements</a>
-- <a href="../files/deposit/template.xlsx", target="_blank">A template for your answers</a>
+- <a href="../../../../../files/deposit/isopach.csv", target="_blank">Isopach data</a>
+- <a href="../../../../../files/deposit/ML.pdf", target="_blank">A map of maximum lithics measurements</a>
+- <a href="../../../../../files/deposit/template.xlsx", target="_blank">A template for your answers</a>
 
  <!-- (Tables
 [1](#isopach){reference-type="ref" reference="isopach"} and
@@ -49,7 +49,7 @@ $$
 
 Estimate the volume of Layer 5 using the 1-exponential segment method of Fierstein & Nathenson (1992)[@Fierstein1992] using the isopach map shown in Figure [1](#layer5):
 
-- In Excel, import the <a href="../files/deposit/isopach.csv", target="_blank">isopach data</a> provided in Table 1 and plot the thickness ($cm$) versus the **square-root** of the area ($km$) and change the y-axis to a logarithmic scale
+- In Excel, import the <a href="../../../../../files/deposit/isopach.csv", target="_blank">isopach data</a> provided in Table 1 and plot the thickness ($cm$) versus the **square-root** of the area ($km$) and change the y-axis to a logarithmic scale
 
 - Fit an exponential segment and display its equation to estimate the intersect ($T_0$) and the thinning rate ($k$). Note that $T_0$ is now in centimetres, so you need to convert it to a unit consistent with the x-axis in order to calculate the volume
 
@@ -98,9 +98,9 @@ The method of Carey & Sparks (1986)[@Carey1986] relies on the construction of th
  
 ### Exercise 
 
-Calculate the plume height ($km$ above vent) with the method of Rossi et al. (2019)[@Rossi2019] (Fig. [3](#rossi1)). The <a href="../files/deposit/ML.pdf", target="_blank">provided map</a> contains measurements of *maximum lithics* (density of $2500\ kg/m^3$). This method works with isopleth contour values of 1.6 and 3.2 $cm$, so **make sure to contour isopleth accordingly**. Assume a mean sampling elevation of 2500 $m\ asl$. Cotopaxi has an elevation of 5700 $m\ asl$.
+Calculate the plume height ($km$ above vent) with the method of Rossi et al. (2019)[@Rossi2019] (Fig. [3](#rossi1)). The <a href="../../../../../files/deposit/ML.pdf", target="_blank">provided map</a> contains measurements of *maximum lithics* (density of $2500\ kg/m^3$). This method works with isopleth contour values of 1.6 and 3.2 $cm$, so **make sure to contour isopleth accordingly**. Assume a mean sampling elevation of 2500 $m\ asl$. Cotopaxi has an elevation of 5700 $m\ asl$.
 
-- Contour isopleths on the <a href="../files/deposit/ML.pdf", target="_blank">provided map</a>. Make sure you contour values that are presented in Figure [3](#rossi1).
+- Contour isopleths on the <a href="../../../../../files/deposit/ML.pdf", target="_blank">provided map</a>. Make sure you contour values that are presented in Figure [3](#rossi1).
 - Measure the *downwind* and *crosswind* ranges of the deposit and report them on Figure [3](#rossi1) to estimate a plume height **above mean sampling elevation**.
 - Calculate the `plume height` and the `wind speed` as an average value of the results obtained from the different plots considered. Please also indicate the associated variation (i.e. ±(max-min)/2). Make sure to subtract the average height of sampling from the height obtained with the nomograms in order to derive the height above the vent.
 
