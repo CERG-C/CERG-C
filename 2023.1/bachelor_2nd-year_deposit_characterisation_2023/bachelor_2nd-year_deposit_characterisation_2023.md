@@ -33,17 +33,27 @@ for calculations. -->
 
 ## Volume of the tephra fallout deposit 
 
+The volume of tephra deposits is estimated from isopach maps by integrating the area below a curve plotting the **logarithm of the thickness of isopach contours** (y-axis) against the **square-root of the isopach area** (x-axis). On such plots, the exponential segment method of Fierstein & Nathenson (1992)[@Fierstein1992] states that a thickness $T$ at any $x$ value can be expressed as:
+
+$$
+T(x) = T_{0}e^{-k\sqrt{A}}
+$$
+
+with $T_0$  being the maximum deposit thickness, $k$ the slope of the exponential segment and $\sqrt{A}$ the square root of the isopach area. Based on the assumption of ellipsoidal shapes of isopachs Fierstein & Nathenson (1992)[@Fierstein1992] estimate the volume as:
+
+$$ 
+V = \frac{2T_0}{k^2} \ [m^3]
+$$
+
+### Exercise 
+
 Estimate the volume of Layer 5 using the 1-exponential segment method of Fierstein & Nathenson (1992)[@Fierstein1992] using the isopach map shown in Figure [1](#layer5):
 
 - In Excel, import the <a href="../files/deposit/isopach.csv", target="_blank">isopach data</a> provided in Table 1 and plot the thickness ($cm$) versus the **square-root** of the area ($km$) and change the y-axis to a logarithmic scale
 
 - Fit an exponential segment and display its equation to estimate the intersect ($T_0$) and the thinning rate ($k$). Note that $T_0$ is now in centimetres, so you need to convert it to a unit consistent with the x-axis in order to calculate the volume
 
-- Calculate the `volume` of the tephra fallout deposit using the following formula:
-
-$$ 
-V = \frac{2T_0}{k^2} \ [m^3]
-$$
+- Calculate the `volume` of the tephra fallout deposit
 
 - Estimate the corresponding `VEI` using the diagram in Fig. [2](#vei) from Newhall and Self (1982)[@newhall82]
 
@@ -79,9 +89,18 @@ $$
 
 ## Plume height
 
+The method of Carey & Sparks (1986)[@Carey1986] relies on the construction of theoretical envelopes within which the vertical velocity of the column and the terminal velocity of a clast of specified size and density are equal. Based on this, the crosswind and downwind ranges of isopleth maps can be used to estimate plume height and wind speed. This method method was further updated by Rossi et al. (2019)[@Rossi2019] to account for a better parametrisation of physical processes in the plume (e.g., plume rise, settling velocity of particles).
+
+
+![](img/deposit/envelopes.png)
+
+
+ 
+### Exercise 
+
 Calculate the plume height ($km$ above vent) with the method of Rossi et al. (2019)[@Rossi2019] (Fig. [3](#rossi1)). The <a href="../files/deposit/ML.pdf", target="_blank">provided map</a> contains measurements of *maximum lithics* (density of $2500\ kg/m^3$). This method works with isopleth contour values of 1.6 and 3.2 $cm$, so **make sure to contour isopleth accordingly**. Assume a mean sampling elevation of 2500 $m\ asl$. Cotopaxi has an elevation of 5700 $m\ asl$.
 
-- Contour isopleths on the <a href="../files/deposit/ML.pdf", target="_blank">provided map</a>. Make sure you contour values that are presented in Figure [3].
+- Contour isopleths on the <a href="../files/deposit/ML.pdf", target="_blank">provided map</a>. Make sure you contour values that are presented in Figure [3](#rossi1).
 - Measure the *downwind* and *crosswind* ranges of the deposit and report them on Figure [3](#rossi1) to estimate a plume height **above mean sampling elevation**.
 - Calculate the `plume height` and the `wind speed` as an average value of the results obtained from the different plots considered. Please also indicate the associated variation (i.e. ±(max-min)/2). Make sure to subtract the average height of sampling from the height obtained with the nomograms in order to derive the height above the vent.
 
@@ -103,11 +122,10 @@ Calculate the plume height ($km$ above vent) with the method of Rossi et al. (20
 
 ## Mass eruption rate 
 
-
-- Estimate the **peak** `mass eruption rate` (`MER`; $kg s^{-1}$) using the method of Degruyter and Bonadonna (2012)[@Degruyter2012]:
+Based on early theoretical studies of plume dynamics, Wilson & Walker (1987)[@Wilson1987] relate the **height of a plume to the MER**, with the height $H$ being proportional to the fourth root of the MER ($kg\ s^{−1}$). More recently, Degruyter and Bonadonna (2012)[@Degruyter2012] have proposed a new analytical expressions relating height and MER that accounts for the variability of the plume parameters and atmospheric conditions: 
 
 $$
-MER = \pi\frac{\rho_{a0}}{g'}\left(\frac{\alpha^2\bar{N}}{10.9}H^4 + \frac{\beta^2\bar{N}^2\bar{v}}{6}H^3\right)
+MER = \pi\frac{\rho_{a0}}{g'}\left(\frac{\alpha^2\bar{N}^3}{10.9}H^4 + \frac{\beta^2\bar{N}^2\bar{v}}{6}H^3\right)
 $$
 
 - Use the following values:
@@ -120,10 +138,15 @@ $$
     - $\beta$: wind entrainment coefficient (use 0.5)
     - $\bar{v}$ average wind velocity across the plume height (use 8.7 m s$^{-1}$). Note that the average wind speed along the plume should be smaller than the wind speed that you have derived with the method of Rossi et al. (2019), which is the maximum wind speed at tropopause
 
+
+### Exercise 
+
+- Estimate the `mass eruption rate` (`MER`; $kg\ s^{-1}$) using the method of Degruyter and Bonadonna (2012)[@Degruyter2012] and the height obtained from isopleth maps. Note that this technique provides the **peak MER** of the eruption. 
+
 - Use the MER to calculate the associated `intensity` following Pyle (2000)[@pyle2000]
 
 $$
-I = log_{10}(MER [kg s^{-1}]) + 3
+I = log_{10}(MER [kg\ s^{-1}]) + 3
 $$
 
 

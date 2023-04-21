@@ -1110,6 +1110,19 @@
     Volume of the tephra fallout deposit
   </a>
   
+    <nav class="md-nav" aria-label="Volume of the tephra fallout deposit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    Exercise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1117,12 +1130,38 @@
     Plume height
   </a>
   
+    <nav class="md-nav" aria-label="Plume height">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise_1" class="md-nav__link">
+    Exercise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#mass-eruption-rate" class="md-nav__link">
     Mass eruption rate
   </a>
+  
+    <nav class="md-nav" aria-label="Mass eruption rate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercise_2" class="md-nav__link">
+    Exercise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1210,7 +1249,16 @@ for calculations. -->
 
 <hr />
 <h2 id="volume-of-the-tephra-fallout-deposit">Volume of the tephra fallout deposit</h2>
-<p>Estimate the volume of Layer 5 using the 1-exponential segment method of Fierstein &amp; Nathenson (1992)<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> using the <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> map shown in Figure <a href="#layer5">1</a>:</p>
+<p>The volume of tephra deposits is estimated from <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> maps by integrating the area below a curve plotting the <strong>logarithm of the thickness of <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> contours</strong> (y-axis) against the <strong>square-root of the <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> area</strong> (x-axis). On such plots, the exponential segment method of Fierstein &amp; Nathenson (1992)<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> states that a thickness <span class="arithmatex">\(T\)</span> at any <span class="arithmatex">\(x\)</span> value can be expressed as:</p>
+<div class="arithmatex">\[
+T(x) = T_{0}e^{-k\sqrt{A}}
+\]</div>
+<p>with <span class="arithmatex">\(T_0\)</span>  being the maximum deposit thickness, <span class="arithmatex">\(k\)</span> the slope of the exponential segment and <span class="arithmatex">\(\sqrt{A}\)</span> the square root of the <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> area. Based on the assumption of ellipsoidal shapes of isopachs Fierstein &amp; Nathenson (1992)<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup> estimate the volume as:</p>
+<div class="arithmatex">\[ 
+V = \frac{2T_0}{k^2} \ [m^3]
+\]</div>
+<h3 id="exercise">Exercise</h3>
+<p>Estimate the volume of Layer 5 using the 1-exponential segment method of Fierstein &amp; Nathenson (1992)<sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup> using the <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> map shown in Figure <a href="#layer5">1</a>:</p>
 <ul>
 <li>
 <p>In Excel, import the <a href="../files/deposit/isopach.csv", target="_blank"><abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> data</a> provided in Table 1 and plot the thickness (<span class="arithmatex">\(cm\)</span>) versus the <strong>square-root</strong> of the area (<span class="arithmatex">\(km\)</span>) and change the y-axis to a logarithmic scale</p>
@@ -1219,13 +1267,8 @@ for calculations. -->
 <p>Fit an exponential segment and display its equation to estimate the intersect (<span class="arithmatex">\(T_0\)</span>) and the thinning rate (<span class="arithmatex">\(k\)</span>). Note that <span class="arithmatex">\(T_0\)</span> is now in centimetres, so you need to convert it to a unit consistent with the x-axis in order to calculate the volume</p>
 </li>
 <li>
-<p>Calculate the <code>volume</code> of the tephra fallout deposit using the following formula:</p>
+<p>Calculate the <code>volume</code> of the tephra fallout deposit</p>
 </li>
-</ul>
-<div class="arithmatex">\[ 
-V = \frac{2T_0}{k^2} \ [m^3]
-\]</div>
-<ul>
 <li>
 <p>Estimate the corresponding <code>VEI</code> using the diagram in Fig. <a href="#vei">2</a> from Newhall and Self (1982)<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 </li>
@@ -1285,9 +1328,12 @@ M = log_{10}(mass\ [kg]) - 7
 </table>
 </div>
 <h2 id="plume-height">Plume height</h2>
-<p>Calculate the plume height (<span class="arithmatex">\(km\)</span> above vent) with the method of Rossi et al. (2019)<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> (Fig. <a href="#rossi1">3</a>). The <a href="../files/deposit/ML.pdf", target="_blank">provided map</a> contains measurements of <em>maximum lithics</em> (density of <span class="arithmatex">\(2500\ kg/m^3\)</span>). This method works with <abbr title="Contour of the maximum clast diameter found at a given tephra fallout outcrop &rarr; usually used to compute the plume height">isopleth</abbr> contour values of 1.6 and 3.2 <span class="arithmatex">\(cm\)</span>, so <strong>make sure to contour <abbr title="Contour of the maximum clast diameter found at a given tephra fallout outcrop &rarr; usually used to compute the plume height">isopleth</abbr> accordingly</strong>. Assume a mean sampling elevation of 2500 <span class="arithmatex">\(m\ asl\)</span>. Cotopaxi has an elevation of 5700 <span class="arithmatex">\(m\ asl\)</span>.</p>
+<p>The method of Carey &amp; Sparks (1986)<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> relies on the construction of theoretical envelopes within which the vertical velocity of the column and the terminal velocity of a clast of specified size and density are equal. Based on this, the crosswind and downwind ranges of <abbr title="Contour of the maximum clast diameter found at a given tephra fallout outcrop &rarr; usually used to compute the plume height">isopleth</abbr> maps can be used to estimate plume height and wind speed. This method method was further updated by Rossi et al. (2019)<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> to account for a better parametrisation of physical processes in the plume (e.g., plume rise, settling velocity of particles).</p>
+<p><img alt="" src="../img/deposit/envelopes.png" /></p>
+<h3 id="exercise_1">Exercise</h3>
+<p>Calculate the plume height (<span class="arithmatex">\(km\)</span> above vent) with the method of Rossi et al. (2019)<sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">7</a></sup> (Fig. <a href="#rossi1">3</a>). The <a href="../files/deposit/ML.pdf", target="_blank">provided map</a> contains measurements of <em>maximum lithics</em> (density of <span class="arithmatex">\(2500\ kg/m^3\)</span>). This method works with <abbr title="Contour of the maximum clast diameter found at a given tephra fallout outcrop &rarr; usually used to compute the plume height">isopleth</abbr> contour values of 1.6 and 3.2 <span class="arithmatex">\(cm\)</span>, so <strong>make sure to contour <abbr title="Contour of the maximum clast diameter found at a given tephra fallout outcrop &rarr; usually used to compute the plume height">isopleth</abbr> accordingly</strong>. Assume a mean sampling elevation of 2500 <span class="arithmatex">\(m\ asl\)</span>. Cotopaxi has an elevation of 5700 <span class="arithmatex">\(m\ asl\)</span>.</p>
 <ul>
-<li>Contour isopleths on the <a href="../files/deposit/ML.pdf", target="_blank">provided map</a>. Make sure you contour values that are presented in Figure [3].</li>
+<li>Contour isopleths on the <a href="../files/deposit/ML.pdf", target="_blank">provided map</a>. Make sure you contour values that are presented in Figure <a href="#rossi1">3</a>.</li>
 <li>Measure the <em>downwind</em> and <em>crosswind</em> ranges of the deposit and report them on Figure <a href="#rossi1">3</a> to estimate a plume height <strong>above mean sampling elevation</strong>.</li>
 <li>Calculate the <code>plume height</code> and the <code>wind speed</code> as an average value of the results obtained from the different plots considered. Please also indicate the associated variation (i.e. ±(max-min)/2). Make sure to subtract the average height of sampling from the height obtained with the nomograms in order to derive the height above the vent.</li>
 </ul>
@@ -1309,11 +1355,9 @@ M = log_{10}(mass\ [kg]) - 7
 </div>
 <hr />
 <h2 id="mass-eruption-rate">Mass eruption rate</h2>
-<ul>
-<li>Estimate the <strong>peak</strong> <code>mass eruption rate</code> (<code>MER</code>; <span class="arithmatex">\(kg s^{-1}\)</span>) using the method of Degruyter and Bonadonna (2012)<sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">7</a></sup>:</li>
-</ul>
+<p>Based on early theoretical studies of plume dynamics, Wilson &amp; Walker (1987)<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup> relate the <strong>height of a plume to the <abbr title="Mass eruption rate">MER</abbr></strong>, with the height <span class="arithmatex">\(H\)</span> being proportional to the fourth root of the <abbr title="Mass eruption rate">MER</abbr> (<span class="arithmatex">\(kg\ s^{−1}\)</span>). More recently, Degruyter and Bonadonna (2012)<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup> have proposed a new analytical expressions relating height and <abbr title="Mass eruption rate">MER</abbr> that accounts for the variability of the plume parameters and atmospheric conditions: </p>
 <div class="arithmatex">\[
-MER = \pi\frac{\rho_{a0}}{g'}\left(\frac{\alpha^2\bar{N}}{10.9}H^4 + \frac{\beta^2\bar{N}^2\bar{v}}{6}H^3\right)
+MER = \pi\frac{\rho_{a0}}{g'}\left(\frac{\alpha^2\bar{N}^3}{10.9}H^4 + \frac{\beta^2\bar{N}^2\bar{v}}{6}H^3\right)
 \]</div>
 <ul>
 <li>
@@ -1328,32 +1372,38 @@ MER = \pi\frac{\rho_{a0}}{g'}\left(\frac{\alpha^2\bar{N}}{10.9}H^4 + \frac{\beta
 <li><span class="arithmatex">\(\bar{v}\)</span> average wind velocity across the plume height (use 8.7 m s<span class="arithmatex">\(^{-1}\)</span>). Note that the average wind speed along the plume should be smaller than the wind speed that you have derived with the method of Rossi et al. (2019), which is the maximum wind speed at tropopause</li>
 </ul>
 </li>
+</ul>
+<h3 id="exercise_2">Exercise</h3>
+<ul>
+<li>
+<p>Estimate the <code>mass eruption rate</code> (<code>MER</code>; <span class="arithmatex">\(kg\ s^{-1}\)</span>) using the method of Degruyter and Bonadonna (2012)<sup id="fnref3:9"><a class="footnote-ref" href="#fn:9">9</a></sup> and the height obtained from <abbr title="Contour of the maximum clast diameter found at a given tephra fallout outcrop &rarr; usually used to compute the plume height">isopleth</abbr> maps. Note that this technique provides the <strong>peak <abbr title="Mass eruption rate">MER</abbr></strong> of the eruption. </p>
+</li>
 <li>
 <p>Use the <abbr title="Mass eruption rate">MER</abbr> to calculate the associated <code>intensity</code> following Pyle (2000)<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
 </li>
 </ul>
 <div class="arithmatex">\[
-I = log_{10}(MER [kg s^{-1}]) + 3
+I = log_{10}(MER [kg\ s^{-1}]) + 3
 \]</div>
 <h2 id="further-reading">Further reading</h2>
 <p>This list contains some references for the characterisation of tephra deposits.</p>
 <h3 id="characterization-of-tephra-fall-deposits">Characterization of tephra-fall deposits</h3>
 <ul>
-<li>Thorarinsson (1954)<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></li>
-<li>Wilson (1972)<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>      </li>
-<li>Walker (1973)<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></li>
-<li>Wright et al (1980)<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup>      </li>
-<li>Walker (1980)<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup>      </li>
-<li>Carey and Sparks (1986)<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup></li>
-<li>Sparks (1986)<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup>      </li>
-<li>Wilson and Walker (1987)<sup id="fnref2:15"><a class="footnote-ref" href="#fn:15">15</a></sup>      </li>
+<li>Thorarinsson (1954)<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></li>
+<li>Wilson (1972)<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup>      </li>
+<li>Walker (1973)<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup></li>
+<li>Wright et al (1980)<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup>      </li>
+<li>Walker (1980)<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup>      </li>
+<li>Carey and Sparks (1986)<sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">6</a></sup></li>
+<li>Sparks (1986)<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup>      </li>
+<li>Wilson and Walker (1987)<sup id="fnref3:8"><a class="footnote-ref" href="#fn:8">8</a></sup>      </li>
 <li>Cas and Wright (1988)<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup></li>
 <li>Houghton and Carey (2015)<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup></li>
 </ul>
 <h3 id="volume-calculation">Volume calculation</h3>
 <ul>
 <li>Pyle (1989)<sup id="fnref:18"><a class="footnote-ref" href="#fn:18">18</a></sup>      </li>
-<li>Fierstein and Nathenson (1992)<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup> </li>
+<li>Fierstein and Nathenson (1992)<sup id="fnref4:3"><a class="footnote-ref" href="#fn:3">3</a></sup> </li>
 <li>Legros (2000)<sup id="fnref:19"><a class="footnote-ref" href="#fn:19">19</a></sup></li>
 <li>Sulpizio (2005)<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">20</a></sup>  </li>
 <li>Bonadonna and Houghton (2005)<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">21</a></sup> </li>
@@ -1366,8 +1416,8 @@ I = log_{10}(MER [kg s^{-1}]) + 3
 </ul>
 <h3 id="mass-eruption-rate_1">Mass eruption rate</h3>
 <ul>
-<li>Wilson and Walker (1987)<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup>                                  </li>
-<li>Degruyter and Bonadonna (2012)<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>   </li>
+<li>Wilson and Walker (1987)<sup id="fnref2:8"><a class="footnote-ref" href="#fn:8">8</a></sup>                                  </li>
+<li>Degruyter and Bonadonna (2012)<sup id="fnref2:9"><a class="footnote-ref" href="#fn:9">9</a></sup>   </li>
 <li>Woodhouse et al (2013)<sup id="fnref:28"><a class="footnote-ref" href="#fn:28">28</a></sup></li>
 <li>Mastin et al (2009)<sup id="fnref:29"><a class="footnote-ref" href="#fn:29">29</a></sup>     </li>
 </ul>
@@ -1391,7 +1441,7 @@ I = log_{10}(MER [kg s^{-1}]) + 3
 <p>Biass S, Bonadonna C. <span class="nocase">A quantitative uncertainty assessment of eruptive parameters derived from tephra deposits: the example of two large eruptions of Cotopaxi volcano, Ecuador</span>. Bulletin of Volcanology 2011;73:73–90.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
-<p>Fierstein J, Nathenson M. <span class="nocase">Another look at the calculation of fallout tephra volumes</span>. Bull Volcanol 1992;54:156–67.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p>Fierstein J, Nathenson M. <span class="nocase">Another look at the calculation of fallout tephra volumes</span>. Bull Volcanol 1992;54:156–67.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
 <p>Newhall CG, Self S. <span class="nocase">The volcanic explosivity index (<abbr title="Volcanic explosivity index">VEI</abbr>)- An estimate of explosive magnitude for historical volcanism</span>. Journal of Geophysical Research 1982;87:1231–8.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
@@ -1400,34 +1450,34 @@ I = log_{10}(MER [kg s^{-1}]) + 3
 <p>Pyle DM. <span class="nocase">Sizes of volcanic eruptions</span>. In: Sigurdsson H, Houghton BF, Ballard RD, editors. Encyclopedia of volcanoes, San Diego: Academic Press; 2000, p. 263–9.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:6">
-<p>Rossi E, Bonadonna C, Degruyter W. A new strategy for the estimation of plume height from clast dispersal in various atmospheric and eruptive conditions. Journal of Volcanology and Geothermal Research 2019;505:1–2. <a href="https://doi.org/10.1016/j.epsl.2018.10.007">https://doi.org/10.1016/j.epsl.2018.10.007</a>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<p>Carey S, Sparks R. <span class="nocase">Quantitative models of the fallout and dispersal of tephra from volcanic eruption columns</span>. Bull Volcanol 1986;48:109–25.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:7">
-<p>Degruyter W, Bonadonna C. <span class="nocase">Improving on mass flow rate estimates of volcanic eruptions</span>. Geophys Res Lett 2012;39. <a href="https://doi.org/10.1029/2012GL052566">https://doi.org/10.1029/2012GL052566</a>.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>Rossi E, Bonadonna C, Degruyter W. A new strategy for the estimation of plume height from clast dispersal in various atmospheric and eruptive conditions. Journal of Volcanology and Geothermal Research 2019;505:1–2. <a href="https://doi.org/10.1016/j.epsl.2018.10.007">https://doi.org/10.1016/j.epsl.2018.10.007</a>.&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:8">
-<p>Thorarinsson S. <span class="nocase">The eruption of Hekla, 1947-48, 3, The tephra-fall from Hekla, March 29th, 1947</span>. Visindafélag Ĺslendinga 1954:1:3.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>Wilson L, Walker G. <span class="nocase">Explosive volcanic eruptions - VI. Ejecta dispersal in plinian eruptions: the control of eruption conditions and atmospheric properties</span>. Geophys J R Astr Soc 1987;89:657–79.&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
 </li>
 <li id="fn:9">
-<p>Wilson L. <span class="nocase">Explosive Volcanic Eruptions-II The Atmospheric Trajectories of Pyroclasts</span>. Geophysical Journal International 1972;30:381–92. <a href="https://doi.org/10.1111/j.1365-246X.1972.tb05822.x">https://doi.org/10.1111/j.1365-246X.1972.tb05822.x</a>.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+<p>Degruyter W, Bonadonna C. <span class="nocase">Improving on mass flow rate estimates of volcanic eruptions</span>. Geophys Res Lett 2012;39. <a href="https://doi.org/10.1029/2012GL052566">https://doi.org/10.1029/2012GL052566</a>.&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 <li id="fn:10">
-<p>Walker GPL. <span class="nocase">Explosive volcanic eruptions — a new classification scheme</span>. Geologische Rundschau 1973;62:431–46. <a href="https://doi.org/10.1007/BF01840108">https://doi.org/10.1007/BF01840108</a>.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+<p>Thorarinsson S. <span class="nocase">The eruption of Hekla, 1947-48, 3, The tephra-fall from Hekla, March 29th, 1947</span>. Visindafélag Ĺslendinga 1954:1:3.&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
 </li>
 <li id="fn:11">
-<p>Wright JV, Smith AL, Self S. <span class="nocase">A working terminology of pyroclastic deposits</span>. Journal of Volcanology and Geothermal Research 1980;8:315–36. <a href="https://doi.org/10.1016/0377-0273(80)90111-0">https://doi.org/10.1016/0377-0273(80)90111-0</a>.&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+<p>Wilson L. <span class="nocase">Explosive Volcanic Eruptions-II The Atmospheric Trajectories of Pyroclasts</span>. Geophysical Journal International 1972;30:381–92. <a href="https://doi.org/10.1111/j.1365-246X.1972.tb05822.x">https://doi.org/10.1111/j.1365-246X.1972.tb05822.x</a>.&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
 </li>
 <li id="fn:12">
-<p>Walker GPL. <span class="nocase">The Taupo pumice: product of the most powerful known (ultraplinian) eruption</span>. J Volcanol Geotherm Res 1980;8:69–94.&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+<p>Walker GPL. <span class="nocase">Explosive volcanic eruptions — a new classification scheme</span>. Geologische Rundschau 1973;62:431–46. <a href="https://doi.org/10.1007/BF01840108">https://doi.org/10.1007/BF01840108</a>.&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
 </li>
 <li id="fn:13">
-<p>Carey S, Sparks R. <span class="nocase">Quantitative models of the fallout and dispersal of tephra from volcanic eruption columns</span>. Bull Volcanol 1986;48:109–25.&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+<p>Wright JV, Smith AL, Self S. <span class="nocase">A working terminology of pyroclastic deposits</span>. Journal of Volcanology and Geothermal Research 1980;8:315–36. <a href="https://doi.org/10.1016/0377-0273(80)90111-0">https://doi.org/10.1016/0377-0273(80)90111-0</a>.&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
 </li>
 <li id="fn:14">
-<p>Sparks R. <span class="nocase">The dimensions and dynamics of volcanic eruption columns</span>. Bull Volcanol 1986;48:3–15.&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+<p>Walker GPL. <span class="nocase">The Taupo pumice: product of the most powerful known (ultraplinian) eruption</span>. J Volcanol Geotherm Res 1980;8:69–94.&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
 </li>
 <li id="fn:15">
-<p>Wilson L, Walker G. <span class="nocase">Explosive volcanic eruptions - VI. Ejecta dispersal in plinian eruptions: the control of eruption conditions and atmospheric properties</span>. Geophys J R Astr Soc 1987;89:657–79.&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+<p>Sparks R. <span class="nocase">The dimensions and dynamics of volcanic eruption columns</span>. Bull Volcanol 1986;48:3–15.&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
 </li>
 <li id="fn:16">
 <p>Cas RAF, Wright J. <span class="nocase">Volcanic successions, modern and ancient: a geological approach to processes, products, and successions</span>. London: Allen    &amp; Unwin; 1988.&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
