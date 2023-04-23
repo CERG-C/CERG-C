@@ -505,6 +505,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+     Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#volume-of-the-tephra-fallout-deposit" class="md-nav__link">
     Volume of the tephra fallout deposit
   </a>
@@ -565,11 +572,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#further-reading" class="md-nav__link">
-    Further reading
+  <a href="#summary" class="md-nav__link">
+     Summary
   </a>
   
-    <nav class="md-nav" aria-label="Further reading">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+     Further reading
+  </a>
+  
+    <nav class="md-nav" aria-label=" Further reading">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1312,6 +1326,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+     Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#volume-of-the-tephra-fallout-deposit" class="md-nav__link">
     Volume of the tephra fallout deposit
   </a>
@@ -1372,11 +1393,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#further-reading" class="md-nav__link">
-    Further reading
+  <a href="#summary" class="md-nav__link">
+     Summary
   </a>
   
-    <nav class="md-nav" aria-label="Further reading">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+     Further reading
+  </a>
+  
+    <nav class="md-nav" aria-label=" Further reading">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1434,6 +1462,7 @@
 <p>April 24 2023</p>
 </blockquote>
 <hr />
+<h2 id="introduction"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3V5m2 2v2h2V7H5m6 0h10v2H11V7m0 8h10v2H11v-2m-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14l-6 6Z"/></svg></span> Introduction</h2>
 <p>The aim of this lab is to apply techniques to quantify eruption source parameters (<abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr>) from tephra fall deposits. This includes:</p>
 <ul>
 <li>From field measurements at the outcrop level, producing <strong><abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr></strong> and <strong><abbr title="Contour of the maximum clast diameter found at a given tephra fallout outcrop &rarr; usually used to compute the plume height">isopleth</abbr> maps</strong>;</li>
@@ -1456,32 +1485,42 @@ for calculations. -->
 <hr />
 <h2 id="volume-of-the-tephra-fallout-deposit">Volume of the tephra fallout deposit</h2>
 <p>The volume of tephra deposits is estimated from <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> maps by integrating the area below a curve plotting the <strong>logarithm of the thickness of <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> contours</strong> (y-axis) against the <strong>square-root of the <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> area</strong> (x-axis). On such plots, the exponential segment method of Fierstein &amp; Nathenson (1992)<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> states that a thickness <span class="arithmatex">\(T\)</span> at any <span class="arithmatex">\(x\)</span> value can be expressed as:</p>
+<h6 id="equation-1">Equation 1</h6>
 <div class="arithmatex">\[
 T(x) = T_{0}e^{-k\sqrt{A}}
 \]</div>
 <p>with <span class="arithmatex">\(T_0\)</span>  being the maximum deposit thickness, <span class="arithmatex">\(k\)</span> the slope of the exponential segment and <span class="arithmatex">\(\sqrt{A}\)</span> the square root of the <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> area. Based on the assumption of ellipsoidal shapes of isopachs Fierstein &amp; Nathenson (1992)<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup> estimate the volume as:</p>
+<h6 id="equation-2">Equation 2</h6>
 <div class="arithmatex">\[ 
-V = \frac{2T_0}{k^2} \ [m^3]
+V = \frac{2T_0}{k^2}
 \]</div>
 <h3 id="exercise">Exercise</h3>
 <p>Estimate the volume of Layer 5 using the 1-exponential segment method of Fierstein &amp; Nathenson (1992)<sup id="fnref3:3"><a class="footnote-ref" href="#fn:3">3</a></sup> using the <abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> map shown in Figure <a href="#layer5">1</a>:</p>
 <ul>
 <li>
-<p>In Excel, import the <a href="../../../../../files/deposit/isopach.csv", target="_blank"><abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> data</a> provided in Table 1 and plot the thickness (<span class="arithmatex">\(cm\)</span>) versus the <strong>square-root</strong> of the area (<span class="arithmatex">\(km\)</span>) and change the y-axis to a logarithmic scale</p>
+<p>In Excel, import the <a href="../../../../../files/deposit/isopach.csv", target="_blank"><abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr> data</a> provided in Table 1 and plot the thickness (<span class="arithmatex">\(cm\)</span>) versus the <strong>square-root</strong> of the area (<span class="arithmatex">\(km\)</span>) as a <strong>scatter plot</strong>. Change the y-axis to a <strong>logarithmic</strong> scale</p>
 </li>
 <li>
-<p>Fit an exponential segment and display its equation to estimate the intersect (<span class="arithmatex">\(T_0\)</span>) and the thinning rate (<span class="arithmatex">\(k\)</span>). Note that <span class="arithmatex">\(T_0\)</span> is now in centimetres, so you need to convert it to a unit consistent with the x-axis in order to calculate the volume</p>
+<p>Fit an <strong>exponential</strong> trendline and display its equation to estimate the intersect (<span class="arithmatex">\(T_0\)</span>) and the thinning rate (<span class="arithmatex">\(k\)</span>) as in <a href="#equation-1">Equation 1</a></p>
 </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Note on units</p>
+<p><span class="arithmatex">\(T_0\)</span> as expressed from the equation is now in the same unit as the y-axis. You need to convert it to a unit consistent with the x-axis in order to calculate the volume, which will have the same unit to the cube.</p>
+<p>For instance, if both <span class="arithmatex">\(sqrt(A)\)</span> and <span class="arithmatex">\(T_0\)</span> are in <span class="arithmatex">\(km\)</span>, then the volume will be in <span class="arithmatex">\(km^3\)</span>.</p>
+</div>
+<ul>
 <li>
-<p>Calculate the <code>volume</code> of the tephra fallout deposit</p>
+<p>Calculate the <code>volume</code> of the tephra fallout deposit using <a href="#equation-2">Equation 2</a></p>
 </li>
 <li>
 <p>Estimate the corresponding <code>VEI</code> using the diagram in Fig. <a href="#vei">2</a> from Newhall and Self (1982)<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
 </li>
 <li>
-<p>Convert the volume to a mass using a bulk density of 1000 <span class="arithmatex">\(kg/m^3\)</span> and calculate the associated <code>magnitude</code> following Pyle (2000)<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<p>Convert the volume to a mass using a bulk density of 1000 <span class="arithmatex">\(kg/m^3\)</span> and calculate the associated <code>magnitude</code> following Pyle (2000)<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup>:</p>
 </li>
 </ul>
+<h6 id="equation-3">Equation 3</h6>
 <div class="arithmatex">\[
 M = log_{10}(mass\ [kg]) - 7
 \]</div>
@@ -1562,6 +1601,7 @@ M = log_{10}(mass\ [kg]) - 7
 <hr />
 <h2 id="mass-eruption-rate">Mass eruption rate</h2>
 <p>Based on early theoretical studies of plume dynamics, Wilson &amp; Walker (1987)<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup> relate the <strong>height of a plume to the <abbr title="Mass eruption rate">MER</abbr></strong>, with the height <span class="arithmatex">\(H\)</span> being proportional to the fourth root of the <abbr title="Mass eruption rate">MER</abbr> (<span class="arithmatex">\(kg\ s^{−1}\)</span>). More recently, Degruyter and Bonadonna (2012)<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup> have proposed a new analytical expressions relating height and <abbr title="Mass eruption rate">MER</abbr> that accounts for the variability of the plume parameters and atmospheric conditions: </p>
+<h6 id="equation-4">Equation 4</h6>
 <div class="arithmatex">\[
 MER = \pi\frac{\rho_{a0}}{g'}\left(\frac{\alpha^2\bar{N}^3}{10.9}H^4 + \frac{\beta^2\bar{N}^2\bar{v}}{6}H^3\right)
 \]</div>
@@ -1588,10 +1628,19 @@ MER = \pi\frac{\rho_{a0}}{g'}\left(\frac{\alpha^2\bar{N}^3}{10.9}H^4 + \frac{\be
 <p>Use the <abbr title="Mass eruption rate">MER</abbr> to calculate the associated <code>intensity</code> following Pyle (2000)<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
 </li>
 </ul>
+<h6 id="equation-5">Equation 5</h6>
 <div class="arithmatex">\[
 I = log_{10}(MER [kg\ s^{-1}]) + 3
 \]</div>
-<h2 id="further-reading">Further reading</h2>
+<h2 id="summary"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83L9 20.42Z"/></svg></span> Summary</h2>
+<p>This exercise provided an introduction on the characterisation of eruption source parameters from tephra fallout deposits, which is a critical process to infer the eruptive histories of volcanic systems from their stratigraphy. Namely, we learned:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to calculate the <strong>volume</strong> of tephra deposits from <strong><abbr title="Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit">isopach</abbr></strong> maps;</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to estimate the maximum <strong>plume height</strong> and <strong>wind speed</strong> from <strong><abbr title="Contour of the maximum clast diameter found at a given tephra fallout outcrop &rarr; usually used to compute the plume height">isopleth</abbr></strong> maps;</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to compute the <strong>peak mass eruption rate</strong> from plume height and wind speed;</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How to estimate <strong><abbr title="Volcanic explosivity index">VEI</abbr></strong>, <strong>magnitude</strong> and <strong>intensity</strong> of eruptions.</li>
+</ul>
+<h2 id="further-reading"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96v320c0 53 43 96 96 96h320c17.7 0 32-14.3 32-32s-14.3-32-32-32v-64c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm0 384h256v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48h192c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg></span> Further reading</h2>
 <p>This list contains some references for the characterisation of tephra deposits.</p>
 <h3 id="characterization-of-tephra-fall-deposits">Characterization of tephra-fall deposits</h3>
 <ul>
