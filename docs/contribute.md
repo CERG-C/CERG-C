@@ -22,8 +22,14 @@ pip install mike -->
 
 ### Library-specific 
 
-- Citations/references: As [footnotes](https://squidfunk.github.io/mkdocs-material/reference/footnotes/)
-- Abbreviations:    
+<!-- - Citations/references: As [footnotes](https://squidfunk.github.io/mkdocs-material/reference/footnotes/) -->
+#### Citations/references 
+
+Bibtex-style of referencing is accepted using the [mkdocs-bibtex](https://github.com/shyamd/mkdocs-bibtex). The master `.bib` file is `includes/bibliography.bib`. 
+
+#### Abbreviations:    
+
+A glossary exists in `includes/glossary.md`. Each entry will automatically be formatted at the bottom of the page that contains the term following [this](https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations).
 
 ## Deploying the website
 

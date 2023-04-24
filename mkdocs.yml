@@ -5,6 +5,7 @@ theme:
   name: material
   features:
       - navigation.tabs
+      - navigation.indexes
       # - navigation.sections
       # - navigation.expand
 
@@ -28,14 +29,20 @@ theme:
 nav:
   - Home: index.md
   - Teaching:
-    - Modelling volcanic processes:
-      - Introduction: modelling_intro.md
-      - Eruption characterization: Pyroclast_story_intro.md
-      - Analogue modelling:
-        - Introduction: Analogue_modelling_intro.md
-        - Scaling analysis: Analogue_modelling_scaling.md
-        - Modelling pyroclastic density currents in the laboratory: Analogue_modelling_PDC.md
-        # - The story of a pyroclast: 
+    - Bachelor:
+      - 2nd Year:
+        - Physical Volcanology: 
+          - Teaching/Bachelor/2ndYear/PhysicalVolcanology/index.md
+          - Deposit characterisation: Teaching/Bachelor/2ndYear/PhysicalVolcanology/deposit_characterisation.md
+    - Master:
+      - Modelling volcanic processes:
+        - Introduction: modelling_intro.md
+        - Eruption characterization: Pyroclast_story_intro.md
+        - Analogue modelling:
+          - Introduction: Analogue_modelling_intro.md
+          - Scaling analysis: Analogue_modelling_scaling.md
+          - Modelling pyroclastic density currents in the laboratory: Analogue_modelling_PDC.md
+          # - The story of a pyroclast: 
     - CERG-C:
       - QGIS basics: QGIS_Intro.md
       - Setting up QGIS: QGIS_Setup.md
@@ -69,6 +76,9 @@ nav:
 plugins:
     - search
     - mkdocstrings
+    - bibtex:
+        bib_file: "includes/bibliography.bib"
+        csl_file: "includes/bibliography.cls"
     - mkdocs-jupyter:
         execute: True
         include_source: True
@@ -97,7 +107,9 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true 
   - abbr
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      auto_append:
+        - includes/glossary.md
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.keys
@@ -122,4 +134,4 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2022 / CERG-C / University of Geneva / CC BY-NC-SA
+copyright: Copyright &copy; 2023 / CERG-C / University of Geneva / CC BY-NC-SA
