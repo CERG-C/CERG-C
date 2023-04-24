@@ -8,6 +8,7 @@ theme:
       - navigation.indexes
       # - navigation.sections
       # - navigation.expand
+      - content.code.copy
 
   logo: img/volcano.svg
   icon:
@@ -116,6 +117,13 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.keys
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 
 extra_javascript:
   - javascripts/mathjax.js
