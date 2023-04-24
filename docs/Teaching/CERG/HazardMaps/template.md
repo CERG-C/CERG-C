@@ -1,17 +1,28 @@
-# Probabilistic modelling: Part 2
+# Hazard assessments
 
 ## Example of reference: 
 
 from Newhall and Self (1982)[@newhall82]
 
+## :material-format-list-checks:{ .icn } Objectives
+
+- Recognize the main steps of **hazard assessments** (HA).
+- Understand the main HA approaches **(short vs long term)**.
+- Identify main HA **outcomes**.
+- Understand hazard maps
+
+## Hazard assessments
+
+A hazard assessment is defined as an evaluation of the probability of occurrence of a given volcanic event of a specific size, associated with one or various phenomena affecting a given location during a specific time interval (Modified from Connor et al. (2015))
 
 
+    <figure markdown>
+    ![](img/hazard_cartoon.png)
+    <figcaption>Figure 1:  </figcaption>
+    </figure>
 
---- 
 
-
-
-
+-------
 
 We have [previously](Hazard_probabilistic1.md) looked at probabilistic modeling for lava flows, where we accounted for the uncertainty of vent location on hazard quantification. However, probabilistic hazard assessment strategies often have to account for the uncertainty on **more than one** parameter. This section sets the stage for probabilistic assessment of tephra fallout and digs one step further into the mechanics of probabilistic hazard modeling.
 
@@ -396,8 +407,10 @@ In the next module, you will produce a **scenario-based probabilistic hazard ass
 [^6]: Crosweller, H.S., Arora, B., Brown, S.K., Cottrell, E., Deligne, N.I., Guerrero, N.O., 2012. Global database on large magnitude explosive volcanic eruptions (LaMEVE). Journal of Applied Volcanology 1, 1–13.
 [^7]: Biass, S., Todde, A., Cioni, R., Pistolesi, M., Geshi, N., Bonadonna, C., 2017. Potential impacts of tephra fallout from a large-scale explosive eruption at Sakurajima volcano, Japan. Bulletin of Volcanology 79, 1–24.
 [^8]: Todde, A., Cioni, R., Pistolesi, M., Geshi, N., Bonadonna, C., 2017. The 1914 Taisho eruption of Sakurajima volcano: stratigraphy and dynamics of the largest explosive event in Japan during the twentieth century. Bull Volcanol 79, 72.
+[^9]: Connor C, Bebbington MS, Marzocchi W (2015) Probabilistic Volcanic Hazard Assessment. In: The Encyclopedia of Volcanoes, Second. Elsevier Inc., pp 897–910
 
 
+*[HA]: Hazard assessments
 *[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
 *[TGSD]: Total grain-size distribution
 *[MER]: Mass eruption rate
