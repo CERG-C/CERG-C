@@ -62,9 +62,9 @@ nav:
         - The temporal component: Hazard_tephra_temporal.md
         # - Beyond scenarios: Hazard_tephra_beyond.md
         - Instructor's notes: Hazard_tephra_notes.md
-      - Hazard maps: 
+      - Hazard assessments: 
         - Teaching/CERG/HazardMaps/index.md
-        - I love lucia: Teaching/CERG/HazardMaps/template.md
+        - Hazard assessments: Teaching/CERG/HazardMaps/template.md
   - Resources: resources.md
   - Contribute:
     - Contribute: contribute.md
