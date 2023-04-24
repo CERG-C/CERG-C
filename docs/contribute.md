@@ -8,7 +8,27 @@ It is recommended to setup the website in a [Conda](https://docs.conda.io/projec
 
 ### Setting up an environment 
 
+For an environment named `teaching`, create it using:
+
+```
+conda create -n teaching python=3.9
+```
+
+Then activate it using:
+
+```
+conda activate teaching 
+```
+
 ### Installing dependencies
+
+It is recommended to [install pandoc](https://pandoc.org) **before** installing the Python dependencies.
+
+#### Python 
+
+````
+pip install mkdocs-material mike mkdocstrings livereload mkdocs-jupyter mkdocs-bibtex mkdocs-encryptcontent-plugin
+```
 
 <!-- mkpdfs-mkdocs
 pip install weasyprint==52.5
@@ -16,6 +36,14 @@ pip install mkdocs-encryptcontent-plugin
 pip install mike -->
 
 ## Contributing to the course
+
+- The teaching content is located in the folder `docs/Teaching`, where sub-folder contain `Bachelor`, `Master` and `CERG`. 
+- Create a sub-folder in the relevant folder. This subfolder must contain
+    - A sub-folder named `img/` that will contain all images
+    - A file called `index.md` that will be the landing page of your course.
+
+
+
 
 ### Markdown native
 
