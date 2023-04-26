@@ -198,16 +198,18 @@ ADD figure!
 There are 3 main outputs of hazard assessments:
 
 
+
+
 === "Reports"
-    All HA should include a complete documentation including:
-    
-   :white_check_mark: **Full description of scenarios** considered in the analysis with eruptive parameters, atmospheric and surface conditions. 
+    All HA should include a complete documentation including: 
 
-   :white_check_mark: Complete description of the **methodology** applied with mathematical models and assumptions considered. 
+    :white_check_mark: **Full description of scenarios** considered in the analysis with eruptive parameters, atmospheric and surface conditions.
 
-   :white_check_mark: **Glossary** and **properties** of outputs (e.g., map legend, hazard metrics, scales, coordinate systems). 
+    :white_check_mark: Complete description of the **methodology** applied with mathematical models and assumptions considered.
 
-   :white_check_mark: Clear **quantification of uncertainties** and their meaning. 
+    :white_check_mark: **Glossary** and **properties** of outputs (e.g., map legend, hazard metrics, scales, coordinate systems).
+
+    :white_check_mark: Clear **quantification of uncertainties** and their meaning.
 
    
 === "Hazard maps"
@@ -217,9 +219,9 @@ There are 3 main outputs of hazard assessments:
 
     <figure markdown>
     ![map](img/Vulcano_prob_map.png)
-    <figcaption> Probabilistic hazard map Bonadonna et al. 2005 [@Bonadonna2005].
+    <figcaption> Example of probabilistic HA of 300 kg/m^2 in Vulcano (Italy), from Biass et al. 2016 [@Biass2016].
 
-    !!!! important "For more on hazard maps go to [understanding hazard maps](hazard_maps.md)!!"
+    !!! important "For more on hazard maps go to [understanding hazard maps](hazard_maps.md)!!"
 
 
 === "Hazard curves"
@@ -228,10 +230,10 @@ There are 3 main outputs of hazard assessments:
     These curves have been explored mainly for tephra fallout but they have a big potential to inform decision makers during crisis and risk management!!
 
     <figure markdown>
-    ![map](img/Probabilistic_Tarawera.png)
-    <figcaption> Example of probabilistic HA of 300 kg/m^2 in Vulcano (Italy), from Biass et al. 2016 [@Biass2016].
+    ![map](img/Vulcano_haz_curves.png)
+    <figcaption> Example of hazard curves in Vulcano (Italy), from Biass et al. 2016 [@Biass2016].
 
-    !!!! important "For more on hazard curves go to [hazard modelling](Hazard_tephra_exercise.md)!!"
+    !!! important "For more on hazard curves go to [hazard modelling](Hazard_tephra_exercise.md)!!"
 
 
 
