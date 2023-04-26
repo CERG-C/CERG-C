@@ -1,6 +1,7 @@
-# Welcome to the CERG-C's homepage for Volcanic hazard classes & material
+# Welcome to the teaching ressources of the Physical Volcanology and Geological Risk group @UNIGE
 
-Welcome to the [CERG-C](https://www.unige.ch/sciences/terre/CERG-C/)'s homepage for Volcanic hazard classes & material. You will find here a combination of ressources to conduct volcanic hazard and impact assessments as well as teaching material for both Master's and CERG-C classes.
+This page contains teaching material and ressources of both the [Physical Volcanology and Geological Risk](https://www.unige.ch/sciences/terre/en/groups/physical-volcanology-and-geological-risk/welcome/) group
+and the [CERG-C](https://www.unige.ch/sciences/terre/CERG-C/) (Certificat de spécialisation en évaluation et management des Risques Géologiques et risques liés au climat / Specialization certificate for the assessment and management of geological and climate related risk).
 
 ## License
 
