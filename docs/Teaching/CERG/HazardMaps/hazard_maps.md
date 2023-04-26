@@ -197,8 +197,8 @@ ADD figure!
 
 There are 3 main outputs of hazard assessments:
 
-
 === "Reports"
+
     All HA should include a complete documentation including:
     
    :white_check_mark: **Full description of scenarios** considered in the analysis with eruptive parameters, atmospheric and surface conditions. 
@@ -209,42 +209,32 @@ There are 3 main outputs of hazard assessments:
 
    :white_check_mark: Clear **quantification of uncertainties** and their meaning. 
 
-   
 === "Hazard maps"
     A hazard maps is a spatial representation of the footprint of a given volcanic phenomenon that have been assessed either deterministically or probabilistically. 
 
-    They are built over a surface at local, regional or global scales. 
+    They are built over an area at local, regional or global scale. 
 
-    <figure markdown>
-    ![map](img/Vulcano_prob_map.png)
-    <figcaption> Probabilistic hazard map Bonadonna et al. 2005 [@Bonadonna2005].
-
-    !!!! important "For more on hazard maps go to [understanding hazard maps](hazard_maps.md)!!"
+    For more on hazard maps go to [understanding hazard maps](hazard_maps.md)We have [previously](Hazard_probabilistic1.md) 
 
 
 === "Hazard curves"
-    To understand all possible outputs of a HA in specific places of interest, a plot of a given hazard metric vs the probability of occurrence -estimated from various outputs- is a very useful tool. 
-
-    These curves have been explored mainly for tephra fallout but they have a big potential to inform decision makers during crisis and risk management!!
-
-    <figure markdown>
-    ![map](img/Probabilistic_Tarawera.png)
-    <figcaption> Example of probabilistic HA of 300 kg/m^2 in Vulcano (Italy), from Biass et al. 2016 [@Biass2016].
-
-    !!!! important "For more on hazard curves go to [hazard modelling](Hazard_tephra_exercise.md)!!"
 
 
+
+
+
+
+
+
+
+
+
+
+
+# Outputs
 
 
 -------
-We have [previously](Hazard_probabilistic1.md) looked at probabilistic modeling for lava flows, where we accounted for the uncertainty of vent location on hazard quantification. However, probabilistic hazard assessment strategies often have to account for the uncertainty on **more than one** parameter. This section sets the stage for probabilistic assessment of tephra fallout and digs one step further into the mechanics of probabilistic hazard modeling.
-
-## :material-format-list-checks:{ .icn } Objectives
-
-- Understand how ESP can be translated into **probabilistic eruption scenarios**.
-- Learn the mechanics of **probabilistic hazard modelling** for tephra accumulation.
-- Review how to **compute** and **display** hazard outputs.
-<!-- - Review the concepts of **deterministic**, **scenario-based probabilistic** and **probabilistic** volcanic hazard assessments. -->
 
   
 ## :fontawesome-solid-gears:{ .icn } Probabilistic hazard modelling 
