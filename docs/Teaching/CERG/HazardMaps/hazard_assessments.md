@@ -1,10 +1,10 @@
-# :material-format-list-checks:{ .icn } Objectives
+## :material-format-list-checks:{ .icn } Objectives
 
 - Recognize the main steps of **hazard assessments** (HA).
 - Understand the main HA approaches **(short vs long term)**.
 - Identify main HA **outputs**.
   
-# :fontawesome-solid-gears:{ .icn } Hazard assessments
+## :fontawesome-solid-gears:{ .icn } Hazard assessments
 
 A hazard assessment is defined as an evaluation of the probability of **occurrence** of a given volcanic event of a specific **size**, associated with one or various **phenomena** affecting a given **location** during a specific time interval (Modified from Connor et al. (2015)[@Connor2015])
 
@@ -144,18 +144,18 @@ Size of eruptions will indirectly inform about the potential phenomena (and prod
   
 
 
-# :fontawesome-solid-gears:{ .icn } Computational modelling
+## :fontawesome-solid-gears:{ .icn } Computational modelling
 
 At present there is a large diversity of computational models from **empirical** to **analytical** and **numerical** models for each volcanic phenomena. Some are more developed than others, particularly those associated with wide-spread and more frequent phenomena, such as tephra fallout. 
 
 This table summarize the most common ones but a complete reference list with software and references is available [here](http://193.206.223.51:8088/index.php/softwarelist). 
 
 <figure markdown>
-![table1](img/Models.png){ width=60% }
-<figcaption></figcaption>
+![table1](img/Models.png){ width="300" }
+<figcaption> Lucia devrait lire la documentations </figcaption>
 </figure>
 
-# :fontawesome-solid-gears:{ .icn } Approaches
+## :fontawesome-solid-gears:{ .icn } Approaches
 
 According to the level of knowledge of a given volcano and the needs/priorities of risk reduction, there are 2 main approaches to evaluate volcanic hazards: **short-term** and **long-term** hazard assessments [HA]. The main difference is the selected timing to evaluate potential hazards that will have strong implications on the purpose of each assessment. 
 
@@ -189,7 +189,7 @@ Once the volcano starts showing signs of unrest (e.g., increasing seismicity, ga
 
     !!! important "Despite requiring significant time and computational resources, these HA are comprehensive and include several potential scenarios. They are, however, difficult to interpret and to communicate to decision makers!"
 
-# :fontawesome-solid-gears:{ .icn } General methodology
+## :fontawesome-solid-gears:{ .icn } General methodology
 
 <figure markdown>
 ![cartoon](img/Methodology.png)
@@ -202,7 +202,7 @@ In general, all hazard assessment starts with the best possible **understanding 
 
     
 
-# :fontawesome-solid-gears:{ .icn } Outputs
+## :fontawesome-solid-gears:{ .icn } Outputs
 
 There are 3 main outputs of hazard assessments:
 
@@ -244,7 +244,7 @@ There are 3 main outputs of hazard assessments:
 
 
 
-# :material-check-bold:{ .icn } Summary
+## :material-check-bold:{ .icn } Summary
 
 In this class we reviewed:
 
@@ -257,31 +257,4 @@ Since hazard maps are the core of hazard assessments, next class will focus on [
 
 
 ## :fontawesome-solid-book:{ .icn } References
--------
-
-
-## :fontawesome-solid-book:{ .icn } References
-
-[^1]: Biass, S., Bonadonna, C., 2011. A quantitative uncertainty assessment of eruptive parameters derived from tephra deposits: the example of two large eruptions of Cotopaxi volcano, Ecuador. Bulletin of Volcanology 73, 73–90.
-[^2]: Bonadonna, C., Costa, A., 2013. Plume height, volume, and classification of explosive volcanic eruptions based on the Weibull function. Bulletin of Volcanology 75, 1–19.
-[^3]: Pyle D., 1989. The thickness, volume and grainsize of tephra fall deposits. Bulletin of Volcanology 51, 1–15.
-[^4]: Tierz, P., 2019. VOLCANS: an objective, structured and reproducible method for identifying sets of analogue volcanoes. Bull Volcanol 22.
-[^5]: Simkin, T., Siebert, L., Simkin, T., Kimberly, P., 2010. Volcanoes of the World. University of California Press, Tucson, AZ.
-[^6]: Crosweller, H.S., Arora, B., Brown, S.K., Cottrell, E., Deligne, N.I., Guerrero, N.O., 2012. Global database on large magnitude explosive volcanic eruptions (LaMEVE). Journal of Applied Volcanology 1, 1–13.
-[^7]: Biass, S., Todde, A., Cioni, R., Pistolesi, M., Geshi, N., Bonadonna, C., 2017. Potential impacts of tephra fallout from a large-scale explosive eruption at Sakurajima volcano, Japan. Bulletin of Volcanology 79, 1–24.
-[^8]: Todde, A., Cioni, R., Pistolesi, M., Geshi, N., Bonadonna, C., 2017. The 1914 Taisho eruption of Sakurajima volcano: stratigraphy and dynamics of the largest explosive event in Japan during the twentieth century. Bull Volcanol 79, 72.
-[^9]: Connor C, Bebbington MS, Marzocchi W (2015) Probabilistic Volcanic Hazard Assessment. In: The Encyclopedia of Volcanoes, Second. Elsevier Inc., pp 897–910
-
-
-*[HA]: Hazard assessments
-*[VEI]: Volcanic Explosivity Index
-*[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
-*[TGSD]: Total grain-size distribution
-*[MER]: Mass eruption rate
-*[VEI]: Volcanic explosivity index
-*[HIM]: Hazard impact metrics
-*[GAR]: Global assessment report
-*[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
-*[GVP]: Global volcanism program 
-*[GSD]: Grain size distribution
 

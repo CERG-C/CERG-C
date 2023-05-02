@@ -11,3 +11,6 @@
 *[DRE]: Dense-rock equivalent &rarr; the equivalent density of the rock when porosity is removed from tephra
 *[isopach]: Contour of equal thickness of tephra fallout deposits &rarr; usually used to compute the volume of the deposit
 *[isopleth]: Contour of the maximum clast diameter found at a given tephra fallout outcrop &rarr; usually used to compute the plume height
+*[HIM]: Hazard Intensity Metric
+*[IAVCEI]: International Association of Volcanology and Chemistry of the Earth’s Interior
+*[HA]: Hazard assessments
