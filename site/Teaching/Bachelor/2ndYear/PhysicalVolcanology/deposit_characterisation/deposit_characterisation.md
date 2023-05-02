@@ -92,14 +92,14 @@ $$
 
 !!! note "Table 1: Isopach data for Layer 5 of Cotopaxi volcano" 
 
-    | Isopach area (km$^2$)   | Thickness (cm) |
-    | --------------- | ---------------- |
-    | 46              | 100 |
-    | 85              | 50 |
-    | 130             | 30 |
-    | 330             | 20 |
-    | 387             | 10 |
-    | 685             | 5 |
+    | Isopach area (km$^2$) | Thickness (cm) |
+    |-----------------------|----------------|
+    | 46                    | 100            |
+    | 85                    | 50             |
+    | 130                   | 30             |
+    | 330                   | 20             |
+    | 387                   | 10             |
+    | 685                   | 5              |
 
 
 ## Plume height
