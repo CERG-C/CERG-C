@@ -6,4 +6,15 @@
 
 ## Master
 
+- [Modelling Volcanic Processes](Master/Modelling-volcanic-processes/index.md)
+
 ## CERG-C
+
+- [Volcanic Risk module](CERG/index.md)
+
+--- 
+
+<figure markdown>
+  ![ISS](img/colima.jpg)
+  <figcaption>Dome collapse at Colima volcano, Mexico (picture: S. Biass).</figcaption>
+</figure>
