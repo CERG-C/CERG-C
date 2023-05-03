@@ -4,6 +4,8 @@
 
 - Started organising all classes in subsections in the `Teaching` folder. That requires each class to have a separate `img` folder for storing images.
   - Only did the Bachelor class for now
+  - [x] Completed on 2023-05-02
+  - [x] Further split the sub-classes of the CERG on 2023-05-03
 
 ## 2022-07-24
 
