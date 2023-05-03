@@ -97,7 +97,7 @@ One of the major challenges of volcanic hazard assessments [HA] is the methodolo
 
 !!! question "What does it mean?"
 
-    Once we get the outcomes of [HA], we need to decide what would be the hazard zones! 
+    Once we get the outcomes of [HA], we need to decide what would be the **hazard zones!** 
 
     In other words... 
 
@@ -229,31 +229,154 @@ Here we just summarize few aspects that are fundamental to consider when designi
 !!! warning "Derived maps are the result of long discussions and interesting **multi-disciplinary approaches!!**"
      
 ### 2. Map features and hazard communication
- = Tarawera
+
+The maps analysed in this exercise have been especially designed for a hazard communication study published by Thompson et al. (2015)[@Thompson2015] with the seek of understanding the relevant role that properties of probabilistic hazard maps play on how we communicate hazards. 
+
+This study was based on a very interesting workshop with scientists experts and general public to understand the impact of [HM] on the end-user. It is important to notice that the results of this study obey to a survey where 60% of participants were New Zealand european people; 65% with postgraduate/graduate degrees! Outcomes are interesting however to extrapolate to other volcanic cases. But especially as an example of survey to be conducted in other contexts. You can also explore further the complete [survey](https://static-content.springer.com/esm/art%3A10.1186%2Fs13617-015-0023-0/MediaObjects/13617_2015_23_MOESM1_ESM.pdf) ... here we focus only in few aspects regarding **map features**:
+
+
+!!! question "Tarawera hazard maps: legibility "
+
+    <figure markdown>
+    ![figure](img/Tarawera1.png){width="800"}
+    <figcaption> </figcaption>
+    </figure>
+
+    Based on the maps A-B-C:
+
+    - If Tarawera were to erupt, what is the probability of accumulating 1 mm of volcanic ash at Whakatane?
+    - Which of the 3 maps is easy to read? Justify your answers
+
+??? note "Map data classification"
+
+    A key aspect to consider when designing a [HM] is the visual **categorisation of the dataset** values. In particular, numerical modelling outcomes involve a large range of values that need to be classified in the most efficient visualization way. These values can be stretched in gradational scales or discrete bins with specific colours. 
+
+     - **Gradational** colour schemes with isolines delimiting classes were found the most efficient to read maps with higher precision. In particular, interviewees noticed that binned maps can make think that there is a big difference between one side and the other of the boundary!
+     - Gradational scales are also favourable because represent the **transitional nature of hazards** decreasing in intensity with distance to the source. 
+     - Smooth **isolines** with intervals of 10% probability, instead of abrupt limits such binned maps, facilitate the reading. Labels in the isolines contribute to fast reading and avoid confusion related to coulour symbology. 
+
+
+!!! question "Tarawera hazard maps: probability meaning "
+
+    <figure markdown>
+    ![figure](img/Tarawera2.png){width="800"}
+    <figcaption> </figcaption>
+    </figure>
+
+    Considering that Maps D-E are two different types of probabilistic hazard maps, 
+
+    - What does the Map D show?
+    - What does the map E show?
+    - If Tarawera were to erupt, which map would you use to assess the potential impacts on houses, roads and the airport of Whakatane?
+
+
+??? note "Map content"
+
+    The content of a map is sensitively dependent on end-users and purpose. 
+
+    In general, some (few) **background assets** are useful as reference points (e.g., boundaries, rivers), but hazard maps should restrict the amount of exposed elements in order to avoid confusion with exposure, vulnerability or risk maps. 
+
+    :point_up: This is particularly challenging with derived maps that are simplified for crisis or risk management purposes (e.g., [Sakurajima hazard map](https://web.archive.org/web/20201101123922/https://www.city.kagoshima.lg.jp/kikikanri/kurashi/bosai/bosai/map/documents/eigo.pdf)). 
+
+    Concerning **hazard content** the end-user interpretation is really crucial. From a scientist point of view, precision on [HIM] is fundamental. For residents, the main concern would be the possibility of any tephra at all impacting their land (10 mm was already to high for certain interviewees). 
+
+    !!! example "In words of an interviewee (Thompson et al. (2015)[@Thompson2015]): *"The question is 'Will I get ash?'...Not, 'how much will I get?'...They're not sort of thinking 'We can do this with 10 milimeters; we can do this with 100'. It's kind of 'We have to deal with volcanic ash'"*."
+
+      
+    Many participants therefore suggest that additional text explaining the possible impacts associated with a given ash thickness would make the map more relevant and useful. 
+
+
+!!! question "Tarawera hazard maps: colour schemes "
+
+    <figure markdown>
+    ![figure](img/Tarawera3.png){width="800"}
+    <figcaption> </figcaption>
+    </figure>
+
+    Based on these sets of maps, Set A – Set B – Set C : 
+
+    - Which colour scheme do you think describes better the tephra hazard intensity? Why?
+    - Do you think that these colour schemes can be used indistinctly for other volcanic hazards? Justify your answers?
+   
+??? note "Colour schemes and legend"
+
+    The choice of the colour scheme is largely dependent on how **hazard zones** are defined and visualized in the map. 
+
+    Concerning **colour scales**: 
+
+    - Red-blue are associated with dangerous/no dangerous; hazard presence/hazard absence; and this has implications spcially with low probability areas that could be considered as "safe". 
+    - Red-yellow-blue scales are automatically associated with weather or floods hazard maps. They could be useful for lahars but misleading for tephra maps. 
+    - Red-yellow are by far the most used scales in the [Volcanic Hazard Maps](https://volcanichazardmaps.org/map-design/) database (~30%).
+
+    **Colour blind** scales might be adopted!! This is something that is rarely taken in consideration but is definitely very important for hazard communication. Crameri et al. (2020)[@Crameri2020] expose an interesting resource to consider for colour schemes in hazard maps!
+
+
 ### 3. Zonation methodologies 
-= Nevado Ruiz
+
+!!! question "Nevado del Ruiz hazard maps: the multi-hazard aspect of volcanic eruptions"
+
+    
+   
+??? note "Multi-hazard maps"
+
+    Multi-hazard maps provide a fast visualisation of the different expected hazards and their inundation areas for the same volcano. 
+
+    The complexity lies on how to combine the different [HIM], that are often a mixture of qualitative and quantitative values. 
+
+    There is **no standard guidelines** for the classification of **hazard zones** -for each single phenomena-; so, there is still quite a lot to build on multi-hazard frameworks. 
+
+    In particular, maps including various hazards are very difficult to read. A single phenomenon is already challenging; the combination of various phenomenon with different [HIM] in 1 single image considerably increases this complexity. 
 
 
 ## :fontawesome-solid-gears:{ .icn } Other challenges and limitations
 
+!!! warning "A good volcanic hazard map involve many challenges! "
+
+    As a general rule, all maps are based in the geological record (either directly or to constrain the model input parameters). Therefore a major limitation lies in **how to constrain the incompleteness** of the geological record. This analysis is often biased towards the bigger events since big deposits are also well-preserved. 
+    
+    Comprehensive field studies are still scarce; and, in many cases, scenarios and eruptive parameters do not reflect the large range of possible scenarios. 
+    
+    An additional limitation is the geographical **access** to the deposits that are often difficult and dangerous, particularly in on-going eruptions. We also need to understand human limitations when facing such a huge natural event!
+
+    Another aspect to consider is that volcanoes do not understand about boundaries: many volcanoes are located in international borders (e.g., Chiles-Cerro Negro in Ecuador-Colombia) and/or impacted areas cross administrative boundaries (e.g., almost all volcanoes in Chile-Argentina) &rarr, this has significant implications in risk management but also in field work of volcanic deposits!!
+
+    Finally, hazard uncertainties (aleatory and epistemic) are difficult to quantify and to represent in maps! You can find more on this in [Probabilistic modeling part II](../Teaching/CERG/Hazard_probabilistic2.md)!   
+
+
+
 ## :fontawesome-solid-gears:{ .icn } Future efforts
 
-## :fontawesome-solid-gears:{ .icn } final thought: interdisciplinary process
+*"It is impossible to achieve a wholly objective representation of complex reality on a map (Thompson et al. (2015)[@Thompson2015])."*   
 
 
+**Objective frameworks** for each volcanic phenomenon (including methodologies, homogenized terminology, standardised outputs and uncertainty quantification) might help to reduce miscommunication of volcanic hazard maps. 
+
+We still need to work on numerical and statistical modelling and big data analysis in order to build good quality hazard assessments and outcomes. 
+
+A better understanding of the impact of hazard mapping in risk communication is required. **Integral studies** in different countries and various audiences (e.g., stakeholders, decision-makers, emergency managers) would help to bridge the gap between scientists and map end-users. 
+
+**Social media** are in nowadays an important tool for information sharing. Warning systems and emergency management need up-to-date information, and hence, images and maps ready to be disseminated. Efficient strategies to derive simplified maps from sophisticated hazard maps in real time are therefore crucial for hazard communication. 
+
+
+Better strategies of communication and credibility are fundamental in the communication of risk. **Global agreements** on the official channels to disseminate hazard maps need to be established. The [IAVCEI] Commission on Volcanic Hazards and Risk plays a fundamental role on this goal!
+
+
+## :fontawesome-solid-gears:{ .icn } Final thought: map design is an interdisciplinary process!
+
+<figure markdown>
+![figure](img/Charlton.png){width="500"}
+<figcaption> Hazard mapping involves several disciplines that need to converge in useful and usable products. Considering the implications of hazard mapping in risk communication, the idea that 1 or few actors could achieve it, is a dangerous utopia! 
+</figcaption>
+</figure>
 
 
 
 ## :material-check-bold:{ .icn } Summary
 
-In this class we reviewed:
+In this class we learn:
 
-- [x] The key questions behind **hazard assessments**.
-- [x] The main **uncertainties** and challenges involved in volcanic eruptions. 
-- [x] The differences between **short-term** and **long-term** hazard assessments and their importance.  
-- [x] The outline of **hazard outputs**.
+- [x] How to read, understand and interpret **hazard maps**.
+- [x] How to identify different **types** of hazard maps and their importance.
+- [x] How to recognize the main **map features** that are crucial for hazard communication. 
 
-
-
-<!-- ## :fontawesome-solid-book:{ .icn } References -->
-
+## :fontawesome-solid-book:{ .icn } References
