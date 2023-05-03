@@ -1,5 +1,13 @@
 # Probabilistic hazard assessment for tephra accumulation
 
+> **Lecturer**: Sébastien Biass 
+ 
+> **Assistants**: Riccardo Simionato, Carolina Diaz-Vecino 
+
+> Spring semester, 2023
+
+---
+
 **Tephra** was first defined by Sigurður Þórarinsson[^1] following the 1947 eruption of Hekla volcano in Iceland as:
 
 !!! quote "Tephra"

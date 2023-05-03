@@ -38,34 +38,36 @@ Running the full workflow for probabilistic hazard assessment in the computer la
 
 ### Setup TephraProb
 
-Download `TephraProb` and open `Matlab`:
+The `VolcanicRisk2022.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
 
-1. Start a MacOS session.
-2. Download `TephraProb` from [GitHub.com](https://github.com/e5k/TephraProb) and save it somewhere on your hard-drive.
-3. ❗ Open `Matlab`.
-4. Left of the address bar at the top of the main Matlab window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
-5. In the Matlab command line, type `TephraProb` and press enter to start `TephraProb`.
+1. Start `Matlab`. If your computer has several versions, use the latest one.
+2. Left of the address bar at the top of the main `Matlab` window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
+3. In the Matlab command line, type `TephraProb` and press enter to start `TephraProb`.
 
-### Get the eruption data 
+!!! danger "Use your user disk!"
+
+    If you are using the PC of the computer lab, make sure **your files are saved on your personal drive!** This is typically the `H:\` drive. Otherwise, your files **will be deleted every time you logout!**
+
+<!-- ### Get the eruption data 
 
 1. Each one of you was assigned a different vent. From the `Moodle` page of the course, download the according folder `ventX` located in the `Tephra hazard assessment` folder. 
 2. Place it in the `RUNS` folder located in your copy of `TephraProb`
 
 !!! note "RUNS folder"
 
-    If the `RUNS` folder does not exist at the root of `TephraProb`, please create it.
+    If the `RUNS` folder does not exist at the root of `TephraProb`, please create it. -->
 
 
 ## :fontawesome-solid-gears:{ .icn } Hazard assessment 
 
-This exercise is structured in 4 parts:
+This exercise is structured in 3 parts:
 
-1. Analysing the eruptive record of La Palma using the [GVP](https://volcano.si.edu) database.
+<!-- 1. Analysing the eruptive record of La Palma using the [GVP](https://volcano.si.edu) database. -->
 2. Analysing wind patterns at la Palma using the [EMCWF ERA-5](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5) database.
 3. Defining an eruption scenario and associated ESP. 
 4. Analysing the hazard output.
 
-
+<!-- 
 ### Eruption history
 
 As already introduced, the [GVP](https://volcano.si.edu) database compiles the eruptive history of Holocene volcanoes based on their VEI. Each volcano is identified by an `id`, which is `383010` for La Palma. Let's have a look at the eruptive history of La Palma based on the GVP database. 
@@ -77,7 +79,7 @@ As already introduced, the [GVP](https://volcano.si.edu) database compiles the e
 
 !!! info "Reading between the lines..."
 
-    The GVP database is incredibly useful but, since based on the VEI, shares [similar strengths and weaknesses](index.md) previously discussed. Namely, the VEI works best for large, explosive eruptions, but not that well for eruption in the smaller spectrum of explosive styles such as those in La Palma. When thinking about the GVP data, bear in mind:
+    The GVP database is incredibly useful but, since based on the VEI, shares [similar strengths and weaknesses](index.md#why-are-tephra-deposits-important) previously discussed. Namely, the VEI works best for large, explosive eruptions, but not that well for eruption in the smaller spectrum of explosive styles such as those in La Palma. When thinking about the GVP data, bear in mind:
 
     1. The 2021 eruption is reported as `Undefined` VEI because no article reporting it has yet been published. However, we know it was a **VEI 3** eruption. 
     2. In the GVP, eruptions that have been identified as **having an explosive component** but for which **no tephra volume** are reported are assigned a default VEI of 2[^2]. This is probably why most eruptions for la Palma are reported as VEI 2.
@@ -87,7 +89,7 @@ As already introduced, the [GVP](https://volcano.si.edu) database compiles the e
 
     1. On the cumulative GVP plot, what does the slope of the plot (i.e., the ratio of `y` to `x`) represent?
     2. How does it vary in time, and how do you explain it?
-    3. What is the **annual frequency of eruption** for the recent history?
+    3. What is the **annual frequency of eruption** for the recent history? -->
 
 
 !!! info "VEI and plume height"
@@ -97,18 +99,18 @@ As already introduced, the [GVP](https://volcano.si.edu) database compiles the e
     The volume associated with the 2021 VEI 3 eruption was erupted over the course of **a few months**, but plume heights were in the 1-5 km range rather than the 3-15 km range. Therefore, let's consider here the following plume heights:
 
     - **VEI 2**: 1-5 km.
-    - **VEI 3 - low intensity**: 1-5 km.
-    - **VEI 3 - hight intensity**: 3-15 km (&rarr; intense eruption lasting for hours).
+    - **VEI 3 - low intensity**: 1-5 km (→ long-lasting eruption lasting for days/weeks).
+    - **VEI 3 - high intensity**: 3-15 km (&rarr; intense eruption lasting for hours).
 
 ### Wind data analysis
 
 In order to take into account the aleatoric variability of atmospheric conditions in the hazard assessment, a large population of wind profiles is required from which a different wind profile is randomly sampled at each model run. The atmospheric database used here is the [EMCWF ERA-5](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5) database.
 
-Downloading atmospheric data takes time - we have therefore already prepared the dataset for you. The dataset contains 5 years of wind for the period 2017-2021, providing 4 wind profiles per day at a resolution of 0.25 degrees above La Palma.
+Downloading atmospheric data takes time - we have therefore already prepared the dataset for you. The dataset contains 5 years of wind for the period 2017-2021, providing 4 wind profiles per day at a resolution of 0.25 degrees (e.g., ~28 km at the equator) above La Palma.
 
 !!! info "Wind population"
 
-    For the purpose of the exercise, we are using 5 years of wind data, which facilitates transfer and speed up analyses. Keep in mind that we usually use larger populations for real applications (typically more than 10 years depending on the variability in a given region).
+    For the purpose of the exercise, we are using 5 years of wind data, which facilitates file transfer and speed up analyses. Keep in mind that we usually use larger populations for real applications (typically more than 10 years depending on the variability in a given region).
 
 #### Analysing wind patterns
 
@@ -116,7 +118,7 @@ You can now display wind profiles. Keep your eyes opened for *seasonal trends* i
 
 1. On the main `TephraProb` window, click `Input>Wind>Analyze wind`
 2. Select the `wind.mat` file located in `WIND/CumbreVieja_1721/`
-3. A new pannel opens, on which you can explore wind profiles either using `wind profiles` or `wind roses`. 
+3. A new panel opens, on which you can explore wind profiles either using `wind profiles` or `wind roses`. 
 
 !!! note "Wind profiles"
 
@@ -126,12 +128,13 @@ You can now display wind profiles. Keep your eyes opened for *seasonal trends* i
 
     Wind roses show the probability (concentric circles) of the wind blowing in each direction [0 - 360 degrees]. Colours indicate wind velocity. Wind roses are plotted for **a given elevation**, so explore a few. 
 
-!!! question "Question 2: Wind conditions"
+!!! question "Question 1: Wind conditions"
 
-    1. Visualize these wind patterns in the context of a hazard assessment. What is the main wind direction? How will that affect tephra dispersal?
-    2. How does the mean wind direction vary with height? How is that affecting eruptions of different sizes? (&rarr; refer to the note about *VEI and plume heights* above).
-    3. Do you notice any seasonality? If yes, identify during what months it happens.
+    1. Visualize these wind patterns in the context of a hazard assessment. What is the main wind direction?
+    2. Can you observe a **seasonality** in wind patterns?
 
+    <!-- 2. How does the mean wind direction vary with height? How is that affecting eruptions of different sizes? (&rarr; refer to the note about *VEI and plume heights* above). -->
+    <!-- 3. Do you notice any seasonality? If yes, identify during what months it happens. -->
 
 
 
@@ -139,13 +142,13 @@ You can now display wind profiles. Keep your eyes opened for *seasonal trends* i
 
 Let's try and forget what we know about the 2021 eruption and put ourselves in this reasoning framework:
 
-1. We need to assess the hazard associated with tephra accumulation for a future eruption at La Palma. 
-2. Looking at the **GVP** catalogue, we see that most eruptions are **VEI 2**. Knowing i) the limitations of the GVP catalogue and ii) that we observed in the field deposits seemingly larger than VEI 2 eruptions, we decide to focus on a **VEI 3** eruption. 
-3. However, the deposits we observed don't look like **short-lasting, subplinian VEI 3** eruptions. We suspect that these eruptions were less intense, and we therefore model an eruption lasting between **3 days to one week** with plume heights varying between **1-5** km.
+1. We need to assess the hazard associated with tephra accumulation for a future eruption along the Cumbre Vieja rift. 
+2. From the historical record, most eruptions are **VEI 2**. However, since what we observed in the field deposits seems larger than VEI 2 eruptions, we decide to focus on a **VEI 3** eruption. 
+3. However, the deposits we observed do not look like **short-lasting, subplinian VEI 3** eruptions. We suspect that these eruptions were less intense and longer-lastin. We therefore model an eruption lasting between **3 days to one week** with plume heights varying between **1-5** km.
 4. We have **no information** regarding the **grain-size** distribution of the observed deposits, and therefore decide to use an **analogue eruption** to inform us. We chose the 2002 eruption of Etna volcano.
 
 
-!!! info "Grain size distribution"
+??? info "Grain size distribution"
 
     For clarity, we haven't touched yet on the concept of **grain-size distribution** or GSD. This is an important ESP for tephra dispersal as it controls *how fine* (or *coarse*) the tephra generated at [fragmentation level](Hazard_tephra_modeling.md#model-parametrisation) will be, and therefore will control *how far particles will go*. 
 
@@ -244,20 +247,20 @@ Now that we have defined the ranges of ESP, `TephraProb` applies the algorithm b
 
     ```
 
-!!! question "Question 3: ESP"
+!!! question "Question 2: ESP"
 
     Analyse the distributions of sampled ESP. For each ESP, discuss:
 
-    1. From what distribution have each ESP been sampled from?
-    2. What *prior knowledge* do these distribution reflect?
+    1. From what distribution have each ESP been sampled from? (Hint: there are three types of distributions used here: *logarithmic*, *normal* and *uniform*).
+    2. What *prior knowledge* do these three distributions reflect?
 
 
 
 ### Hazard output
 
-!!! question "Question 4: Probability calculation"
+!!! question "Question 3: Probability calculation"
 
-    1. The [previous module](Hazard_probabilistic2.md) has introduced how to compute *exceedence probability* for tephra accumulation. Based on the 10 simulations below for pixel $x,y$, what are the probabilities of this pixel to suffer tephra accumulations exceeding:
+    1. The [previous module](Hazard_probabilistic2.md) has introduced how to compute *exceedance probability* for tephra accumulation. Based on the 10 simulations below for pixel $x,y$, what are the probabilities of this pixel to suffer tephra accumulations exceeding:
 
           - 50 $kg/m^2$?
           - 100 $kg/m^2$?
@@ -273,8 +276,8 @@ Now that we have defined the ranges of ESP, `TephraProb` applies the algorithm b
 
     2. Similarly, we also learned how to estimate a **typical accumulation** associated with a given probability of occurrence. The figure below shows the [survivor function](Hazard_probabilistic2.md#hazard-outputs) for the data in the table above. Estimate the approximative load associated with probability values of:
 
-        - 25%
-        - 75%
+        - 30%
+        - 70%
 
     <figure markdown>
     ![survivor](img/survivor.png){width='450px'}
@@ -298,7 +301,7 @@ Let's plot probability maps:
 
 1. Make sure the scenario for the vent that was attributed to you is loaded (`File > Load`). 
 2. From the main `TephraProb` window, click `Display > Probability Maps`. 
-3. A new window opens, from which you can select pre-defined accumulation threshold (you can select multiple using the ++cmd++ (Mac) or the ++ctrl++ (Windows) keyboard buttons). 
+3. A new window opens, from which you can select pre-defined accumulation threshold (you can select multiple using the ++cmd++ (Mac) or the ++ctrl++ (Windows) keyboard buttons). **Do not open all maps!** Select only the **1** **10**, **100** $kg/m^2$.
 4. Click `Ok` - `Google Earth should now open`. 
 
 ??? warning "Troubleshooting Google Earth" 
@@ -312,10 +315,16 @@ Let's plot probability maps:
     - From the main `TephraProb` window, select `File > Preferences` and make sure the `Show Google Earth` option is selected.
 
 
-!!! question "Question 5: Probability maps"
+!!! question "Probability maps"
 
-    1. Describe the geometry (i.e., extent, orientation) of selected probability maps.
-    2. With your knowledge of hazardous thresholds of tephra accumulations previously discussed, what can you conclude with respect to the risk related to tephra fallouts?
+    No question to answer here, but take a moment to think about:
+
+    1. In which direction (i.e., downwind cardinal reference) is the hazard associated with tephra fallout most likely to occur?
+    2. At each point of the map, can you express exactly the information that is presented?
+
+
+    <!-- 1. Describe the geometry (i.e., extent, orientation) of selected probability maps.
+    3. With your knowledge of hazardous thresholds of tephra accumulations previously discussed, what can you conclude with respect to the risk related to tephra fallouts? -->
 
 #### Probabilistic isomass maps
 
@@ -324,35 +333,25 @@ Probabilistic isomass maps fix a probability threshold to represent a typical te
 To plot probabilistic isomass maps:
 
 1. From the main `TephraProb` window, click `Display > Isomass Maps`. 
-2. A new window opens, from which you can select pre-defined probability thresholds. Choose them all.
+2. A new window opens, from which you can select pre-defined probability thresholds. Choose the **25%** and **75%**.
 3. Click `Ok` - `Google Earth should now open`. 
 
-The figures below are DDS compiled by Jenkins et al (2015)[^4]. Use them to answer these questions.
 
-!!! question "Question 6: Probabilistic isomass maps"
+!!! question "Probabilistic isomass maps"
 
-    Consider the possible consequences of tephra fallout on the road network. Using the `25%` and `75%` isomass maps, discuss:
+    Again, no question to answer, but reflect on:
+    
+    1. What are these maps showing?
+    2. How do they differ from probability maps?
 
-    1. Where could the potential impact states occur?
-    2. What consequences would that have on the mobility on the island?
+    <!-- Consider the possible consequences of tephra fallout on the road network. Using the `25%` and `75%` isomass maps, discuss:
 
-    Discuss these **briefly**.
+    3. Where could the potential impact states occur?
+    4. What consequences would that have on the mobility on the island?
 
-=== "Infrastructures"
-
-    ![infra](img/DDS/infrastructures.png)
-
-=== "Roofs"
-
-    ![roofs](img/DDS/roofs.png)
-
-=== "Agriculture"
-
-    ![agri](img/DDS/agriculture.png)
+    Discuss these **briefly**. -->
 
 #### Hazard curves
-
-Using [OpenStreetMap](https://www.openstreetmap.org/relation/1464825#map=11/28.6541/-17.7587) and [Google Maps](https://www.google.com/maps/place/La+Palma/@28.6551008,-18.0057897,11z/data=!3m1!4b1!4m5!3m4!1s0xc6bf20c6a87a13b:0x8e2037d22330882d!8m2!3d28.7133828!4d-17.9057813), select three points covering agricultural area and note their coordinates (in `lat`, `lon`). 
 
 Let's now look at hazard curves. For each vent, hazard curves for three points have been processed. To visualise them:
 
@@ -360,64 +359,82 @@ Let's now look at hazard curves. For each vent, hazard curves for three points h
 2. From the new window, chose `File > Load` and select the `GRID/LaPalma_ventX/LaPalma_ventX.points` file. 
 3. The points appear, click `Plot` to visualise them.
 
-Each point is summarised below. To plot hazard curves:
+Relevant points to each vent regarding the hazard to roof collapse are presented in the table below. To plot hazard curves:
 
 1. From the main `TephraProb` window, click `Display > Hazard curves`
-2. From the `CURVES` folder, choose the file for a given point. 
+2. Choose the point for your own vent as named in the table below.
 
 === "Vent 1"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
-    | Main highway | -17.84055 | 28.65027 |
-    | El Paso, vineyard| -17.86370 | 28.64256 |
     | El Paso, houses | -17.85992 | 28.65247 |
     
+    <!-- | Main highway | -17.84055 | 28.65027 |
+    | El Paso, vineyard| -17.86370 | 28.64256 | -->
 
 === "Vent 2"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | San Nicola, houses | -17.88052 | 28.60222 |
-    | San Nicola, main road| -17.88763 | 28.60108 |
-    | Crops | -17.90305 | 28.59933 |
+
+    <!-- | San Nicola, main road| -17.88763 | 28.60108 | -->
+    <!-- | Crops | -17.90305 | 28.59933 | -->
     
 
 === "Vent 3"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
-    | Jedey, vineyard | -17.87881 | 28.58865 |
     | Jedey, houses | -17.87995 | 28.58373 |
-    | Forest | -17.84751 | 28.57731 |
+
+    <!-- | Jedey, vineyard | -17.87881 | 28.58865 | -->
+    <!-- | Forest | -17.84751 | 28.57731 | -->
     
 
 === "Vent 4"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | El Pueblo, houses  | -17.77892 | 28.60605 |
-    | El Pilar, forest | -17.83002 | 28.61377 |
-    | Crops  | -17.82077 | 28.62483 |
+
+    <!-- | El Pilar, forest | -17.83002 | 28.61377 |
+    | Crops  | -17.82077 | 28.62483 | -->
     
 
 === "Vent 5"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | Los Canarios, houses | -17.84446 | 28.49251 |
-    | Los Canarios, vineyard| -17.83749 | 28.47775 |
-    | Road leading to Los Canarios from W | -17.82308 | 28.51489 |
+
+    <!-- | Los Canarios, vineyard| -17.83749 | 28.47775 |
+    | Road leading to Los Canarios from W | -17.82308 | 28.51489 | -->
     
 
-!!! question "Question 7: Hazard curves"
+The figures below are DDS compiled by Jenkins et al (2015)[^4]. Use them to answer these questions.
 
-    For each point attributed to your vent, use the hazard curves to *briefly* discuss the probability of occurrence of each damage state. Assume that:
+!!! question "Question 4: Hazard curves"
 
-    1. The **functional** impact of ash on the road network.
-    2. Houses are **domestic reinforced** concrete.
-    3. *Vineyard* fall into the **ground crops** category and *Orchards* in the **tree crops**.
+    For each point attributed to your vent, use the DDS of Jenkins et al (2015)[^4] to discuss the probability of occurrence of:
 
+    1. **Structural damages** on buildings and;
+    2. **Loss of function** (with associated replacement cost).
+    
+    Assume that the considered buildings fall in the **domestic reinforced concrete** category, and use a 25-75% probability of occurrence of the hazard to illustrate uncertainty.
+
+=== "Buildings"
+
+    ![roofs](img/DDS/roofs.png)
+
+=== "Infrastructures"
+
+    ![infra](img/DDS/infrastructures.png)
+
+=== "Agriculture"
+
+    ![agri](img/DDS/agriculture.png)
 
 ## :material-thought-bubble:{ .icn } Food for thoughts 
 

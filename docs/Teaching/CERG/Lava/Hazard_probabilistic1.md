@@ -65,7 +65,7 @@ In other terms:
 Figure 4 illustrates the different hazard outputs obtained from deterministic (left) and probabilistic (right) modelling strategies for lava inundation.
 
 <figure markdown>
-  ![detprob](img/prob/lava_det_vs_prob.png){ width="500" }
+  ![detprob](../Tephra/img/prob/lava_det_vs_prob.png){ width="500" }
   <figcaption>Figure 4: Difference between deterministic (left &rarr; boolean yes/no inundation information) and probabilistic (likelihood of inundation) hazard outputs.</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ Figure 4 illustrates the different hazard outputs obtained from deterministic (l
 For the case of lava flow inundation hazard in La Palma, we will explore how the uncertainty on the **vent location** will affect possible inundated areas. This flowchart illustrates how we will account for an uncertainty in vent location using a probabilistic hazard modeling approach and how it contrasts with a deterministic strategy.
 
 <figure markdown>
-  ![prob1](img/prob/prob1_wf.jpeg)
+  ![prob1](../Tephra/img/prob/prob1_wf.jpeg)
   <figcaption>Figure 5: Deterministic and probabilistic approaches to model the uncertainty associated with vent location.</figcaption>
 </figure>
 

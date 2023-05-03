@@ -167,7 +167,7 @@ Comparing the path of steepest descent approach computed on the pre-2021 eruptio
     2. Their duration, the properties of *single* vs *compound* lava flows and their evolution in time.
     3. Their relation with topography.
 
-From a crisis management perspective and reflecting back on the [Kīlauea crises](Hazard_lava_intro.md#objectives), the **path of steepest descent** is a great communication tool for as long as:
+From a crisis management perspective and reflecting back on the [Kīlauea crises](index.md#objectives), the **path of steepest descent** is a great communication tool for as long as:
 
 - There is an active monitoring of the crisis as it evolves.
 - There is a clear and trusting communication channel between the monitoring agencies and the stakeholders, thanks to which limitations and uncertainties associated with predictions can be clearly explained and discussed.

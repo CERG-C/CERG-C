@@ -9,7 +9,7 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 ## Installing Q-LavHA 
 
 
-1. From the `Moodle` page of the class, download the `VolcanicRisk2022.zip` file and extract it somewhere **on your personal user drive.**
+1. From the `Moodle` page of the class, download the `VolcanicRisk2023.zip` file and extract it somewhere **on your personal user drive.**
 2. Make sure `QGIS` is closed.
 3. In Windows, navigate to the following folder, where `$USER` is your ISIS username:
 
@@ -41,7 +41,7 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 
 ## Starting QGIS
 
-- Search for `QGIS 3.2x` and start it. Depending on the computer, the version might vary between `3.20` and `3.23`. Please take the most advanced one. 
+- Search for `QGIS 3.2x` and start it. Depending on the computer, the version might vary between `3.20` and `3.23`. Please take the most recent one. 
 
 ### Activate Q-LavHA
 
@@ -59,9 +59,9 @@ To activate `Q–LavHA` in `QGIS`:
 
 ## Loading data
 
-The `Lava_Flow_Exercise_2022.zip` file downloaded from `Moodle` contains a `Lava flow exercise` folder that contains these files:
+The `Lava_Flow_Exercise_2023.zip` file downloaded from `Moodle` contains a `Lava flow exercise` folder that contains these files:
 
-- `LaPalma_exercise_2022.qgz`: Main `QGIS` file. 
+- `LaPalma_exercise_2023.qgz`: Main `QGIS` file. 
 - `Data/`
     - `exercise.gpkg`: Geopackage containing some vector files for the exercise. 
     - `lapalma.gpkg`: Geopackage containing some vector files on previous eruptions at La Palma. 
@@ -69,7 +69,7 @@ The `Lava_Flow_Exercise_2022.zip` file downloaded from `Moodle` contains a `Lava
     - `DEM/`: Folder containing some pre-processed DEM files. 
     - `Hydro`: Folder containing hydrological analyses.
 
-Open the `LaPalma_exercise_2022.qgz` file. 
+Open the `LaPalma_exercise_2023.qgz` file. 
 
 !!! warning "Centering the map"
 
@@ -88,13 +88,3 @@ You should now see something similar to this:
 
     `QGIS` is amazing, but it can be unstable at time. **Make sure you regularly save your project throughout the exercise!**
 
-*[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
-*[TGSD]: Total grain-size distribution
-*[MER]: Mass eruption rate
-*[VEI]: Volcanic explosivity index
-*[HIM]: Hazard impact metrics
-*[GAR]: Global assessment report
-*[DDS]: Damage-Disruption states &rarr; one way of characterising vulnerability
-*[GVP]: Global volcanism program 
-*[GSD]: Grain size distribution
-*[DEM]: Digital Elevation Model

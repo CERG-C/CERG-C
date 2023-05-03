@@ -1,6 +1,6 @@
 # Q-LavHA
 
-With the knowledge gained on [topographic controls](Hazard_lava_steepest-descent.md) and [modeling](Hazard_lava_modeling.md) from the previous exercise, we will now look at `Q-LavHA`[^1] as an alternative approach for probabilistic hazard assessments for lava flow inundation. This part of the exercise assumes that you have already [installed](Hazard_lava_config.md) both `QGIS` and `Q-LavHA`. The [Q-LavHA user manual](../../files/Usersguide_Q-LavHA_V3_2020.pdf) contains some important information about how to configure the model and the data, so we encourage you to have a look at it at some point. 
+With the knowledge gained on [topographic controls](Hazard_lava_steepest-descent.md) and [modeling](Hazard_lava_modeling.md) from the previous exercise, we will now look at `Q-LavHA`[^1] as an alternative approach for probabilistic hazard assessments for lava flow inundation. This part of the exercise assumes that you have already [installed](Hazard_lava_config.md) both `QGIS` and `Q-LavHA`. The [Q-LavHA user manual](../../../files/Usersguide_Q-LavHA_V3_2020.pdf) contains some important information about how to configure the model and the data, so we encourage you to have a look at it at some point. 
 
 ## :material-format-list-checks:{ .icn } Objectives 
 
@@ -87,15 +87,14 @@ Depending on the modeling options adopted, `Q-LavHA` will slightly modify this a
 !!! warning "Install Q-LavHA"
 
     ![Image title](img/qgis/qlavha.png){width=40, align=left }
-    Start by making sure that `Q-LavHA` has been properly installed according to [this guide](Hazard_lava_config.md). You should see this icon in the toolbar.
+    Start by making sure that `Q-LavHA` has been properly installed according to [this guide](Hazard_lava_config.md). You should see this icon in the toolbar. You should also have loaded the QGIS project according to [this guide](Hazard_lava_config.md#loading-data).
 
 
-- In the `Lava Flow exercise` layer group in `QGIS`, activate the `Vents Exercise` layer.
+- In `QGIS`, activate the `Vents for Exercise` layer group.
 
 ### Running Q-LavHA for single vents
 
 These vents correspond to those indicated in the Table below. `Q-LavHA` requires [projected UTM coordinates](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system), which are shown in the `Easting` and `Northing` columns (`x` and `y` columns, respectively). The UTM zone for La Palma is `28N`, or [EPSG:3268](https://epsg.io/32628).
-
 
 | Vent   | Latitude  | Longitude | Easting (m) | Northing (m) | EPSG  |
 |:-------|:----------|:----------|:------------|:-------------|:------|
@@ -105,6 +104,8 @@ These vents correspond to those indicated in the Table below. `Q-LavHA` requires
 | Vent 4 | -17.81585 | 28.60777  | 224646      | 3167772      | 32628 |
 | Vent 5 | -17.84649 | 28.49699  | 221357      | 3155562      | 32628 |
 
+Each of you has been assigned a vent. **Please run the exercise only for the vent assigned to you!**
+
 !!! warning "Coordinate systems" 
 
     Here, you are provided with input data that **all have the same coordinate system**. Before modeling lava flows for your own projects, make sure that you first [reproject](https://docs.qgis.org/3.22/en/docs/training_manual/processing/crs.html?highlight=reproject) all your data to a **unique** [CRS](https://epsg.io). 
@@ -112,13 +113,13 @@ These vents correspond to those indicated in the Table below. `Q-LavHA` requires
 #### Model setup
 
 
-Let's run `Q-LavHA` for each of the vents defined above. For now, we will assume that we know *exactly* the vent location. Open the `Q-LavHA` window, and let's look at the parameters:
+Let's run `Q-LavHA` for the selected vent. For now, we will assume that we know *exactly* the vent location. Open the `Q-LavHA` window, and let's look at the parameters:
 
 === "Vent location tab"
 
     1. In the `DEM Selection` box, select the `Data/Lava/DEM_Qlavah.tif`. In the DEM selection window, make sure you change the type of files from `.asc` to `.tif`.
     2. As a `Vent Type`, choose `Point` for now.
-    3. Add the relevant `Coordinates`.
+    3. Add the relevant `Coordinates` as specified in the table above.
 
 === "Lava flow parameter tab" 
 
@@ -136,11 +137,12 @@ Let's run `Q-LavHA` for each of the vents defined above. For now, we will assume
     1. Set an `Output path` and a `name` to the output layers. 
     2. Save the `Parameters`. 
 
-**You are now ready to run the simulation!**
+!!! info "Q-LavHA"
+    **You are now ready to run the simulation!**
 
 ??? info "Vent geometry"
 
-    `Q-LavHA` offers different source geometries, such as a fissure, or a vent opening susceptibility map. The choice of these options depends on the case study, and their use is described in the [Q-LavHA user manual](../../files/Usersguide_Q-LavHA_V3_2020.pdf).
+    `Q-LavHA` offers different source geometries, such as a fissure, or a vent opening susceptibility map. The choice of these options depends on the case study, and their use is described in the [Q-LavHA user manual](../../../files/Usersguide_Q-LavHA_V3_2020.pdf).
 
 #### Styling outputs 
 
@@ -165,30 +167,36 @@ The output file now shows the **spatial distribution** of **inundation probabili
 
     ![copy styles](img/qgis/copy_styles.png){width=500}
 
-#### Analysing results 
+<!-- #### Analysing results  -->
 
-Following this procedure, run `Q-LavHA` for **all the vents specified in the Table above** and apply the same symbology. Answer the following questions:
+<!-- Following this procedure, run `Q-LavHA` for **all the vents specified in the Table above** and apply the same symbology. Answer the following questions: -->
 
 !!! question "Question 1: Single-vent simulations"
 
-    1. How do modelled flows compare to <a href="../../../files/GeologicalmapofLaPalma.pdf", target="_blank">historical lava flows</a> in terms of length and width?
-    2. Analyse and discuss the spatial distribution of inundation probability. How do they compare to flow accumulation rasters and the path of steepest descent approach?
-    3. Where do branching occur?
-    4. Chose *one vent* for which you will produce another run with the same parameters as above. Are they **exactly** the same? If not, why?
-    5. Compare simulations from **vent 2** with the flow outlines of the 2021 eruption. **When** and **where** is the model doing a good job? **When** and **where** is it not? Why?
+    1. How do modelled flows compare to the closest <a href="../../../files/GeologicalmapofLaPalma.pdf", target="_blank">historical lava flows</a> in terms of length and width?
+
+
+    <!-- 2. Chose *one vent* for which you will produce another run with the same parameters as above. Are they **exactly** the same? If not, why? -->
+    <!-- 3. Compare simulations from **vent 2** with the flow outlines of the 2021 eruption. **When** and **where** is the model doing a good job? **When** and **where** is it not? Why? -->
+    <!-- 4. Analyse and discuss the spatial distribution of inundation probability. How do they compare to flow accumulation rasters and the path of steepest descent approach?
+    2. Where do branching occur? -->
 
 
 ### Using several vents
 
-Even in *monogenetic vents*, one eruptive episode can consist of multiple satellite vents. This was certainly the case for the 2021 eruption of La Palma. In fact, as you can see from the `2021 Vents` layer in `QGIS`, [CEMS](https://emergency.copernicus.eu/mapping/list-of-components/EMSR546) identified that ~10 vents opened over a 500 x 500 m area. Here, we won't attempt predicting the **number** or the **location** of each vent; instead, we will model lava flow inundation from **a grid of vents** within a surface area and explore how vent location affects the lava flow simulation hazard. 
+In the case of fissure eruptions, one eruptive episode can consist of multiple satellite vents. This was certainly the case for the 2021 eruption of La Palma. In fact, as you can see from the `2021 Vents` layer in `QGIS`, [CEMS](https://emergency.copernicus.eu/mapping/list-of-components/EMSR546) identified that ~10 vents opened over a 500 x 500 m area. Here, we won't attempt predicting the **number** or the **location** of each vent. Instead, we will model lava flow inundation from **a grid of vents** within a surface area and explore how vent location affects the lava flow simulation hazard.
 
-!!! warning "(Not) one vent to rule them all"
+!!! info "Probability of vent opening" 
 
-    You've each been assigned **one** of the vents defined in the table above. Since this step takes more computational time, please run this procedure only for this vent. 
+    Note that with this approach, we consider an **equal probability** of vent opening within this area. This is acceptable for this exercise, but this assumption should be checked for real-case scenarios.
+
+<!-- !!! warning "(Not) one vent to rule them all"
+
+    You've each been assigned **one** of the vents defined in the table above. Since this step takes more computational time, please run this procedure only for this vent.  -->
 
 #### Define the area 
 
-We will define a potential vent opening surface as a 500 x 500 m square centered on the reference coordinates of your attributed vent. Note that UTM coordinates are in *meter*: you can therefore simply identify the `x` and `y` coordinates these four points by addition and subtraction:
+We will define a potential vent opening surface as a 500 x 500 m square centered on the reference coordinates of your attributed vent. Note that UTM coordinates are in *metre*: you can therefore simply identify the `x` and `y` coordinates these four points by addition and subtraction:
 
 - Lower left corner 
 - Lower right corner 
@@ -197,17 +205,18 @@ We will define a potential vent opening surface as a 500 x 500 m square centered
 
 #### Model setup
 
-- From `QGIS` open `Q-LavHA`. Most of the parameters should already be filled. Otherwise, you can use the `Load parameters` option.
-- Set a `Distance between vents` of 100 m. Since we definerd a 500 x 500 m area, `Q-LavHA` will therefore model lava flow inundation from 25 vents. 
-- Enter the 4 coordinates previously defined.
+- From `QGIS` open `Q-LavHA`. Most of the parameters should already be filled. Otherwise, you can use the `Load parameters` option and load a previous run.
+- Set a `Distance between vents` of 100 m. Since we defined a 500x500 m area, `Q-LavHA` will therefore model lava flow inundation from 25 vents. 
+- Enter the 4 coordinates defining your area.
 - In the `Lava Flow Parameter` tab, change the `Number of Simulations` to **100**. This will help save some computation time.
 - Make sure you change the output name.
 
-**Run the model!**
+!!! info "Q-LavHA"
+    **You are now ready to run the simulation!**
 
-#### Analysing results
+<!-- #### Analysing results -->
 
-Apply the same methodology to the surface area runs as you did for the point run. 
+Apply the same symbology to the surface area runs as you did for the point run. 
 
 !!! question "Question 2: Vent location uncertainty"
 
@@ -238,14 +247,18 @@ Compare the `Q-LavHA` run with the flow outlines from the 2021 eruption below. N
 
     1. From what you know about both the 2021 eruption and the dynamics of lava flows, compare and discuss the hazard forecast and the actual deposit. What are `Q-LavHA`'s strengths and limitations?
 
+### Limitations 
+
+The method presented here is *one* amongst many attempts to estimate the hazard from lava flow inundation. This model relies on *no* to *some* degrees of physics, but inherently attempts to quantify uncertainties. It is important to recognise that although this model is *useful* and has been *validated*, it still bypasses some critical aspects of lava flows including *time*, *effusion rates* or *morphology*. Again, models are useful as long as used in the range of their **limitations** and for an **appropriate purpose**. 
+
 ## :material-check-bold:{ .icn } Summary
 
 In this exercise, you have:
 
-- Understood the philosophy behind a probabilistic model for lava flow inundation, `Q-LavHA`.
-- Assessed the hazard of lava flow inundation using probabilistic modeling.
-- Included the uncertainty on vent location in hazard estimates.
-- Understood the limitations of model predictions when compared to past events.
+- [x] Understood the philosophy behind a probabilistic model for lava flow inundation, `Q-LavHA`.
+- [x] Assessed the hazard of lava flow inundation using probabilistic modeling.
+- [x] Included the uncertainty on vent location in hazard estimates.
+- [x] Understood the limitations of model predictions when compared to past events.
 
 ## :fontawesome-solid-book:{ .icn } References
 

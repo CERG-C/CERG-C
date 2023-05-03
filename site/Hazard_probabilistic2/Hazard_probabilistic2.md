@@ -11,7 +11,7 @@ We have [previously](Hazard_probabilistic1.md) looked at probabilistic modeling 
   
 ## :fontawesome-solid-gears:{ .icn } Probabilistic hazard modelling 
 
-For the sake of this exercise, let's consider a [Plinian](https://en.wikipedia.org/wiki/Plinian_eruption) eruption from [Cotopaxi](https://en.wikipedia.org/wiki/Cotopaxi) volcano (Ecuador) that occurred ~1200 years ago. By using the [workflow](Hazard_tephra_intro.md#field-mapping-toolbox) previously introduced, we were able to reconstruct the ESP of the eruption[^1]. 
+For the sake of this exercise, let's consider a [Plinian](https://en.wikipedia.org/wiki/Plinian_eruption) eruption from [Cotopaxi](https://en.wikipedia.org/wiki/Cotopaxi) volcano (Ecuador) that occurred ~1200 years ago. By using the [workflow](index.md#field-mapping-toolbox) previously introduced, we were able to reconstruct the ESP of the eruption[^1]. 
 
 === "Deposit Maps"
 

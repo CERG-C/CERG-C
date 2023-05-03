@@ -1,6 +1,6 @@
 # Modeling tephra dispersal
 
-Until now, we have used a *probabilistic* model to [simulate lava flow inundation](Hazard_lava_Q-LavHA.md), using models that consider limited to no physics. In contrast, most models for **tephra dispersal and deposition** require a *physics-based* approach to assess associated hazards. 
+Until now, we have used a *probabilistic* model to [simulate lava flow inundation](../Lava/Hazard_lava_Q-LavHA.md), using models that consider limited to no physics. In contrast, most models for **tephra dispersal and deposition** require a *physics-based* approach to assess associated hazards. 
 
 This module introduces the modelling strategy that will be adopted throughout the following exercises, which relies on `Tephra2` and `TephraProb`.
 
@@ -96,9 +96,9 @@ Alternatively, other models adopt *assumptions* that allows them to simplify som
 
     Is a **complex numerical model** always better than a **simpler model** (e.g., empirical or probabilistic)? Well, not necessarily, it all depends on **context**.
 
-    When a high accuracy is required, complex numerical models are generally better. However, they usually require a large number of input parameters and an important computing power. Therefore, they are not suited for probabilistic analyses as their computational time is too large, and they are therefore mostly used for [deterministic](Hazard_probabilistic1.md) modeling. 
+    When a high accuracy is required, complex numerical models are generally better. However, they usually require a large number of input parameters and an important computing power. Therefore, they are not suited for probabilistic analyses as their computational time is too large, and they are therefore mostly used for [deterministic](../Lava/Hazard_probabilistic1.md) modeling. 
 
-    Conversely, simpler models might not capture all the subtleties of the underlying processes, but are easier to use and require less computation cost. Therefore, they can be used for [probabilistic](Hazard_probabilistic1.md) modeling and are often used for long-term hazard assessments. 
+    Conversely, simpler models might not capture all the subtleties of the underlying processes, but are easier to use and require less computation cost. Therefore, they can be used for [probabilistic](../Lava/Hazard_probabilistic1.md) modeling and are often used for long-term hazard assessments. 
 
 ### The Tephra2 model
 
@@ -108,7 +108,7 @@ In order to assess the hazard associated with tephra accumulation, we will here 
 - *Numerous* of input parameters related to atmospheric transport are *parametrised* into *a few* parameters.
 - *Computation time* is fast.
 
-These specificities make `Tephra2` **highly suited** for [probabilistic hazard assessment](Hazard_probabilistic1.md) purposes.
+These specificities make `Tephra2` **highly suited** for [probabilistic hazard assessment](../Lava/Hazard_probabilistic1.md) purposes.
 
 `Tephra2` requires three different inputs (Figure 1):
 
@@ -152,7 +152,7 @@ Therefore, we, as Physical volcanologists/Geologists/Earth Scientists, can direc
 
 ## :material-thought-bubble:{ .icn } Food for thoughts 
 
-Many different models for tephra dispersal and deposition exist, some of which can be found [here](../../resources.md), or in the report of the 2021 Ash and Aviation Workshop [report](https://www.unige.ch/sciences/terre/CERG-C/international-conferences/workshop/results/). It is again important to chose the appropriate model for a **given context**.
+Many different models for tephra dispersal and deposition exist, some of which can be found [here](../../../resources.md), or in the report of the 2021 Ash and Aviation Workshop [report](https://www.unige.ch/sciences/terre/CERG-C/international-conferences/workshop/results/). It is again important to chose the appropriate model for a **given context**.
 
 For instance, `Tephra2` is suited for probabilistic hazard analyses, but being time-independent, it cannot capture the **spatio-temporal evolution** of the ash cloud. It is therefore more suited for *preparedness* rather than *crisis management*.
 

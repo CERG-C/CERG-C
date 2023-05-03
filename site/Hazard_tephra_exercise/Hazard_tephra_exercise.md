@@ -1,6 +1,6 @@
 # Probabilistic tephra hazard assessment
 
-Tephra describes all fragments of rocks of any size or composition that are injected into the atmosphere during explosive volcanic eruptions. Although tephra is not one of the main causes of casualties in the context of volcanic crisis (tephra are responsible for only 2% of all volcano-related deaths), it can cover wide areas and disrupt a broad range of socio-economic activities. Examples are health problems, collapse of roofs, death of vegetation, blockage of roads and disruption of airports and air traffic. Some hazardous tephra thresholds are shown in the table below. These ranges are wide due to the range of typologies of crops, vegetation, buildings that can be impacted, as well as external factors (e.g. time of the year for crops). Refer to the references provided in the [previous lesson](Hazard_tephra_intro.md) for more information on how to quantify physical vulnerability to tephra fallout.
+Tephra describes all fragments of rocks of any size or composition that are injected into the atmosphere during explosive volcanic eruptions. Although tephra is not one of the main causes of casualties in the context of volcanic crisis (tephra are responsible for only 2% of all volcano-related deaths), it can cover wide areas and disrupt a broad range of socio-economic activities. Examples are health problems, collapse of roofs, death of vegetation, blockage of roads and disruption of airports and air traffic. Some hazardous tephra thresholds are shown in the table below. These ranges are wide due to the range of typologies of crops, vegetation, buildings that can be impacted, as well as external factors (e.g. time of the year for crops). Refer to the references provided in the [previous lesson](index.md) for more information on how to quantify physical vulnerability to tephra fallout.
 
 <figure markdown>
 | Element                          | Threshold ($kg/m^{2}$) |
@@ -79,7 +79,7 @@ As already introduced, the [GVP](https://volcano.si.edu) database compiles the e
 
 !!! info "Reading between the lines..."
 
-    The GVP database is incredibly useful but, since based on the VEI, shares [similar strengths and weaknesses](Hazard_tephra_intro.md#why-are-tephra-deposits-important) previously discussed. Namely, the VEI works best for large, explosive eruptions, but not that well for eruption in the smaller spectrum of explosive styles such as those in La Palma. When thinking about the GVP data, bear in mind:
+    The GVP database is incredibly useful but, since based on the VEI, shares [similar strengths and weaknesses](index.md#why-are-tephra-deposits-important) previously discussed. Namely, the VEI works best for large, explosive eruptions, but not that well for eruption in the smaller spectrum of explosive styles such as those in La Palma. When thinking about the GVP data, bear in mind:
 
     1. The 2021 eruption is reported as `Undefined` VEI because no article reporting it has yet been published. However, we know it was a **VEI 3** eruption. 
     2. In the GVP, eruptions that have been identified as **having an explosive component** but for which **no tephra volume** are reported are assigned a default VEI of 2[^2]. This is probably why most eruptions for la Palma are reported as VEI 2.

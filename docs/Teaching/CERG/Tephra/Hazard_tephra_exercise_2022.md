@@ -1,6 +1,6 @@
 # Probabilistic tephra hazard assessment
 
-Tephra describes all fragments of rocks of any size or composition that are injected into the atmosphere during explosive volcanic eruptions. Although tephra is not one of the main causes of casualties in the context of volcanic crisis (tephra are responsible for only 2% of all volcano-related deaths), it can cover wide areas and disrupt a broad range of socio-economic activities. Examples are health problems, collapse of roofs, death of vegetation, blockage of roads and disruption of airports and air traffic. Some hazardous tephra thresholds are shown in the table below. These ranges are wide due to the range of typologies of crops, vegetation, buildings that can be impacted, as well as external factors (e.g. time of the year for crops). Refer to the references provided in the [previous lesson](Hazard_tephra_intro.md) for more information on how to quantify physical vulnerability to tephra fallout.
+Tephra describes all fragments of rocks of any size or composition that are injected into the atmosphere during explosive volcanic eruptions. Although tephra is not one of the main causes of casualties in the context of volcanic crisis (tephra are responsible for only 2% of all volcano-related deaths), it can cover wide areas and disrupt a broad range of socio-economic activities. Examples are health problems, collapse of roofs, death of vegetation, blockage of roads and disruption of airports and air traffic. Some hazardous tephra thresholds are shown in the table below. These ranges are wide due to the range of typologies of crops, vegetation, buildings that can be impacted, as well as external factors (e.g. time of the year for crops). Refer to the references provided in the [previous lesson](index.md) for more information on how to quantify physical vulnerability to tephra fallout.
 
 <figure markdown>
 | Element                          | Threshold ($kg/m^{2}$) |
@@ -38,22 +38,24 @@ Running the full workflow for probabilistic hazard assessment in the computer la
 
 ### Setup TephraProb
 
-Download `TephraProb` and open `Matlab`:
+The `VolcanicRisk2022.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
 
-1. Start a MacOS session.
-2. Download `TephraProb` from [GitHub.com](https://github.com/e5k/TephraProb) and save it somewhere on your hard-drive.
-3. ❗ Open `Matlab`.
-4. Left of the address bar at the top of the main Matlab window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
-5. In the Matlab command line, type `TephraProb` and press enter to start `TephraProb`.
+1. Start `Matlab`. If your computer has several versions, use the latest one.
+2. Left of the address bar at the top of the main `Matlab` window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
+3. In the Matlab command line, type `TephraProb` and press enter to start `TephraProb`.
 
-### Get the eruption data 
+!!! danger "Use your user disk!"
+
+    If you are using the PC of the computer lab, make sure **your files are saved on your personal drive!** This is typically the `H:\` drive. Otherwise, your files **will be deleted every time you logout!**
+
+<!-- ### Get the eruption data 
 
 1. Each one of you was assigned a different vent. From the `Moodle` page of the course, download the according folder `ventX` located in the `Tephra hazard assessment` folder. 
 2. Place it in the `RUNS` folder located in your copy of `TephraProb`
 
 !!! note "RUNS folder"
 
-    If the `RUNS` folder does not exist at the root of `TephraProb`, please create it.
+    If the `RUNS` folder does not exist at the root of `TephraProb`, please create it. -->
 
 
 ## :fontawesome-solid-gears:{ .icn } Hazard assessment 
@@ -77,7 +79,7 @@ As already introduced, the [GVP](https://volcano.si.edu) database compiles the e
 
 !!! info "Reading between the lines..."
 
-    The GVP database is incredibly useful but, since based on the VEI, shares [similar strengths and weaknesses](Hazard_tephra_intro.md) previously discussed. Namely, the VEI works best for large, explosive eruptions, but not that well for eruption in the smaller spectrum of explosive styles such as those in La Palma. When thinking about the GVP data, bear in mind:
+    The GVP database is incredibly useful but, since based on the VEI, shares [similar strengths and weaknesses](index.md#why-are-tephra-deposits-important) previously discussed. Namely, the VEI works best for large, explosive eruptions, but not that well for eruption in the smaller spectrum of explosive styles such as those in La Palma. When thinking about the GVP data, bear in mind:
 
     1. The 2021 eruption is reported as `Undefined` VEI because no article reporting it has yet been published. However, we know it was a **VEI 3** eruption. 
     2. In the GVP, eruptions that have been identified as **having an explosive component** but for which **no tephra volume** are reported are assigned a default VEI of 2[^2]. This is probably why most eruptions for la Palma are reported as VEI 2.
@@ -131,7 +133,6 @@ You can now display wind profiles. Keep your eyes opened for *seasonal trends* i
     1. Visualize these wind patterns in the context of a hazard assessment. What is the main wind direction? How will that affect tephra dispersal?
     2. How does the mean wind direction vary with height? How is that affecting eruptions of different sizes? (&rarr; refer to the note about *VEI and plume heights* above).
     3. Do you notice any seasonality? If yes, identify during what months it happens.
-
 
 
 
@@ -352,8 +353,6 @@ The figures below are DDS compiled by Jenkins et al (2015)[^4]. Use them to answ
 
 #### Hazard curves
 
-Using [OpenStreetMap](https://www.openstreetmap.org/relation/1464825#map=11/28.6541/-17.7587) and [Google Maps](https://www.google.com/maps/place/La+Palma/@28.6551008,-18.0057897,11z/data=!3m1!4b1!4m5!3m4!1s0xc6bf20c6a87a13b:0x8e2037d22330882d!8m2!3d28.7133828!4d-17.9057813), select three points covering agricultural area and note their coordinates (in `lat`, `lon`). 
-
 Let's now look at hazard curves. For each vent, hazard curves for three points have been processed. To visualise them:
 
 1. From the main `TephraProb` window, choose `Input > Points`. 
@@ -367,7 +366,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 1"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | Main highway | -17.84055 | 28.65027 |
     | El Paso, vineyard| -17.86370 | 28.64256 |
@@ -376,7 +375,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 2"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | San Nicola, houses | -17.88052 | 28.60222 |
     | San Nicola, main road| -17.88763 | 28.60108 |
@@ -385,7 +384,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 3"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | Jedey, vineyard | -17.87881 | 28.58865 |
     | Jedey, houses | -17.87995 | 28.58373 |
@@ -394,7 +393,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 4"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | El Pueblo, houses  | -17.77892 | 28.60605 |
     | El Pilar, forest | -17.83002 | 28.61377 |
@@ -403,7 +402,7 @@ Each point is summarised below. To plot hazard curves:
 
 === "Vent 5"
 
-    | Location | Latitude | Longitude |
+    | Location | Longitude | Latitude |
     | ----- | ------ | ------ | 
     | Los Canarios, houses | -17.84446 | 28.49251 |
     | Los Canarios, vineyard| -17.83749 | 28.47775 |

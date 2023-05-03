@@ -1,6 +1,6 @@
 # Probabilistic modelling: Part 2
 
-We have [previously](Hazard_probabilistic1.md) looked at probabilistic modeling for lava flows, where we accounted for the uncertainty of vent location on hazard quantification. However, probabilistic hazard assessment strategies often have to account for the uncertainty on **more than one** parameter. This section sets the stage for probabilistic assessment of tephra fallout and digs one step further into the mechanics of probabilistic hazard modeling.
+We have [previously](../Lava/Hazard_probabilistic1.md) looked at probabilistic modeling for lava flows, where we accounted for the uncertainty of vent location on hazard quantification. However, probabilistic hazard assessment strategies often have to account for the uncertainty on **more than one** parameter. This section sets the stage for probabilistic assessment of tephra fallout and digs one step further into the mechanics of probabilistic hazard modeling.
 
 ## :material-format-list-checks:{ .icn } Objectives
 
@@ -11,7 +11,7 @@ We have [previously](Hazard_probabilistic1.md) looked at probabilistic modeling 
   
 ## :fontawesome-solid-gears:{ .icn } Probabilistic hazard modelling 
 
-For the sake of this exercise, let's consider a [Plinian](https://en.wikipedia.org/wiki/Plinian_eruption) eruption from [Cotopaxi](https://en.wikipedia.org/wiki/Cotopaxi) volcano (Ecuador) that occurred ~1200 years ago. By using the [workflow](Hazard_tephra_intro.md#field-mapping-toolbox) previously introduced, we were able to reconstruct the ESP of the eruption[^1]. 
+For the sake of this exercise, let's consider a [Plinian](https://en.wikipedia.org/wiki/Plinian_eruption) eruption from [Cotopaxi](https://en.wikipedia.org/wiki/Cotopaxi) volcano (Ecuador) that occurred ~1200 years ago. By using the [workflow](index.md#field-mapping-toolbox) previously introduced, we were able to reconstruct the ESP of the eruption[^1]. 
 
 === "Deposit Maps"
 
@@ -77,11 +77,11 @@ As a summary, the [previous lesson](Hazard_tephra_modeling.md) has provided us w
 
 ### Probabilistic eruption scenarios
 
-Probabilistic hazard modelling for tephra fallout follows the same general philosophy compared to what we adopted for [lava flows](Hazard_probabilistic1.md) with two notable differences.
+Probabilistic hazard modelling for tephra fallout follows the same general philosophy compared to what we adopted for [lava flows](../Lava/Hazard_probabilistic1.md) with two notable differences.
 
-1. **Model input &rarr;** For [lava flows](Hazard_probabilistic1.md), we used a *non-physical model*. As a consequence, we explored the uncertainty associated with vent location and the DEM rather than physical properties - or, in other words, ESP. Input parameters to `Tephra2` are, however, physical ESP, and the aim of the probabilistic modelling approach for the tephra hazard will be to **explore a range of possible eruption conditions** for a future event. 
+1. **Model input &rarr;** For [lava flows](../Lava/Hazard_probabilistic1.md), we used a *non-physical model*. As a consequence, we explored the uncertainty associated with vent location and the DEM rather than physical properties - or, in other words, ESP. Input parameters to `Tephra2` are, however, physical ESP, and the aim of the probabilistic modelling approach for the tephra hazard will be to **explore a range of possible eruption conditions** for a future event. 
 
-2. **Model output &rarr;** For [lava flows](Hazard_probabilistic1.md), the output of one single run consisted of a boolean inundation/no inundation condition, and the probabilistic approach quantified a **likelihood of pixel inundation** by a lava flow. Conversely, the output of a single `Tephra2` run is a *hazard intensity*, namely a **mass accumulation per surface area** ($kg/m^2$). The probabilistic approach will therefore help us to quantify a **likelihood of a mass at a given pixel to exceed a specific threshold of mass accumulation**. This flowchart illustrates the differences between these approaches:
+2. **Model output &rarr;** For [lava flows](../Lava/Hazard_probabilistic1.md), the output of one single run consisted of a boolean inundation/no inundation condition, and the probabilistic approach quantified a **likelihood of pixel inundation** by a lava flow. Conversely, the output of a single `Tephra2` run is a *hazard intensity*, namely a **mass accumulation per surface area** ($kg/m^2$). The probabilistic approach will therefore help us to quantify a **likelihood of a mass at a given pixel to exceed a specific threshold of mass accumulation**. This flowchart illustrates the differences between these approaches:
 
 ```mermaid
 
@@ -138,7 +138,7 @@ We need to repeat this process for all ESP relevant for the model used. For `Tep
 
 #### A note on the uncertainty of ESPs 
 
-Choosing the most appropriate *range* and *distribution* for each ESP is **not trivial** and express the uncertainty that we have of what the next eruption will be. We have briefly discussed this at the end of [this module](Hazard_lava_modeling.md), but let's review again what **uncertainties** are and where they are originating from.
+Choosing the most appropriate *range* and *distribution* for each ESP is **not trivial** and express the uncertainty that we have of what the next eruption will be. We have briefly discussed this at the end of [this module](../Lava/Hazard_lava_modeling.md), but let's review again what **uncertainties** are and where they are originating from.
 
 Conceptually, uncertainties can be classified in two categories:
 
@@ -191,7 +191,7 @@ Note that for **1** and **2**, we adopt a **normal** distribution. In this way, 
 
 ### Probabilistic hazard modelling
 
-Now that we have defined the eruption scenario and associated ESPs, let's actually run the probabilistic hazard modeling. Similarly to the approach used for [lava flows](Hazard_probabilistic1.md), we will perform a large number of single model runs. But instead of varying the `vent location`, each run be initiated with **one set** of ESP stochastically sampled from the pre-defined distributions.
+Now that we have defined the eruption scenario and associated ESPs, let's actually run the probabilistic hazard modeling. Similarly to the approach used for [lava flows](../Lava/Hazard_probabilistic1.md), we will perform a large number of single model runs. But instead of varying the `vent location`, each run be initiated with **one set** of ESP stochastically sampled from the pre-defined distributions.
 
 The cartoon below illustrates the process. We modeled $n$ runs: here $n=3$, but we would typically used *thousands* of runs to ensure that ESP drawn from each distribution represents a statistically significant sample of the range of possible combinations and outcomes.
 
@@ -229,7 +229,7 @@ By repeating this approach over all points of the map, it is now possible to rep
 
     Again, pay attention to [what these probabilities express](Hazard_probabilistic2.md#probabilistic-eruption-scenarios):
 
-    - In the case of [lava flows](Hazard_probabilistic1.md), one single model run estimates a **boolean** yes/no inundation for each pixel, and the probabilistic approach quantifies a **probability of flow inundation** (&rarr; one single map). 
+    - In the case of [lava flows](../Lava/Hazard_probabilistic1.md), one single model run estimates a **boolean** yes/no inundation for each pixel, and the probabilistic approach quantifies a **probability of flow inundation** (&rarr; one single map). 
     - In the case of tephra deposits, one single model run estimates a **continuous** hazard intensity (i.e., mass of tephra per unit area). The probabilistic approach quantifies a **probability of accumulation to exceed** specific masses per unit area. Therefore, the output for probabilistic hazard assessment for tephra accumulation consists of **multiple maps** (&rarr; one map per accumulation threshold). 
 
 !!! info "Formalising probability computation"
