@@ -2,7 +2,7 @@
 
 This website is stored as a [project site Github page](https://pages.github.com) and is stored on the [CERG-C](https://github.com/CERG-C/CERG-C) github repository. The documentation is written in [Markdown](https://www.markdownguide.org), and built into a website using the static website generator [MkDocs](https://www.mkdocs.org) with the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme. Building and deploying the website requires some knowledge of [Python](https://www.python.org) and [Git](https://git-scm.com).
 
-## Requirements
+## Software requirement
 
 ### Github 
 
@@ -19,7 +19,7 @@ It is recommended to [install pandoc](https://pandoc.org) **before** installing 
 
 ## Installing the website
 
-### Setting up an environment 
+### Setting up a Python environment 
 
 It is recommended to setup the website in a [Conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment rather than on the system's Python distribution. For an environment named `teaching`, create it using:
 
@@ -52,10 +52,11 @@ pip install mike -->
 
 ## Contributing to the course
 
-- The teaching content is located in the folder `docs/Teaching`, where sub-folder contain `Bachelor`, `Master` and `CERG`. 
-- Create a sub-folder in the relevant folder. This subfolder must contain
+The teaching content is located in the folder `docs/Teaching`, where sub-folder contain `Bachelor`, `Master` and `CERG`. Create a sub-folder in the relevant folder and create the following sub-folders
     - A sub-folder named `img/` that will contain all images
     - A file called `index.md` that will be the landing page of your course.
+
+
 
 ### Writing the documentation
 
@@ -141,3 +142,5 @@ The website was initially stored as an [organisation site Github page](https://p
 ```
 mkdocs gh-deploy --force --remote-branch main --config-file mkdocs.yml
 ``` -->
+
+<!-- ### Checklist before deploying -->
