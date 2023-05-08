@@ -14,5 +14,5 @@ This page contains the teaching material for the Physical Volcanology and Volcan
 
 <figure markdown>
   ![ISS](img/laPalma-ISS.jpg)
-  <figcaption>The 2021 eruption of Tajogaite on La Palma viewed from the International Space Station (source: earthobservatory.nasa.gov).</figcaption>
+  <figcaption>The 2021 eruption of Tajogaite on La Palma viewed from the International Space Station on October 4, 2021 (<a href="https://earthobservatory.nasa.gov/images/148946/eruption-continues-at-la-palma", target="_blank">Source</a>).</figcaption>
 </figure>
