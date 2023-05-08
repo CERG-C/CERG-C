@@ -173,7 +173,9 @@ The output file now shows the **spatial distribution** of **inundation probabili
 
 !!! question "Question 1: Single-vent simulations"
 
-    1. How do modelled flows compare to the closest <a href="../../../files/GeologicalmapofLaPalma.pdf", target="_blank">historical lava flows</a> in terms of length and width?
+    1. In one sentence, describe what the color at any given pixel expresses.
+    2. How do modelled flows compare to the closest <a href="../../../files/GeologicalmapofLaPalma.pdf", target="_blank">historical lava flows</a> in terms of length and width?
+    3. Analyse and discuss the spatial distribution of inundation probability. How do they compare to the path of steepest descent?
 
 
     <!-- 2. Chose *one vent* for which you will produce another run with the same parameters as above. Are they **exactly** the same? If not, why? -->
@@ -186,13 +188,10 @@ The output file now shows the **spatial distribution** of **inundation probabili
 
 In the case of fissure eruptions, one eruptive episode can consist of multiple satellite vents. This was certainly the case for the 2021 eruption of La Palma. In fact, as you can see from the `2021 Vents` layer in `QGIS`, [CEMS](https://emergency.copernicus.eu/mapping/list-of-components/EMSR546) identified that ~10 vents opened over a 500 x 500 m area. Here, we won't attempt predicting the **number** or the **location** of each vent. Instead, we will model lava flow inundation from **a grid of vents** within a surface area and explore how vent location affects the lava flow simulation hazard.
 
-!!! info "Probability of vent opening" 
+!!! warning "Probability of vent opening" 
 
-    Note that with this approach, we consider an **equal probability** of vent opening within this area. This is acceptable for this exercise, but this assumption should be checked for real-case scenarios.
+    Note that with this approach, we consider an **equal probability** of vent opening within this area. We will consider this as an acceptable assumption for this exercise, but this is likely an over-simplification for real-case scenarios.
 
-<!-- !!! warning "(Not) one vent to rule them all"
-
-    You've each been assigned **one** of the vents defined in the table above. Since this step takes more computational time, please run this procedure only for this vent.  -->
 
 #### Define the area 
 
