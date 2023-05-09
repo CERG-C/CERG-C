@@ -6,7 +6,7 @@
   
 ## :fontawesome-solid-gears:{ .icn } Hazard assessments
 
-A hazard assessment is defined as an evaluation of the probability of **occurrence** of a given volcanic event of a specific **size**, associated with one or various **phenomena** affecting a given **location** during a specific time interval (Modified from Connor et al. (2015)[@Connor2015])
+A hazard assessment is defined as an evaluation of the probability of **occurrence** of a given volcanic event of a specific **size**, associated with one or various **phenomena** affecting a given **location** during a specific time interval (Modified from Connor et al. (2015)[@Connor2015]
 
 <figure markdown>
 ![cartoon](img/hazard_cartoon.png)
