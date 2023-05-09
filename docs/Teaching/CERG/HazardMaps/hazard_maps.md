@@ -75,14 +75,14 @@ On the other hand, depending on the level of detail and again, in the purpose, a
 === "Spatial scale"
 
     <figure markdown>
-    ![map](img/SpatialScale.png){ width=100% }
+    ![map](img/SpatialScale.png){ width="600" }
     <figcaption> 
 
 
 === "Temporal scale"
 
     <figure markdown>
-    ![map](img/TemporalScale.png){ width=80% }
+    ![map](img/TemporalScale.png){ width="600" }
     <figcaption> 
 
 
@@ -341,7 +341,7 @@ This study was based on a very interesting workshop with scientists experts and 
 
 ## :fontawesome-solid-gears:{ .icn } Future efforts
 
-*"It is impossible to achieve a wholly objective representation of complex reality on a map (Thompson et al. (2015)[@Thompson2015]*
+*"It is impossible to achieve a wholly objective representation of complex reality on a map (Thompson et al. (2015)[@Thompson2015])*
 
 
 - There is still a lot of work on building **objective frameworks** for each volcanic phenomenon (including methodologies, homogenized terminology, standardised outputs and uncertainty quantification) that help to reduce miscommunication of volcanic hazard maps. We still need to work on numerical and statistical modelling and big data analysis in order to build good quality hazard assessments and outcomes. 

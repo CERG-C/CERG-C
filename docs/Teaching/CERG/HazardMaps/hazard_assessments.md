@@ -46,13 +46,15 @@ It is based on the assumption that future activity rates can be extrapolated fro
 
     <figure markdown>
     ![map](img/CerroNegro.png){ width=90% }
-    <figcaption> Cumulative number of eruptions over time since the formation of Cerro Negro volcano in 1850. 
+    <figcaption> </figcaption> 
+
+    Cumulative number of eruptions over time since the formation of Cerro Negro volcano in 1850. 
     
    
     Slope corresponds to the **mean eruption rate**. 
 
     
-    Slope breaking points could indicate changes on eruptive behaviour (red arrows). Activity of Cerro Negro is clearly NOT in steady-state, with a significant increasing of frequency since 1947.</figcaption> 
+    Slope breaking points could indicate changes on eruptive behaviour (red arrows). Activity of Cerro Negro is clearly NOT in steady-state, with a significant increasing of frequency since 1947.
 
 === "Uncertainties"
 
@@ -78,7 +80,9 @@ Polygenetic volcanoes are typically large structures whose vents are active for 
 
     <figure markdown>
     ![map](img/Tohoku_vents.png){ width=90% }
-    <figcaption> Probabilities of one or more volcanic vents in the next 100 ka are computed based **only** on the location of previous events. The Tohoku volcanic arc is constituted approximately of 170 Holocene volcanoes!!. 
+    <figcaption></figcaption>
+    </figure>
+    Probabilities of one or more volcanic vents in the next 100 ka are computed based **only** on the location of previous events. The Tohoku volcanic arc is constituted approximately of 170 Holocene volcanoes!!. 
 
 === "Uncertainties"
 
@@ -122,7 +126,9 @@ Size of eruptions will indirectly inform about the potential phenomena (and prod
 
     <figure markdown>
     ![map](img/Vulcano_geological.png){ width=90% }
-    <figcaption> Detailed stratigraphy of volcanic deposits help identifying past eruptive styles and the associated phenomena (e.g., tephra, lava flows), as well as estimating erupted volumes (and consequently VEI). 
+    <figcaption></figcaption>
+    </figure>
+    Detailed stratigraphy of volcanic deposits help identifying past eruptive styles and the associated phenomena (e.g., tephra, lava flows), as well as estimating erupted volumes (and consequently VEI). 
     
     However, the variability during the event are often too complex to be recorded by the different layers of deposits, particularly for long-lasting and pulsatory eruptions. 
 
@@ -130,7 +136,9 @@ Size of eruptions will indirectly inform about the potential phenomena (and prod
 
     <figure markdown>
     ![map](img/Cotopaxi_GVP.png){ width=75% }
-    <figcaption> A fundamental source of information is the **historical** data that help constraining the story of each volcano.
+    <figcaption></figcaption>
+    </figure>
+    A fundamental source of information is the **historical** data that help constraining the story of each volcano.
 
     The cumulative number of events over time of  Cotopaxi volcano (Ecuador) shows 78 recorded eruptions classified per size. A clear change of **recurrence rate** at ~3.9 ka BP is associated with a shift of composition from rhyolitic to andesitic, decreasing the volumes erupted. 
 
@@ -152,7 +160,7 @@ This table summarize the most common ones but a complete reference list with sof
 
 <figure markdown>
 ![table1](img/Models.png){ width="300" }
-<figcaption> Lucia devrait lire la documentations </figcaption>
+<figcaption></figcaption>
 </figure>
 
 ## :fontawesome-solid-gears:{ .icn } Approaches
@@ -226,7 +234,7 @@ There are 3 main outputs of hazard assessments:
 
     <figure markdown>
     ![map](img/Vulcano_prob_map.png)
-    <figcaption> Example of probabilistic HA of 300 kg/m^2 in Vulcano (Italy), from Biass et al. 2016 [@Biass2016].
+    <figcaption> Example of probabilistic HA of 300 kg/m^2 in Vulcano (Italy), from Biass et al.(2016)[@Biass2016].
 
     !!! important "For more on hazard maps go to [understanding hazard maps](hazard_maps.md)!!"
 
@@ -238,7 +246,7 @@ There are 3 main outputs of hazard assessments:
 
     <figure markdown>
     ![map](img/Vulcano_haz_curves.png)
-    <figcaption> Example of hazard curves in Vulcano (Italy), from Biass et al. 2016 [@Biass2016].
+    <figcaption> Example of hazard curves in Vulcano (Italy), from Biass et al. (2016)[@Biass2016].
 
     !!! important "For more on hazard curves go to [hazard modelling](../Hazard_tephra_exercise.md)!!"
 
