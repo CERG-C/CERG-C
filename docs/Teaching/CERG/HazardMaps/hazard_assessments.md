@@ -248,7 +248,7 @@ There are 3 main outputs of hazard assessments:
     ![map](img/Vulcano_haz_curves.png)
     <figcaption> Example of hazard curves in Vulcano (Italy), from Biass et al. (2016)[@Biass2016].
 
-    !!! important "For more on hazard curves go to [hazard modelling](../Hazard_tephra_exercise.md)!!"
+    !!! important "For more on hazard curves go to [hazard modelling](../Hazard_tephra_exercise_2022.md)!!"
 
 
 

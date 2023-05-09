@@ -335,7 +335,7 @@ This study was based on a very interesting workshop with scientists experts and 
 
     Another aspect to consider is that volcanoes do not understand about boundaries: many volcanoes are located in international borders (e.g., Chiles-Cerro Negro in Ecuador-Colombia) and/or impacted areas cross administrative boundaries (e.g., almost all volcanoes in Chile-Argentina) &rarr; this has significant implications in risk management but also in field work of volcanic deposits!! In several cases, there are detailed studies from one side of the volcano but not of the other side!
 
-    Finally, hazard uncertainties (aleatory and epistemic) are difficult to quantify and to represent in maps! You can find more on this in [Probabilistic modeling part II](../Teaching/CERG/Hazard_probabilistic2.md)!   
+    Finally, hazard uncertainties (aleatory and epistemic) are difficult to quantify and to represent in maps! You can find more on this in [Probabilistic modeling part II](../Teaching/CERG/Tephra/Hazard_probabilistic2.md)!   
 
 
 
