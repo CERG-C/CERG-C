@@ -38,7 +38,10 @@ Running the full workflow for probabilistic hazard assessment in the computer la
 
 ### Setup TephraProb
 
-The `VolcanicRisk2022.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
+The `VolcanicRisk2023.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
+
+!!! tip "Alternative link"
+    [Alternative dowload link](https://kdrive.infomaniak.com/app/share/250506/23d26070-975d-4d10-a290-e95ba2b001cc) 
 
 1. Start `Matlab`. If your computer has several versions, use the latest one.
 2. Left of the address bar at the top of the main `Matlab` window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
