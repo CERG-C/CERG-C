@@ -27,15 +27,19 @@ Download the relevant `QGIS` version for your own operating system from [this pa
 As `QGIS` will most likely be in French, let's change it to English:
 
 1. From the [Menu Bar](QGIS_Intro.md#the-qgis-interface), choose `Préférences` > `Options` > `Général`
-2. Change the *Langue de l'interface graphique* to English (Fig. 1)
+2. Change the *Langue de l'interface graphique* to English ([Fig. 1](#fig1))
 3. Close and restart `QGIS`
 
 <figure markdown>
-  ![QGIS_language](img/qgis/qgis_language.png)
+  ![QGIS_language](img/qgis/qgis_language.png){#fig1}
   <figcaption>Figure 1: Change the QGIS language</figcaption>
 </figure>
 
 ### Activate the Coordinate Capture Tool
+
+!!! warning "Coordinate Capture"
+
+    If the tool is not available, we can manage without.
 
 The *Coordinate Capture* allows to capture the coordinates when clicking on the map canvas, which will be useful throughout the exercices.
 

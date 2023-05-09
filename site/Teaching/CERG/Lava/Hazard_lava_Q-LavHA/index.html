@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://CERG-C.github.io/cerg-c/2023.2/Teaching/CERG/Lava/Hazard_lava_Q-LavHA/">
+        <link rel="canonical" href="https://cerg-c.github.io/CERG-C/2023.2/Teaching/CERG/Lava/Hazard_lava_Q-LavHA/">
       
       
         <link rel="prev" href="../Hazard_probabilistic1/">
@@ -17,7 +17,7 @@
         <link rel="next" href="../Hazard_lava_notes/">
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
@@ -123,8 +123,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -132,8 +130,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -1080,7 +1076,7 @@
   
     <li class="md-nav__item">
       <a href="../Hazard_lava_notes/" class="md-nav__link">
-        Instructor's notes
+        [Protected] Instructor's notes
       </a>
     </li>
   
@@ -1208,7 +1204,7 @@
   
     <li class="md-nav__item">
       <a href="../../Tephra/Hazard_tephra_notes/" class="md-nav__link">
-        Instructor's notes
+        [Protected] Instructor's notes
       </a>
     </li>
   
@@ -1820,7 +1816,9 @@ Start by making sure that <code>Q-LavHA</code> has been properly installed accor
 <div class="admonition question">
 <p class="admonition-title">Question 1: Single-vent simulations</p>
 <ol>
+<li>In one sentence, describe what the color at any given pixel expresses.</li>
 <li>How do modelled flows compare to the closest <a href="../../../files/GeologicalmapofLaPalma.pdf", target="_blank">historical lava flows</a> in terms of length and width?</li>
+<li>Analyse and discuss the spatial distribution of inundation probability. How do they compare to the path of steepest descent?</li>
 </ol>
 <p><!-- 2. Chose *one vent* for which you will produce another run with the same parameters as above. Are they **exactly** the same? If not, why? -->
 <!-- 3. Compare simulations from **vent 2** with the flow outlines of the 2021 eruption. **When** and **where** is the model doing a good job? **When** and **where** is it not? Why? -->
@@ -1829,14 +1827,10 @@ Start by making sure that <code>Q-LavHA</code> has been properly installed accor
 </div>
 <h3 id="using-several-vents">Using several vents</h3>
 <p>In the case of fissure eruptions, one eruptive episode can consist of multiple satellite vents. This was certainly the case for the 2021 eruption of La Palma. In fact, as you can see from the <code>2021 Vents</code> layer in <code>QGIS</code>, <a href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR546">CEMS</a> identified that ~10 vents opened over a 500 x 500 m area. Here, we won't attempt predicting the <strong>number</strong> or the <strong>location</strong> of each vent. Instead, we will model lava flow inundation from <strong>a grid of vents</strong> within a surface area and explore how vent location affects the lava flow simulation hazard.</p>
-<div class="admonition info">
+<div class="admonition warning">
 <p class="admonition-title">Probability of vent opening</p>
-<p>Note that with this approach, we consider an <strong>equal probability</strong> of vent opening within this area. This is acceptable for this exercise, but this assumption should be checked for real-case scenarios.</p>
+<p>Note that with this approach, we consider an <strong>equal probability</strong> of vent opening within this area. We will consider this as an acceptable assumption for this exercise, but this is likely an over-simplification for real-case scenarios.</p>
 </div>
-<!-- !!! warning "(Not) one vent to rule them all"
-
-    You've each been assigned **one** of the vents defined in the table above. Since this step takes more computational time, please run this procedure only for this vent.  -->
-
 <h4 id="define-the-area">Define the area</h4>
 <p>We will define a potential vent opening surface as a 500 x 500 m square centered on the reference coordinates of your attributed vent. Note that UTM coordinates are in <em>metre</em>: you can therefore simply identify the <code>x</code> and <code>y</code> coordinates these four points by addition and subtraction:</p>
 <ul>

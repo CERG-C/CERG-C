@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://CERG-C.github.io/cerg-c/2023.2/Teaching/CERG/Tephra/Hazard_tephra_exercise/">
+        <link rel="canonical" href="https://cerg-c.github.io/CERG-C/2023.2/Teaching/CERG/Tephra/Hazard_tephra_exercise/">
       
       
         <link rel="prev" href="../Hazard_probabilistic2/">
@@ -17,7 +17,7 @@
         <link rel="next" href="../Hazard_tephra_temporal/">
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
@@ -123,8 +123,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -132,8 +130,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -1200,7 +1196,7 @@
   
     <li class="md-nav__item">
       <a href="../Hazard_tephra_notes/" class="md-nav__link">
-        Instructor's notes
+        [Protected] Instructor's notes
       </a>
     </li>
   
@@ -1993,8 +1989,6 @@ H2 --&gt; I2["Run is not valid, restart"]
 <li>In which direction (i.e., downwind cardinal reference) is the hazard associated with tephra fallout most likely to occur?</li>
 <li>At each point of the map, can you express exactly the information that is presented?</li>
 </ol>
-<!-- 1. Describe the geometry (i.e., extent, orientation) of selected probability maps.
-3. With your knowledge of hazardous thresholds of tephra accumulations previously discussed, what can you conclude with respect to the risk related to tephra fallouts? -->
 </div>
 <h4 id="probabilistic-isomass-maps">Probabilistic isomass maps</h4>
 <p>Probabilistic isomass maps fix a probability threshold to represent a typical tephra accumulation given a probability of occurrence of the hazardous phenomenon. The choice of the probability threshold, which can be regarded as an acceptable level of hazard, is a critical aspect that is the resort of decision-makers. Scientists should therefore communicate results from probabilistic isomass maps with care.</p>
@@ -2011,12 +2005,6 @@ H2 --&gt; I2["Run is not valid, restart"]
 <li>What are these maps showing?</li>
 <li>How do they differ from probability maps?</li>
 </ol>
-<p>&lt;!-- Consider the possible consequences of tephra fallout on the road network. Using the <code>25%</code> and <code>75%</code> isomass maps, discuss:</p>
-<ol>
-<li>Where could the potential impact states occur?</li>
-<li>What consequences would that have on the mobility on the island?</li>
-</ol>
-<p>Discuss these <strong>briefly</strong>. --&gt;</p>
 </div>
 <h4 id="hazard-curves">Hazard curves</h4>
 <p>Let's now look at hazard curves. For each vent, hazard curves for three points have been processed. To visualise them:</p>
@@ -2134,27 +2122,38 @@ H2 --&gt; I2["Run is not valid, restart"]
 </div>
 </div>
 </div>
-<p>The figures below are <abbr title="Damage-Disruption states &rarr; one way of characterising vulnerability">DDS</abbr> compiled by Jenkins et al (2015)<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>. Use them to answer these questions.</p>
+<p><a href="#fig1">Figure 1</a> represents fragility curves for various European roofs (Spence et al., 2005<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>), and estimate a median probability of roof collapse as a function of tephra accumulation. Use these curves to answer the following questions. </p>
+<figure>
+<p><img alt="roofs" id="fig1" src="../img/tephra/fragility.png" /></p>
+<figcaption>Figure 1: Fragility curves of Spence et al. (2005) expressing the median probability of roof collapse for various European roofs. The different curves represent various roof typologies: *WE:* Weak (e.g., Tiled roof, old or in poor condition); *MW:* Medium Weak (e.g., Tiled roof, average or good condition); *MS:* Medium Strong (e.g., Flat RC roof); *ST:* Strong (e.g., Flat RC roof designed for access, younger than 20 years). </figcaption>
+</figure>
 <div class="admonition question">
 <p class="admonition-title">Question 4: Hazard curves</p>
-<p>For each point attributed to your vent, use the <abbr title="Damage-Disruption states &rarr; one way of characterising vulnerability">DDS</abbr> of Jenkins et al (2015)<sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup> to discuss the probability of occurrence of:</p>
+<p>For the point attributed to your vent, use the model of Spence et al. (2005)<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup> to estimate a probability of occurrence of roof collapse. To convert a mass per unit area (<span class="arithmatex">\(M\)</span>, <span class="arithmatex">\(kg/m^2\)</span>) to a load (<span class="arithmatex">\(L\)</span>, <span class="arithmatex">\(kPa\)</span>), use:</p>
+<div class="arithmatex">\[
+L = M \times 9.81 \times 10^{-3} 
+\]</div>
 <ol>
-<li><strong>Structural damages</strong> on buildings and;</li>
-<li><strong>Loss of function</strong> (with associated replacement cost).</li>
+<li>Assuming that the considered buildings are of a <strong>MS</strong> fragility class, what are the probabilities of roof collapse for associated with mass loads for 25% and 75% probability of occurrence?</li>
 </ol>
-<p>Assume that the considered buildings fall in the <strong>domestic reinforced concrete</strong> category, and use a 25-75% probability of occurrence of the hazard to illustrate uncertainty.</p>
+<div class="admonition tip">
+<p class="admonition-title">Accessing hazard curves with <strong>data tips</strong></p>
+<p>On the hazard curve figure, you can activate the <code>Data Tips</code> tool. This allows you to click on the curve and directly get the underlying data. It is hard to get exact probabilities, <strong>so anything within a ± 5% range is ok</strong>.</p>
+<p><figure markdown>
+<img alt="Data-tip" src="../img/tephraprob/data-tip.png" width="300" />
+</figure></p>
 </div>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Buildings</label><label for="__tabbed_3_2">Infrastructures</label><label for="__tabbed_3_3">Agriculture</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><img alt="roofs" src="../img/DDS/roofs.png" /></p>
-</div>
-<div class="tabbed-block">
-<p><img alt="infra" src="../img/DDS/infrastructures.png" /></p>
-</div>
-<div class="tabbed-block">
-<p><img alt="agri" src="../img/DDS/agriculture.png" /></p>
-</div>
+<div class="admonition tip">
+<p class="admonition-title">Estimating probability of roof collapse</p>
+<p>Once you have estimated the load, you can read the corresponding probability of roof collapse from <a href="#fig1">Figure 1</a>. If you feel adventurous, you can also compute it directly from the Matlab command line (where <span class="arithmatex">\(L\)</span> is the load):</p>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">normcdf</span><span class="p">(</span><span class="nb">log</span><span class="p">(</span><span class="n">L</span><span class="p">),</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="mf">4.5</span><span class="p">)</span><span class="w"> </span><span class="mf">0.2</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Note that the MS class according to Spence et al. (2005)<sup id="fnref3:5"><a class="footnote-ref" href="#fn:5">5</a></sup> is characterised by:</p>
+<div class="language-text highlight"><pre><span></span><code>1. A normal cumulative density function 
+2. A mean value of 4.5 kPa
+3. A standard deviation of 20%
+</code></pre></div>
+<p>Refer to the original paper for more information.</p>
 </div>
 </div>
 <h2 id="food-for-thoughts"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 19A1.5 1.5 0 0 1 5 20.5 1.5 1.5 0 0 1 3.5 22 1.5 1.5 0 0 1 2 20.5 1.5 1.5 0 0 1 3.5 19m5-3a2.5 2.5 0 0 1 2.5 2.5A2.5 2.5 0 0 1 8.5 21 2.5 2.5 0 0 1 6 18.5 2.5 2.5 0 0 1 8.5 16m6-1c-1.19 0-2.27-.5-3-1.35-.73.85-1.81 1.35-3 1.35-1.96 0-3.59-1.41-3.93-3.26A4.02 4.02 0 0 1 2 8a4 4 0 0 1 4-4c.26 0 .5.03.77.07C7.5 3.41 8.45 3 9.5 3c1.19 0 2.27.5 3 1.35.73-.85 1.81-1.35 3-1.35 1.96 0 3.59 1.41 3.93 3.26A4.02 4.02 0 0 1 22 10a4 4 0 0 1-4 4l-.77-.07c-.73.66-1.68 1.07-2.73 1.07Z"/></svg></span> Food for thoughts</h2>
@@ -2165,8 +2164,8 @@ H2 --&gt; I2["Run is not valid, restart"]
 </ul>
 <h3 id="getting-the-hazard-data">Getting the hazard data</h3>
 <p>As displayed in <code>Matlab</code>, you can save the maps displayed within <code>TephraProb</code> by simply typing <code>saveAllMaps('png')</code>, which will save all opened maps to <code>TephraProb/MAPS</code>. The raw output data for both <em>probability</em> and <em>isomass</em> maps are saved as <code>ascii</code> raster file with a UTM 28 N projection. Probability (<code>PROB</code>) and isomass (<code>IM</code>) data are located in:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>TephraProb/RUNS/ventX/1/PROB/all/RASTER/*.txt
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>TephraProb/RUNS/ventX/1/IM/all/RASTER/*.txt
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>TephraProb/RUNS/ventX/1/PROB/all/RASTER/*.txt
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>TephraProb/RUNS/ventX/1/IM/all/RASTER/*.txt
 </span></code></pre></div>
 <p>These are useful for use in external softwares (e.g., <code>QGIS</code>). Similarly, <code>kml</code> files are stored in the <code>KML</code> folder of your run.</p>
 <p>Hazard curves must be saved from within <code>Matlab</code>.</p>
@@ -2186,7 +2185,10 @@ H2 --&gt; I2["Run is not valid, restart"]
 <p>Simkin, T., Siebert, L., Simkin, T., Kimberly, P., 2010. Volcanoes of the World. University of California Press, Tucson, AZ.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:4">
-<p>Jenkins, S.F., Wilson, T.M., Magill, C., Miller, V., Stewart, C., Blong, R., Marzocchi, W., Boulton, M., Bonadonna, C., Costa, A., 2015. Volcanic ash fall hazard and risk, in: Loughlin, S., Sparks, S., Brown, S., Jenkins, S., Vye-Brown, C. (Eds.), Global Volcanic Hazards and Risk. Cambridge University Press, pp. 173–222.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>Jenkins, S.F., Wilson, T.M., Magill, C., Miller, V., Stewart, C., Blong, R., Marzocchi, W., Boulton, M., Bonadonna, C., Costa, A., 2015. Volcanic ash fall hazard and risk, in: Loughlin, S., Sparks, S., Brown, S., Jenkins, S., Vye-Brown, C. (Eds.), Global Volcanic Hazards and Risk. Cambridge University Press, pp. 173–222.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Spence, R.J.S., Kelman, I., Baxter, P.J., Zuccaro, G., Petrazzuoli, S., 2005. Residential building and occupant vulnerability to tephra fall. Natural Hazards and Earth System Sciences 5, 477–494.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>

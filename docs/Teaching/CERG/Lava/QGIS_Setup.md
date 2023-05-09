@@ -27,17 +27,29 @@ Download the relevant `QGIS` version for your own operating system from [this pa
 As `QGIS` will most likely be in French, let's change it to English:
 
 1. From the [Menu Bar](QGIS_Intro.md#the-qgis-interface), choose `Préférences` > `Options` > `Général`
-2. Change the *Langue de l'interface graphique* to English (Fig. 1)
+2. Change the *Langue de l'interface graphique* to English ([Fig. 1](#fig1))
 3. Close and restart `QGIS`
 
 <figure markdown>
-  ![QGIS_language](img/qgis/qgis_language.png)
+  ![QGIS_language](img/qgis/qgis_language.png){#fig1}
   <figcaption>Figure 1: Change the QGIS language</figcaption>
 </figure>
 
 ### Activate the Coordinate Capture Tool
 
+!!! warning "Coordinate Capture"
+
+    If the tool is not available, we can manage without.
+
 The *Coordinate Capture* allows to capture the coordinates when clicking on the map canvas, which will be useful throughout the exercices.
 
-First install it: From the Menu bar, use the `Plugins > Manage and Install Plugins` tool and search for the `Coordinate Capture` tool and install it. To activate it, right-click anywhere in the [Toolbar](QGIS_Intro.md#the-qgis-interface) and activate the `Coordinate Capture Panel`.
+First install it: From the Menu bar, use the `Plugins > Manage and Install Plugins` tool and search for the `Coordinate Capture` tool and install it. The logo shown in [Figure 2](#fig2) should now appear in the [Toolbar](QGIS_Intro.md#the-qgis-interface)
 
+<figure markdown>
+  ![QGIS_ccapture](img/qgis/coordinate.jpg){#fig2}
+  <figcaption>Figure 2: Coordinate capture tool.</figcaption>
+</figure>
+
+<!-- To activate it, right-click anywhere in the [Toolbar](QGIS_Intro.md#the-qgis-interface) and activate the `Coordinate Capture Panel`. -->
+
+zip -r Exercise_VolcanicRisk2023.zip Exercise_VolcanicRisk2023  -x '**/.*' -x '**/__MACOSX'

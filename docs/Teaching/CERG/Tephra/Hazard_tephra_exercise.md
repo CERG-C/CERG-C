@@ -38,7 +38,10 @@ Running the full workflow for probabilistic hazard assessment in the computer la
 
 ### Setup TephraProb
 
-The `VolcanicRisk2022.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
+The `VolcanicRisk2023.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
+
+!!! tip "Alternative link"
+    [Alternative dowload link](https://kdrive.infomaniak.com/app/share/250506/23d26070-975d-4d10-a290-e95ba2b001cc) 
 
 1. Start `Matlab`. If your computer has several versions, use the latest one.
 2. Left of the address bar at the top of the main `Matlab` window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
@@ -262,9 +265,9 @@ Now that we have defined the ranges of ESP, `TephraProb` applies the algorithm b
 
     1. The [previous module](Hazard_probabilistic2.md) has introduced how to compute *exceedance probability* for tephra accumulation. Based on the 10 simulations below for pixel $x,y$, what are the probabilities of this pixel to suffer tephra accumulations exceeding:
 
-          - 50 $kg/m^2$?
-          - 100 $kg/m^2$?
-          - 150 $kg/m^2$?
+        - 50 $kg/m^2$?
+        - 100 $kg/m^2$?
+        - 150 $kg/m^2$?
   
     | Simulation | Tephra accumulation ($kg/m^2$) | Simulation | Tephra accumulation ($kg/m^2$) |
     |------------|--------------------------------|------------|--------------------------------|
@@ -323,9 +326,6 @@ Let's plot probability maps:
     2. At each point of the map, can you express exactly the information that is presented?
 
 
-    <!-- 1. Describe the geometry (i.e., extent, orientation) of selected probability maps.
-    3. With your knowledge of hazardous thresholds of tephra accumulations previously discussed, what can you conclude with respect to the risk related to tephra fallouts? -->
-
 #### Probabilistic isomass maps
 
 Probabilistic isomass maps fix a probability threshold to represent a typical tephra accumulation given a probability of occurrence of the hazardous phenomenon. The choice of the probability threshold, which can be regarded as an acceptable level of hazard, is a critical aspect that is the resort of decision-makers. Scientists should therefore communicate results from probabilistic isomass maps with care.
@@ -343,13 +343,6 @@ To plot probabilistic isomass maps:
     
     1. What are these maps showing?
     2. How do they differ from probability maps?
-
-    <!-- Consider the possible consequences of tephra fallout on the road network. Using the `25%` and `75%` isomass maps, discuss:
-
-    3. Where could the potential impact states occur?
-    4. What consequences would that have on the mobility on the island?
-
-    Discuss these **briefly**. -->
 
 #### Hazard curves
 
@@ -413,28 +406,48 @@ Relevant points to each vent regarding the hazard to roof collapse are presented
     | Road leading to Los Canarios from W | -17.82308 | 28.51489 | -->
     
 
-The figures below are DDS compiled by Jenkins et al (2015)[^4]. Use them to answer these questions.
+[Figure 1](#fig1) represents fragility curves for various European roofs (Spence et al., 2005[^5]), and estimate a median probability of roof collapse as a function of tephra accumulation. Use these curves to answer the following questions. 
+
+<figure markdown>
+![roofs](img/tephra/fragility.png){#fig1}
+<figcaption>Figure 1: Fragility curves of Spence et al. (2005) expressing the median probability of roof collapse for various European roofs. The different curves represent various roof typologies: *WE:* Weak (e.g., Tiled roof, old or in poor condition); *MW:* Medium Weak (e.g., Tiled roof, average or good condition); *MS:* Medium Strong (e.g., Flat RC roof); *ST:* Strong (e.g., Flat RC roof designed for access, younger than 20 years). </figcaption>
+</figure>
 
 !!! question "Question 4: Hazard curves"
 
-    For each point attributed to your vent, use the DDS of Jenkins et al (2015)[^4] to discuss the probability of occurrence of:
+    For the point attributed to your vent, use the model of Spence et al. (2005)[^5] to estimate a probability of occurrence of roof collapse. To convert a mass per unit area ($M$, $kg/m^2$) to a load ($L$, $kPa$), use:
 
-    1. **Structural damages** on buildings and;
-    2. **Loss of function** (with associated replacement cost).
+    $$
+    L = M \times 9.81 \times 10^{-3} 
+    $$
     
-    Assume that the considered buildings fall in the **domestic reinforced concrete** category, and use a 25-75% probability of occurrence of the hazard to illustrate uncertainty.
+    1. Assuming that the considered buildings are of a **MS** fragility class, what are the probabilities of roof collapse for associated with mass loads for 25% and 75% probability of occurrence?
 
-=== "Buildings"
 
-    ![roofs](img/DDS/roofs.png)
+    !!! tip "Accessing hazard curves with **data tips**"
 
-=== "Infrastructures"
+        On the hazard curve figure, you can activate the `Data Tips` tool. This allows you to click on the curve and directly get the underlying data. It is hard to get exact probabilities, **so anything within a ± 5% range is ok**.
 
-    ![infra](img/DDS/infrastructures.png)
+        <figure markdown>
+        ![Data-tip](img/tephraprob/data-tip.png){width="300"}
+        </figure>
 
-=== "Agriculture"
+    !!! tip "Estimating probability of roof collapse"
 
-    ![agri](img/DDS/agriculture.png)
+        Once you have estimated the load, you can read the corresponding probability of roof collapse from [Figure 1](#fig1). If you feel adventurous, you can also compute it directly from the Matlab command line (where $L$ is the load):
+
+        ```matlab 
+            P = normcdf(log(L), log(4.5) 0.2)
+        ```
+
+        Note that the MS class according to Spence et al. (2005)[^5] is characterised by:
+        
+            1. A normal cumulative density function 
+            2. A mean value of 4.5 kPa
+            3. A standard deviation of 20% 
+
+        Refer to the original paper for more information.
+
 
 ## :material-thought-bubble:{ .icn } Food for thoughts 
 
@@ -466,6 +479,7 @@ This module provided a practical application of the concepts introduced in the p
 [^2]: Biass, S., Bonadonna, C., Connor, L., Connor, C., 2016. TephraProb: a Matlab package for probabilistic hazard assessments of tephra fallout. Journal of Applied Volcanology 5, 1–16. 
 [^3]: Simkin, T., Siebert, L., Simkin, T., Kimberly, P., 2010. Volcanoes of the World. University of California Press, Tucson, AZ.
 [^4]: Jenkins, S.F., Wilson, T.M., Magill, C., Miller, V., Stewart, C., Blong, R., Marzocchi, W., Boulton, M., Bonadonna, C., Costa, A., 2015. Volcanic ash fall hazard and risk, in: Loughlin, S., Sparks, S., Brown, S., Jenkins, S., Vye-Brown, C. (Eds.), Global Volcanic Hazards and Risk. Cambridge University Press, pp. 173–222.
+[^5]: Spence, R.J.S., Kelman, I., Baxter, P.J., Zuccaro, G., Petrazzuoli, S., 2005. Residential building and occupant vulnerability to tephra fall. Natural Hazards and Earth System Sciences 5, 477–494.
 
 *[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
 *[TGSD]: Total grain-size distribution

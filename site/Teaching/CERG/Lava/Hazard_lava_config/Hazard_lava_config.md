@@ -49,12 +49,12 @@ To activate `Q–LavHA` in `QGIS`:
 
 1. Re-open `QGIS` as previously.
 2. From the [Menu Bar](QGIS_Intro.md#the-qgis-interface), open the `Plugins` > `Manage and Install Plugins` window.
-3. Following Figure 3, search for `lava` and activate the plugin.
+3. Following [Figure 1](#fig1), search for `lava` and activate the plugin.
 4. There should now be a `Q-LavHA` icon in the [Toolbar](QGIS_Intro.md#the-qgis-interface).
 
 <figure markdown>
-  ![QGIS_plugin](img/qgis/qgis_plugin.png)
-  <figcaption>Figure 2: Activate the Q–LavHA plugin</figcaption>
+  ![QGIS_plugin](img/qgis/qgis_plugin.png){#fig1}
+  <figcaption>Figure 1: Activate the Q–LavHA plugin</figcaption>
 </figure>
 
 ## Loading data
@@ -77,7 +77,7 @@ Open the `LaPalma_exercise_2023.qgz` file.
 
     <figure markdown>
     ![zoom](img/qgis/zoom.png){width="450px"}
-    <figcaption>Figure 3: Zoom on data</figcaption>
+    <figcaption></figcaption>
     </figure>
 
 You should now see something similar to this:
