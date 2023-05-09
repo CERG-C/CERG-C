@@ -43,5 +43,13 @@ As `QGIS` will most likely be in French, let's change it to English:
 
 The *Coordinate Capture* allows to capture the coordinates when clicking on the map canvas, which will be useful throughout the exercices.
 
-First install it: From the Menu bar, use the `Plugins > Manage and Install Plugins` tool and search for the `Coordinate Capture` tool and install it. To activate it, right-click anywhere in the [Toolbar](QGIS_Intro.md#the-qgis-interface) and activate the `Coordinate Capture Panel`.
+First install it: From the Menu bar, use the `Plugins > Manage and Install Plugins` tool and search for the `Coordinate Capture` tool and install it. The logo shown in [Figure 2](#fig2) should now appear in the [Toolbar](QGIS_Intro.md#the-qgis-interface)
 
+<figure markdown>
+  ![QGIS_ccapture](img/qgis/coordinate.jpg){#fig2}
+  <figcaption>Figure 2: Coordinate capture tool.</figcaption>
+</figure>
+
+<!-- To activate it, right-click anywhere in the [Toolbar](QGIS_Intro.md#the-qgis-interface) and activate the `Coordinate Capture Panel`. -->
+
+zip -r Exercise_VolcanicRisk2023.zip Exercise_VolcanicRisk2023  -x '**/.*' -x '**/__MACOSX'
