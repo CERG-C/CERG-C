@@ -75,14 +75,14 @@ On the other hand, depending on the level of detail and again, in the purpose, a
 === "Spatial scale"
 
     <figure markdown>
-    ![map](img/SpatialScale.png){ width=100% }
+    ![map](img/SpatialScale.png){ width="600" }
     <figcaption> 
 
 
 === "Temporal scale"
 
     <figure markdown>
-    ![map](img/TemporalScale.png){ width=80% }
+    ![map](img/TemporalScale.png){ width="600" }
     <figcaption> 
 
 
@@ -335,13 +335,13 @@ This study was based on a very interesting workshop with scientists experts and 
 
     Another aspect to consider is that volcanoes do not understand about boundaries: many volcanoes are located in international borders (e.g., Chiles-Cerro Negro in Ecuador-Colombia) and/or impacted areas cross administrative boundaries (e.g., almost all volcanoes in Chile-Argentina) &rarr; this has significant implications in risk management but also in field work of volcanic deposits!! In several cases, there are detailed studies from one side of the volcano but not of the other side!
 
-    Finally, hazard uncertainties (aleatory and epistemic) are difficult to quantify and to represent in maps! You can find more on this in [Probabilistic modeling part II](../Teaching/CERG/Hazard_probabilistic2.md)!   
+    Finally, hazard uncertainties (aleatory and epistemic) are difficult to quantify and to represent in maps! You can find more on this in [Probabilistic modeling part II](../Teaching/CERG/Tephra/Hazard_probabilistic2.md)!   
 
 
 
 ## :fontawesome-solid-gears:{ .icn } Future efforts
 
-*"It is impossible to achieve a wholly objective representation of complex reality on a map (Thompson et al. (2015)[@Thompson2015]*
+*"It is impossible to achieve a wholly objective representation of complex reality on a map (Thompson et al. (2015)[@Thompson2015])*
 
 
 - There is still a lot of work on building **objective frameworks** for each volcanic phenomenon (including methodologies, homogenized terminology, standardised outputs and uncertainty quantification) that help to reduce miscommunication of volcanic hazard maps. We still need to work on numerical and statistical modelling and big data analysis in order to build good quality hazard assessments and outcomes. 
