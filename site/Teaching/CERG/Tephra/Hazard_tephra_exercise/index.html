@@ -17,7 +17,7 @@
         <link rel="next" href="../Hazard_tephra_temporal/">
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
     
       
@@ -123,8 +123,6 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          
-          
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
@@ -132,8 +130,6 @@
             </label>
           
         
-          
-          
           
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
@@ -1200,7 +1196,7 @@
   
     <li class="md-nav__item">
       <a href="../Hazard_tephra_notes/" class="md-nav__link">
-        Instructor's notes
+        [Protected] Instructor's notes
       </a>
     </li>
   
@@ -2154,7 +2150,7 @@ L = M \times 9.81 \times 10^{-3}
 <div class="admonition tip">
 <p class="admonition-title">Estimating probability of roof collapse</p>
 <p>Once you have estimated the load, you can read the corresponding probability of roof collapse from <a href="#fig1">Figure 1</a>. If you feel adventurous, you can also compute it directly from the Matlab command line (where <span class="arithmatex">\(L\)</span> is the load):</p>
-<div class="language-matlab highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">normcdf</span><span class="p">(</span><span class="nb">log</span><span class="p">(</span><span class="n">L</span><span class="p">),</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="mf">4.5</span><span class="p">)</span><span class="w"> </span><span class="mf">0.2</span><span class="p">)</span>
+<div class="language-matlab highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="n">P</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">normcdf</span><span class="p">(</span><span class="nb">log</span><span class="p">(</span><span class="n">L</span><span class="p">),</span><span class="w"> </span><span class="nb">log</span><span class="p">(</span><span class="mf">4.5</span><span class="p">),</span><span class="w"> </span><span class="mf">0.2</span><span class="p">)</span>
 </span></code></pre></div>
 <p>Note that the MS class according to Spence et al. (2005)<sup id="fnref3:5"><a class="footnote-ref" href="#fn:5">5</a></sup> is characterised by:</p>
 <div class="language-text highlight"><pre><span></span><code>1. A normal cumulative density function 

@@ -437,7 +437,7 @@ Relevant points to each vent regarding the hazard to roof collapse are presented
         Once you have estimated the load, you can read the corresponding probability of roof collapse from [Figure 1](#fig1). If you feel adventurous, you can also compute it directly from the Matlab command line (where $L$ is the load):
 
         ```matlab 
-            P = normcdf(log(L), log(4.5) 0.2)
+            P = normcdf(log(L), log(4.5), 0.2)
         ```
 
         Note that the MS class according to Spence et al. (2005)[^5] is characterised by:
