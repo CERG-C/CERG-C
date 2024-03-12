@@ -6,7 +6,7 @@
 
 This page contains the teaching material for the Physical Volcanology and Volcanic Risk modules of the CERG-C. It contains both **theory** and the **exercises**, which will get you started for the week in the field in La Palma. The module contains the following classes:
 
-- Theory behind hazard assessments and hazard maps
+- [Theory behind hazard assessments and hazard maps](HazardMaps/index.md)
 - [Hazard assessment for lava flows](Lava/index.md) 
 - [Hazard assessment for tephra fallout](Tephra/index.md)
 

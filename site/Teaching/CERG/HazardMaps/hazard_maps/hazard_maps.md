@@ -68,7 +68,7 @@ For this lecture, we will only focus on the maps classified by hazard process ty
   
 ### Space and time scales
 
-Depending on the knowledge of a given volcano, and the characteristics of the [hazard assessment](hazard_assessments.md), maps can be designed during the volcano in quiescence (background activity &rarr; long-term hazard assessments) or during the eruption (crisis &rarr; shor-term hazard assessments). There are hence 2 main categories: **short** and **long-term** hazard maps. Information about the objectives of the map (purpose) and/or time indicators are evidences of the temporal scale applied in the elaboration of the map. 
+Depending on the knowledge of a given volcano, and the characteristics of the [hazard assessment](index.md), maps can be designed during the volcano in quiescence (background activity &rarr; long-term hazard assessments) or during the eruption (crisis &rarr; shor-term hazard assessments). There are hence 2 main categories: **short** and **long-term** hazard maps. Information about the objectives of the map (purpose) and/or time indicators are evidences of the temporal scale applied in the elaboration of the map. 
 
 On the other hand, depending on the level of detail and again, in the purpose, a hazard map can specifically focus on specific flanks of the volcano, on the volcano itself or on a regional surface showing larger inondated areas. 
 
@@ -335,7 +335,7 @@ This study was based on a very interesting workshop with scientists experts and 
 
     Another aspect to consider is that volcanoes do not understand about boundaries: many volcanoes are located in international borders (e.g., Chiles-Cerro Negro in Ecuador-Colombia) and/or impacted areas cross administrative boundaries (e.g., almost all volcanoes in Chile-Argentina) &rarr; this has significant implications in risk management but also in field work of volcanic deposits!! In several cases, there are detailed studies from one side of the volcano but not of the other side!
 
-    Finally, hazard uncertainties (aleatory and epistemic) are difficult to quantify and to represent in maps! You can find more on this in [Probabilistic modeling part II](../Teaching/CERG/Tephra/Hazard_probabilistic2.md)!   
+    Finally, hazard uncertainties (aleatory and epistemic) are difficult to quantify and to represent in maps! You can find more on this in [Probabilistic modeling part II](../Tephra/Hazard_probabilistic2.md)!   
 
 
 
