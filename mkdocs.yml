@@ -36,6 +36,10 @@ nav:
         - Physical Volcanology: 
           - Teaching/Bachelor/2ndYear/PhysicalVolcanology/index.md
           - Deposit characterisation: Teaching/Bachelor/2ndYear/PhysicalVolcanology/deposit_characterisation.md
+      - 3rd Year:
+        - Risques volcaniques: 
+          - Teaching/Bachelor/3rdYear/RisquesGeologiques/index.md
+          - Aléas et impacts des balistiques: Teaching/Bachelor/3rdYear/RisquesGeologiques/lapalma_ballistiques.md
     - Master:
       - Modelling volcanic processes:
         - Teaching/Master/Modelling-volcanic-processes/index.md
