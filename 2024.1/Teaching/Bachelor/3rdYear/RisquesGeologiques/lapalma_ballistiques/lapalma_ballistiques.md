@@ -46,7 +46,7 @@ Basé sur des modèles disponibles, il est estimé que la masse la plus probable
 
 !!! question "Question 1"
 
-    Réorganiser les **équations 1-4** pour estimer **d'estimer l'énergie cinétique au moment de l'impact de blocks de 0.4 kg**.
+    Réorganiser les **équations 1-4** pour estimer l'énergie cinétique au moment de l'impact de blocks de 0.4 kg**.
 
 #### Equations
 
@@ -114,7 +114,7 @@ La figure 3 ci-dessous présente des valeurs d'énergie cinétique limites pour 
 !!! question "Question 3.2"
 
     Les modèles estiment que la probabilité d'occurrence d'un bloc de cette taille est de $10^{-3}$ (soit 1 chance sur 1000). Réfléchissez à ces différents aspects:
-    
+
     - Pensez-vous que cette probabilité soit haute/faible?
     - Pensez-vous que cette probabilité soit acceptable?
     - Feriez-vous une recommendation à PEVOLCA? Comment répondriez-vous si ils vous le demandaient?
