@@ -46,7 +46,7 @@ Basé sur des modèles disponibles, il est estimé que la masse la plus probable
 
 !!! question "Question 1"
 
-    Réorganiser les **équations 1-4** pour estimer l'énergie cinétique au moment de l'impact de blocks de 0.4 kg**.
+    Réorganiser les **équations 1-4** pour estimer **l'énergie cinétique** qu'on des blocs de 0.4 kg au moment de l'impact.
 
 #### Equations
 
@@ -63,7 +63,7 @@ Basé sur des modèles disponibles, il est estimé que la masse la plus probable
 ##### Equation 2
 
 - L'équation 2 décrit la distance horizontale $d$ (m) en fonction du temps $t$ (s):
-  > $d = \frac{v_0}{\sqrt{2}}$
+  > $d = \frac{v_0}{\sqrt{2}}t$
 
 ##### Equation 3
 
