@@ -46,7 +46,7 @@ Basé sur des modèles disponibles, il est estimé que la masse la plus probable
 
 !!! question "Question 1"
 
-    Réorganiser les **équations 1-4** pour estimer **d'estimer l'énergie cinétique au moment de l'impact de blocks de 0.4 kg**.
+    Réorganiser les **équations 1-4** pour estimer **l'énergie cinétique** qu'ont des blocs de 0.4 kg au moment de l'impact.
 
 #### Equations
 
@@ -63,7 +63,7 @@ Basé sur des modèles disponibles, il est estimé que la masse la plus probable
 ##### Equation 2
 
 - L'équation 2 décrit la distance horizontale $d$ (m) en fonction du temps $t$ (s):
-  > $d = \frac{v_0}{\sqrt{2}}$
+  > $d = \frac{v_0}{\sqrt{2}}t$
 
 ##### Equation 3
 
@@ -92,7 +92,7 @@ Basé sur des modèles disponibles, il est estimé que la masse la plus probable
 
 ### 2. Estimer l'impact potentiel sur les habitations 
 
-La figure 3 ci-dessous présente des valeurs d'énergie cinétique limites pour la perforation de toits constitués de matériaux différents. La localité d'El Remo contient principalement des habitations faites de toits en métal.
+La figure 3 ci-dessous présente des valeurs d'énergie cinétique limites pour la perforation de toits constitués de matériaux différents. En d'autres termes, elle représente les échelles d'énergies pouvant provoque un *impact state* spécifique (→ perforation des toits). La localité d'El Remo contient principalement des habitations faites de toits en métal.
 
 !!! question "Question 2"
 
@@ -113,8 +113,8 @@ La figure 3 ci-dessous présente des valeurs d'énergie cinétique limites pour 
 
 !!! question "Question 3.2"
 
-    Les modèles estiment que la probabilité d'occurrence d'un bloc de cette taille est de $10^{-3}$ (soit 1 chance sur 1000). Réfléchissez à ces différents aspects:
-    
+    Les modèles estiment que la probabilité d'occurrence d'un bloc de cette taille est de $10^{-3}$ (→ un bloc atteignant la zone d'El Remo a 1 chance sur 1000 d'avoir cette taille). Réfléchissez à ces différents aspects:
+
     - Pensez-vous que cette probabilité soit haute/faible?
     - Pensez-vous que cette probabilité soit acceptable?
     - Feriez-vous une recommendation à PEVOLCA? Comment répondriez-vous si ils vous le demandaient?
@@ -126,3 +126,14 @@ La figure 3 ci-dessous présente des valeurs d'énergie cinétique limites pour 
     PEVOLCA vous demande à quels autres aléas les habitants peuvent être exposés. En se basant sur vos connaissances incomensurables en matière d'aléas volcaniques et de la situation, que répondez-vous? 
 
 
+## Solutions
+
+??? danger "Solutions"
+
+    De l'équation 1, $v_0$ peut être obtenu par:
+
+    > $v_0 = \frac{v\sqrt{2}}{\sqrt{\frac{z-z_0-v}{\frac{1}{2}g}}}$
+
+    De l'équation 2, $t$ peut être obtenu par:
+
+    > $t = \frac{v\sqrt{2}}{v_0}$

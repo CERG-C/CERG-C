@@ -2,7 +2,13 @@
 
 ## Bachelor
 
-- [Physical Volcanology (2nd year)](Bachelor/2ndYear/PhysicalVolcanology/index.md)
+### 2nd year
+
+- [Physical Volcanology](Bachelor/2ndYear/PhysicalVolcanology/index.md)
+
+### 3rd year
+
+- [Risques géologiques module Risques volcaniques](Bachelor/3rdYear/RisquesGeologiques/index.md)
 
 ## Master
 

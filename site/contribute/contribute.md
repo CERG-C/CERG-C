@@ -124,6 +124,10 @@ When happy with your changes, use the `latest` label.
 mike deploy --push --update-aliases 2022.1 latest
 ```
 
+!!! info "Check actions"
+
+    It is possible to check the status of the page building on [this page](https://github.com/CERG-C/CERG-C/actions).
+
 Different versions are accessible with their version numbers. For instance, the url of version `2022.1` is https://cerg-c.github.io/CERG-C/2022.1/. 
 
 !!! warning "Keep track of versions!"
