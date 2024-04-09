@@ -2,9 +2,9 @@
 
 > **Physical volcanology course**
 
-> Sébastien Biass, Riccardo Simionato, Corin Jorgenson, Tom Sheldrake
+> Sébastien Biass, Riccardo Simionato, Frank Förster, Tom Sheldrake
 
-> April 24 2023
+> April 15 2024
 
 ---
 
