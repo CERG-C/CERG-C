@@ -1,10 +1,8 @@
 # Physical volcanology
 
 > **Lecturers**: Tom Sheldrake, Sébastien Biass 
- 
-> **Assistants**: Corin Jorgenson, Riccardo Simionato, Jonathan Lemus, Carolina Diaz-Vecino 
 
-> Spring semester, 2023
+> Spring semester, 2024
 
 --- 
 
