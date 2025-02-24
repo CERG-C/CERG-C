@@ -38,10 +38,10 @@ Running the full workflow for probabilistic hazard assessment in the computer la
 
 ### Setup TephraProb
 
-The `VolcanicRisk2023.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
+The `VolcanicRisk2024.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
 
 !!! tip "Alternative link"
-    [Alternative dowload link](https://kdrive.infomaniak.com/app/share/250506/23d26070-975d-4d10-a290-e95ba2b001cc) 
+    [Alternative dowload link](https://kdrive.infomaniak.com/app/share/250506/f6653aca-6802-4d55-b37f-1f3819057003) 
 
 1. Start `Matlab`. If your computer has several versions, use the latest one.
 2. Left of the address bar at the top of the main `Matlab` window, click on the icon `Browse for Folder` and navigate to the location of `TephraProb` (i.e. the location of the file `tephraProb.m`).
@@ -133,8 +133,8 @@ You can now display wind profiles. Keep your eyes opened for *seasonal trends* i
 
 !!! question "Question 1: Wind conditions"
 
-    1. Visualize these wind patterns in the context of a hazard assessment. What is the main wind direction?
-    2. Can you observe a **seasonality** in wind patterns?
+    1. Visualize these wind patterns in the context of a hazard assessment. What is the main wind direction **below 5 km**?
+    2. Can you observe a **variability** in wind patterns as a function of the month? If yes, is it gradual or do you observe two distinct wind regimes?
 
     <!-- 2. How does the mean wind direction vary with height? How is that affecting eruptions of different sizes? (&rarr; refer to the note about *VEI and plume heights* above). -->
     <!-- 3. Do you notice any seasonality? If yes, identify during what months it happens. -->
@@ -254,7 +254,7 @@ Now that we have defined the ranges of ESP, `TephraProb` applies the algorithm b
 
     Analyse the distributions of sampled ESP. For each ESP, discuss:
 
-    1. From what distribution have each ESP been sampled from? (Hint: there are three types of distributions used here: *logarithmic*, *normal* and *uniform*).
+    1. From what distribution have ESPs for i) plume height, ii) erupted mass and iii) grain-size distribution been sampled from? (Hint: there are three types of distributions used here: *logarithmic*, *normal* and *uniform*).
     2. What *prior knowledge* do these three distributions reflect?
 
 

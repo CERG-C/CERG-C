@@ -64,7 +64,7 @@ Flow length is a critical metrics of lava flow hazard. However, since it depends
 
 !!! note "Lava flow distance"
 
-    As you can see from the <a href="../../../files/GeologicalmapofLaPalma.pdf", target="_blank">geological map of La Palma</a>, most historical flows on the island have reached the sea, so we will consider here that the flow distance is of limited importance. This assumption is however invalid in most cases. The **probability function** option allows you define a probability of flow length based on a **mean** and **standard** deviation of known lava flows length, which is a convenient way to treat this parameter probabilistically. Refer to the original paper[^1] for more information.
+    As you can see from the <a href="../../../../files/GeologicalmapofLaPalma.pdf", target="_blank">geological map of La Palma</a>, most historical flows on the island have reached the sea, so we will consider here that the flow distance is of limited importance. This assumption is however invalid in most cases. The **probability function** option allows you define a probability of flow length based on a **mean** and **standard** deviation of known lava flows length, which is a convenient way to treat this parameter probabilistically. Refer to the original paper[^1] for more information.
 
 ### Probability of flow inundation 
 

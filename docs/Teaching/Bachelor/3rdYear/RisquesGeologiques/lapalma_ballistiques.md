@@ -2,9 +2,9 @@
 
 > **Module risques volcaniques**
 
-> Sébastien Biass, Simon Thivet, Allan Fries
+> Sébastien Biass, Simon Thivet
 
-> 13 Mars 2023
+> 26 février 2025
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## :material-format-list-checks:{ .icn } Introduction
 
-Depuis quelques jours, une augmentation du niveau sismique a laissé penser qu'une nouvelle éruption était imminente sur l'île de La Palma (Figure 1). Ce matin, le bruit sismique à migré de façon inattendue vers la localité d'El Remo. Un tremblement de terre a endommagé la seule route liant El Remo à la route principale permettant l'évacuation. Depuis, l'éruption a commencé, créant un cone d'une hauteur d'environ 100 mètres situé à environ 1 km du village, situé à la hauteur de la mer. La mer étant mauvaise, une évacuation par bateau ou hélicoptère est pour l'instant impossible et les habitants et touristes ont reçu la recommendation de s'abriter à l'intérieur.
+Depuis quelques jours, une augmentation du niveau sismique laisse penser qu'une nouvelle éruption est imminente sur l'île de La Palma (Figure 1). Ce matin, le bruit sismique à migré de façon inattendue vers la localité d'El Remo. Un tremblement de terre a endommagé la seule route liant El Remo à la route principale permettant l'évacuation. Depuis, l'éruption a commencé, créant un cone d'une hauteur d'environ 100 mètres situé à environ 1 km du village, situé à la hauteur de la mer. La mer étant mauvaise, une évacuation par bateau ou hélicoptère est pour l'instant impossible et les habitants et touristes ont reçu la recommendation de s'abriter à l'intérieur.
 
 Une étude rapide de l'évolution de l'éruption révèle que:
 
@@ -64,6 +64,7 @@ Basé sur des modèles disponibles, il est estimé que la masse la plus probable
 
 - L'équation 2 décrit la distance horizontale $d$ (m) en fonction du temps $t$ (s):
   > $d = \frac{v_0}{\sqrt{2}}t$
+- Notez qu'on sera intéressé à estimer l'énergie cinétique à la distance d'impact, donc à $d=1000\ m$
 
 ##### Equation 3
 
@@ -83,10 +84,10 @@ Basé sur des modèles disponibles, il est estimé que la masse la plus probable
 
 ??? tip "Réorganiser les équations?"
 
-    1. La quantité qui nous intéresse est l'énergie cinétique $E_k$. Pour cela nous avons besoin de **l'équation 4**, mais il nous manque la valeur de vitesse $v$.
+    1. La quantité qui nous intéresse est l'énergie cinétique $E_k$. Pour cela nous avons besoin de **l'équation 4**, mais il nous manque la valeur de vitesse à l'impact $v$.
     2. Il faut donc réorganiser **l'équation 3**, mais elle requiert les valeurs de vitesse initiale $v_0$ ainsi que le temps total $t$ jusqu'à l'impact.
     3. $t$ peut être obtenu de **l'équation 2**, mais nous avons besoin de $v_0$ pour cela.
-    4. $v_0$ peut être obtenu de **l'équation 1**!
+    4. $v_0$ peut être obtenu de **l'équation 1**! Notez qu'il faut substituer l'équation 2 ré-arrangée dans l'équation 1
 
 --- 
 
@@ -130,10 +131,53 @@ La figure 3 ci-dessous présente des valeurs d'énergie cinétique limites pour 
 
 ??? danger "Solutions"
 
-    De l'équation 1, $v_0$ peut être obtenu par:
-
-    > $v_0 = \frac{v\sqrt{2}}{\sqrt{\frac{z-z_0-v}{\frac{1}{2}g}}}$
-
     De l'équation 2, $t$ peut être obtenu par:
 
-    > $t = \frac{v\sqrt{2}}{v_0}$
+    \[
+    t = \frac{d\sqrt{2}}{v_0}
+    \]
+
+    Nous pouvons maintenant substituer $t$ dans l'équation 1
+  
+    \[
+    z = z_0 + \frac{v_0}{\sqrt{2}} \cdot \frac{d \cdot \sqrt{2}}{v_0} - \frac{1}{2} g \left( \frac{d \cdot \sqrt{2}}{v_0} \right)^2
+    \]
+
+    Simplifions les termes :
+
+    - Le premier terme devient :
+
+    \[
+    \frac{v_0}{\sqrt{2}} \cdot \frac{d \cdot \sqrt{2}}{v_0} = d
+    \]
+
+    - Le deuxième terme devient :
+
+    \[
+    \frac{1}{2} g \left( \frac{d \cdot \sqrt{2}}{v_0} \right)^2 = \frac{1}{2} g \cdot \frac{2d^2}{v_0^2} = \frac{g d^2}{v_0^2}
+    \]
+
+    On peut maintenant réarranger l'équation :
+
+    \[
+    z = z_0 + d - \frac{g d^2}{v_0^2}
+    \]
+
+    Et isoler \( v_0 \) :
+
+    \[
+    z - z_0 - d = -\frac{g d^2}{v_0^2}
+    \]
+
+    On peut maintenant résoudre pour $v_0$ :
+
+    \[
+    v_0^2 = \frac{g d^2}{z_0 + d - z}
+    \]
+
+    Réponse finale :
+
+    \[
+    v_0 = \sqrt{\frac{g d^2}{z_0 + d - z}}
+    \]
+

@@ -9,3 +9,4 @@
 | `2023.1`      | Apr 2023 | 2023 BSc 2nd year Physical Volcanology                        |
 | `2023.2`      | May 2023 | 2023 CERG-C teaching                                          |
 | `2024.1`      | Mar 2024 | 2024 BSc 3rd year Risques géologiques                         |
+| `2025.1`      | Fev 2025 | 2025 BSc 3rd year Risques géologiques                         |

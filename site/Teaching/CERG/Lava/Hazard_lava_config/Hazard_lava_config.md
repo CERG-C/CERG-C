@@ -9,12 +9,12 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 ## Installing Q-LavHA 
 
 
-1. From the `Moodle` page of the class, download the `VolcanicRisk2023.zip` file and extract it somewhere **on your personal user drive.**
+1. From the `Moodle` page of the class, download the `VolcanicRisk2024.zip` file and extract it somewhere **on your personal user drive.**
 2. Make sure `QGIS` is closed.
 3. In Windows, navigate to the following folder, where `$USER` is your ISIS username:
 
 !!! tip "Alternative link"
-    [Alternative dowload link](https://kdrive.infomaniak.com/app/share/250506/23d26070-975d-4d10-a290-e95ba2b001cc) 
+    [Alternative dowload link](https://kdrive.infomaniak.com/app/share/250506/f6653aca-6802-4d55-b37f-1f3819057003) 
 
 === "Windows"
 
@@ -41,7 +41,7 @@ This section explains how to install [Q–LavHA](https://we.vub.ac.be/en/q-lavha
 
 ## Starting QGIS
 
-- Search for `QGIS 3.2x` and start it. Depending on the computer, the version might vary between `3.20` and `3.23`. Please take the most recent one. **Avoid QGIS 3.4!**
+- Search for `QGIS 3.2x` and start it. Depending on the computer, the version might vary between `3.20` and `3.28`. Please take the most recent one. **Avoid QGIS 3.8!**
 
 ### Activate Q-LavHA
 
@@ -59,17 +59,17 @@ To activate `Q–LavHA` in `QGIS`:
 
 ## Loading data
 
-The `Lava_Flow_Exercise_2023.zip` file downloaded from `Moodle` contains a `Lava flow exercise` folder that contains these files:
+The `VolcanicRisk2024.zip` file downloaded from `Moodle` contains a `Lava flow exercise` folder that contains these files:
 
-- `LaPalma_exercise_2023.qgz`: Main `QGIS` file. 
-- `Data/`
+- `LaPalma_basemap.qgz`: Main `QGIS` file. 
+- `Lava flow exercise/Data/`
     - `exercise.gpkg`: Geopackage containing some vector files for the exercise. 
     - `lapalma.gpkg`: Geopackage containing some vector files on previous eruptions at La Palma. 
     - `osm.gpkg`: Geopackage containing [openstreetmap](http://openstreetmap.org) files. 
     - `DEM/`: Folder containing some pre-processed DEM files. 
     - `Hydro`: Folder containing hydrological analyses.
 
-Open the `LaPalma_exercise_2023.qgz` file. 
+Open the `LaPalma_basemap.qgz` file. 
 
 !!! warning "Centering the map"
 
