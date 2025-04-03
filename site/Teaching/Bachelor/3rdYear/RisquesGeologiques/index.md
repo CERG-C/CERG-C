@@ -1,8 +1,8 @@
 # Risques volcaniques
 
-> **Lecturers**: Sébastien Biass, Costanza Bonadonna
+> **Lecturers**: Sébastien Biass
  
-> Module Risques Géologiques, Printemps 2023
+> Module Risques Géologiques, Printemps 2025
 
 --- 
 

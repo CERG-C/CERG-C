@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://cerg-c.github.io/CERG-C/2024.1/Teaching/Bachelor/3rdYear/RisquesGeologiques/lapalma_ballistiques/">
+        <link rel="canonical" href="https://cerg-c.github.io/CERG-C/2025.2/Teaching/Bachelor/3rdYear/RisquesGeologiques/lapalma_ballistiques/">
       
       
         <link rel="prev" href="../">
@@ -1981,8 +1981,8 @@
 <h1 id="estimer-laleas-et-limpact-des-retombees-de-balistiques">Estimer l'aléas et l'impact des retombées de balistiques</h1>
 <blockquote>
 <p><strong>Module risques volcaniques</strong></p>
-<p>Sébastien Biass, Simon Thivet, Allan Fries</p>
-<p>13 Mars 2023</p>
+<p>Sébastien Biass, Simon Thivet</p>
+<p>26 février 2025</p>
 </blockquote>
 <hr />
 <div class="admonition warning">
@@ -1990,7 +1990,7 @@
 <p>Les conditions d'aléas et de vulnérabilité physique présentés dans cet exercise sont 100% fictifs!</p>
 </div>
 <h2 id="introduction"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h6v6H3V5m2 2v2h2V7H5m6 0h10v2H11V7m0 8h10v2H11v-2m-6 5-3.5-3.5 1.41-1.41L5 17.17l4.59-4.58L11 14l-6 6Z"/></svg></span> Introduction</h2>
-<p>Depuis quelques jours, une augmentation du niveau sismique a laissé penser qu'une nouvelle éruption était imminente sur l'île de La Palma (Figure 1). Ce matin, le bruit sismique à migré de façon inattendue vers la localité d'El Remo. Un tremblement de terre a endommagé la seule route liant El Remo à la route principale permettant l'évacuation. Depuis, l'éruption a commencé, créant un cone d'une hauteur d'environ 100 mètres situé à environ 1 km du village, situé à la hauteur de la mer. La mer étant mauvaise, une évacuation par bateau ou hélicoptère est pour l'instant impossible et les habitants et touristes ont reçu la recommendation de s'abriter à l'intérieur.</p>
+<p>Depuis quelques jours, une augmentation du niveau sismique laisse penser qu'une nouvelle éruption est imminente sur l'île de La Palma (Figure 1). Ce matin, le bruit sismique à migré de façon inattendue vers la localité d'El Remo. Un tremblement de terre a endommagé la seule route liant El Remo à la route principale permettant l'évacuation. Depuis, l'éruption a commencé, créant un cone d'une hauteur d'environ 100 mètres situé à environ 1 km du village, situé à la hauteur de la mer. La mer étant mauvaise, une évacuation par bateau ou hélicoptère est pour l'instant impossible et les habitants et touristes ont reçu la recommendation de s'abriter à l'intérieur.</p>
 <p>Une étude rapide de l'évolution de l'éruption révèle que:</p>
 <ol>
 <li>Du à la morphologie du cone, la lave s'écoule vers le nord-ouest et ne devrait pas atteindre El Remo. La coulée devrait entrer en contact avec l'océan d'ici à demain</li>
@@ -2034,6 +2034,7 @@
 <p><span class="arithmatex">\(d = \frac{v_0}{\sqrt{2}}t\)</span></p>
 </blockquote>
 </li>
+<li>Notez qu'on sera intéressé à estimer l'énergie cinétique à la distance d'impact, donc à <span class="arithmatex">\(d=1000\ m\)</span></li>
 </ul>
 <h5 id="equation-3">Equation 3</h5>
 <ul>
@@ -2066,10 +2067,10 @@
 <details class="tip">
 <summary>Réorganiser les équations?</summary>
 <ol>
-<li>La quantité qui nous intéresse est l'énergie cinétique <span class="arithmatex">\(E_k\)</span>. Pour cela nous avons besoin de <strong>l'équation 4</strong>, mais il nous manque la valeur de vitesse <span class="arithmatex">\(v\)</span>.</li>
+<li>La quantité qui nous intéresse est l'énergie cinétique <span class="arithmatex">\(E_k\)</span>. Pour cela nous avons besoin de <strong>l'équation 4</strong>, mais il nous manque la valeur de vitesse à l'impact <span class="arithmatex">\(v\)</span>.</li>
 <li>Il faut donc réorganiser <strong>l'équation 3</strong>, mais elle requiert les valeurs de vitesse initiale <span class="arithmatex">\(v_0\)</span> ainsi que le temps total <span class="arithmatex">\(t\)</span> jusqu'à l'impact.</li>
 <li><span class="arithmatex">\(t\)</span> peut être obtenu de <strong>l'équation 2</strong>, mais nous avons besoin de <span class="arithmatex">\(v_0\)</span> pour cela.</li>
-<li><span class="arithmatex">\(v_0\)</span> peut être obtenu de <strong>l'équation 1</strong>!</li>
+<li><span class="arithmatex">\(v_0\)</span> peut être obtenu de <strong>l'équation 1</strong>! Notez qu'il faut substituer l'équation 2 ré-arrangée dans l'équation 1</li>
 </ol>
 </details>
 <hr />
@@ -2105,14 +2106,43 @@
 <h2 id="solutions">Solutions</h2>
 <details class="danger">
 <summary>Solutions</summary>
-<p>De l'équation 1, <span class="arithmatex">\(v_0\)</span> peut être obtenu par:</p>
-<blockquote>
-<p><span class="arithmatex">\(v_0 = \frac{v\sqrt{2}}{\sqrt{\frac{z-z_0-v}{\frac{1}{2}g}}}\)</span></p>
-</blockquote>
 <p>De l'équation 2, <span class="arithmatex">\(t\)</span> peut être obtenu par:</p>
-<blockquote>
-<p><span class="arithmatex">\(t = \frac{v\sqrt{2}}{v_0}\)</span></p>
-</blockquote>
+<div class="arithmatex">\[
+t = \frac{d\sqrt{2}}{v_0}
+\]</div>
+<p>Nous pouvons maintenant substituer <span class="arithmatex">\(t\)</span> dans l'équation 1</p>
+<div class="arithmatex">\[
+z = z_0 + \frac{v_0}{\sqrt{2}} \cdot \frac{d \cdot \sqrt{2}}{v_0} - \frac{1}{2} g \left( \frac{d \cdot \sqrt{2}}{v_0} \right)^2
+\]</div>
+<p>Simplifions les termes :</p>
+<ul>
+<li>Le premier terme devient :</li>
+</ul>
+<div class="arithmatex">\[
+\frac{v_0}{\sqrt{2}} \cdot \frac{d \cdot \sqrt{2}}{v_0} = d
+\]</div>
+<ul>
+<li>Le deuxième terme devient :</li>
+</ul>
+<div class="arithmatex">\[
+\frac{1}{2} g \left( \frac{d \cdot \sqrt{2}}{v_0} \right)^2 = \frac{1}{2} g \cdot \frac{2d^2}{v_0^2} = \frac{g d^2}{v_0^2}
+\]</div>
+<p>On peut maintenant réarranger l'équation :</p>
+<div class="arithmatex">\[
+z = z_0 + d - \frac{g d^2}{v_0^2}
+\]</div>
+<p>Et isoler <span class="arithmatex">\( v_0 \)</span> :</p>
+<div class="arithmatex">\[
+z - z_0 - d = -\frac{g d^2}{v_0^2}
+\]</div>
+<p>On peut maintenant résoudre pour <span class="arithmatex">\(v_0\)</span> :</p>
+<div class="arithmatex">\[
+v_0^2 = \frac{g d^2}{z_0 + d - z}
+\]</div>
+<p>Réponse finale :</p>
+<div class="arithmatex">\[
+v_0 = \sqrt{\frac{g d^2}{z_0 + d - z}}
+\]</div>
 </details>
 
 

@@ -133,8 +133,8 @@ You can now display wind profiles. Keep your eyes opened for *seasonal trends* i
 
 !!! question "Question 1: Wind conditions"
 
-    1. Visualize these wind patterns in the context of a hazard assessment. What is the main wind direction?
-    2. Can you observe a **seasonality** in wind patterns?
+    1. Visualize these wind patterns in the context of a hazard assessment. What is the main wind direction **below 5 km**?
+    2. Can you observe a **variability** in wind patterns as a function of the month? If yes, is it gradual or do you observe two distinct wind regimes?
 
     <!-- 2. How does the mean wind direction vary with height? How is that affecting eruptions of different sizes? (&rarr; refer to the note about *VEI and plume heights* above). -->
     <!-- 3. Do you notice any seasonality? If yes, identify during what months it happens. -->
@@ -254,7 +254,7 @@ Now that we have defined the ranges of ESP, `TephraProb` applies the algorithm b
 
     Analyse the distributions of sampled ESP. For each ESP, discuss:
 
-    1. From what distribution have each ESP been sampled from? (Hint: there are three types of distributions used here: *logarithmic*, *normal* and *uniform*).
+    1. From what distribution have ESPs for i) plume height, ii) erupted mass and iii) grain-size distribution been sampled from? (Hint: there are three types of distributions used here: *logarithmic*, *normal* and *uniform*).
     2. What *prior knowledge* do these three distributions reflect?
 
 
