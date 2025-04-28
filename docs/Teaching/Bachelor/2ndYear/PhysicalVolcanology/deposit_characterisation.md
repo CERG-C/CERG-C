@@ -36,7 +36,7 @@ for calculations. -->
 
 ## Volume of the tephra fallout deposit 
 
-The volume of tephra deposits is estimated from isopach maps by integrating the area below a curve plotting the **logarithm of the thickness of isopach contours** (y-axis) against the **square-root of the isopach area** (x-axis). On such plots, the exponential segment method of Fierstein & Nathenson (1992)[@Fierstein1992] states that a thickness $T$ at any $x$ value can be expressed as:
+The volume of tephra deposits is estimated from isopach maps by integrating the area below a curve plotting the **logarithm of the thickness of isopach contours** (y-axis) against the **square-root of the isopach area** (x-axis). On such plots, the exponential segment method of Fierstein & Nathenson (1992)[^Fierstein1992] states that a thickness $T$ at any $x$ value can be expressed as:
 
 ###### Equation 1
 
@@ -44,7 +44,7 @@ $$
 T(x) = T_{0}e^{-k\sqrt{A}}
 $$ 
 
-with $T_0$  being the maximum deposit thickness, $k$ the slope of the exponential segment and $\sqrt{A}$ the square root of the isopach area. Based on the assumption of ellipsoidal shapes of isopachs Fierstein & Nathenson (1992)[@Fierstein1992] estimate the volume $V$ as:
+with $T_0$  being the maximum deposit thickness, $k$ the slope of the exponential segment and $\sqrt{A}$ the square root of the isopach area. Based on the assumption of ellipsoidal shapes of isopachs Fierstein & Nathenson (1992)[^Fierstein1992] estimate the volume $V$ as:
 
 ###### Equation 2
 
@@ -71,7 +71,7 @@ $$
     | 387                   | 10             |
     | 685                   | 5              |
 
-Estimate the volume of Layer 5 using the 1-exponential segment method of Fierstein & Nathenson (1992)[@Fierstein1992] using the isopach map shown in Figure [1](#layer5):
+Estimate the volume of Layer 5 using the 1-exponential segment method of Fierstein & Nathenson (1992)[^Fierstein1992] using the isopach map shown in Figure [1](#layer5):
 
 - In Excel, import the <a href="../../../../../files/deposit/isopach.csv", target="_blank">isopach data</a> provided in Table 1 and plot the thickness ($cm$) versus the **square-root** of the area ($km$) as a **scatter plot**. Change the y-axis to a **logarithmic** scale
 
@@ -87,9 +87,9 @@ Estimate the volume of Layer 5 using the 1-exponential segment method of Fierste
 
 - Calculate the `volume` of the tephra fallout deposit using [Equation 2](#equation-2)
 
-- Estimate the corresponding `VEI` using the diagram in Fig. [2](#vei) from Newhall and Self (1982)[@newhall82]
+- Estimate the corresponding `VEI` using the diagram in Fig. [2](#vei) from Newhall and Self (1982)[@Newhall82]
 
-<!-- - Convert the volume to a mass using a bulk density of 1000 $kg/m^3$ and calculate the associated `magnitude` following Pyle (2000)[@pyle2000]:
+<!-- - Convert the volume to a mass using a bulk density of 1000 $kg/m^3$ and calculate the associated `magnitude` following Pyle (2000)[@Pyle2000]:
 
 ###### Equation 3
 
@@ -166,7 +166,7 @@ $$
 
 - Estimate the `mass eruption rate` (`MER`; $kg\ s^{-1}$) using the method of Degruyter and Bonadonna (2012)[@Degruyter2012] and the height obtained from isopleth maps. Note that this technique provides the **peak MER** of the eruption. 
 
-- Use the MER to calculate the associated `intensity` following Pyle (2000)[@pyle2000]
+- Use the MER to calculate the associated `intensity` following Pyle (2000)[@Pyle2000]
 
 ###### Equation 5
 
@@ -191,45 +191,46 @@ This list contains some references for the characterisation of tephra deposits.
 
 ### Characterization of tephra-fall deposits
 
-- Thorarinsson (1954)[@Thorarinsson1954]
-- Wilson (1972)[@Wilson1972]      
-- Walker (1973)[@Walker1973]
-- Wright et al (1980)[@Wright1980]      
-- Walker (1980)[@Walker1980]      
-- Carey and Sparks (1986)[@Carey1986]
-- Sparks (1986)[@Sparks1986]      
-- Wilson and Walker (1987)[@Wilson1987]      
-- Cas and Wright (1988)[@Cas1988]
-- Houghton and Carey (2015)[@HoughtonB.F.2000]
+- [@Thorarinsson1954]
+- [@Wilson1972]      
+- [@Walker1973]
+- [@Wright1980]      
+- [@Walker1980]      
+- [@Carey1986]
+- [@Sparks1986]      
+- [@Wilson1987]      
+- [@Cas1988]
+- [@Houghton2015]
 
 ### Volume calculation
 
-- Pyle (1989)[@Pyle1989]      
-- Fierstein and Nathenson (1992)[@Fierstein1992] 
-- Legros (2000)[@Legros2000]
-- Sulpizio (2005)[@Sulpizio2005]  
-- Bonadonna and Houghton (2005)[@Bonadonna2005] 
-- Bonadonna and Costa (2013)[@Bonadonna2013a]
-- Burden et al (2013)[@Burden2013]    
-- Daggitt et al (2014)[@Daggitt2014]   
-- Engwell et al (2015)[@Engwell2015]
-- Yang and Bursik (2016)[@Yang2016]      
-- Nathenson (2017)[@Nathenson2017] 
+- [@Pyle1989]      
+- [@Fierstein1992] 
+- [@Legros2000]
+- [@Sulpizio2005]  
+- [@Bonadonna2005] 
+- [@Bonadonna2013a]
+- [@Burden2013]    
+- [@Daggitt2014]   
+- [@Engwell2015]
+- [@Yang2016]      
+- [@Nathenson2017] 
 
 ### Mass eruption rate
 
-- Wilson and Walker (1987)[@Wilson1987]                                  
-- Degruyter and Bonadonna (2012)[@Degruyter2012]   
-- Woodhouse et al (2013)[@Woodhouse2013]
-- Mastin et al (2009)[@Mastin2009]     
+- [@Wilson1987]                                  
+- [@Mastin2009]     
+- [@Degruyter2012]   
+- [@Woodhouse2013]
+- [@Aubry2023]
 
 ### Uncertainty assessment
 
-- Biass and Bonadonna (2011)[@Biass2011]        
-- Cioni et al (2011)[@Cioni2011]       
-- Engwell et al (2013)[@Engwell2013]
-- Biass et al (2014)[@Biass2014b]       
-- Klawonn et al (2014a)[@Klawonn2014]     
-- Klawonn et al (2014b)[@Klawonn2014a]
-- Bonadonna et al (2015)[@Bonadonna2015a]   
+- [@Biass2011]
+- [@Cioni2011]       
+- [@Engwell2013]
+- [@Biass2014b]       
+- [@Klawonn2014]     
+- [@Klawonn2014a]
+- [@Bonadonna2015a]   
 

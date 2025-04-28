@@ -52,4 +52,3 @@ First install it: From the Menu bar, use the `Plugins > Manage and Install Plugi
 
 <!-- To activate it, right-click anywhere in the [Toolbar](QGIS_Intro.md#the-qgis-interface) and activate the `Coordinate Capture Panel`. -->
 
-zip -r Exercise_VolcanicRisk2023.zip Exercise_VolcanicRisk2023  -x '**/.*' -x '**/__MACOSX'

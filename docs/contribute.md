@@ -83,14 +83,17 @@ This path must be adapted to link files between classes. For instance, `mastercl
 Bibtex-style of referencing is accepted using the [mkdocs-bibtex](https://github.com/shyamd/mkdocs-bibtex). The master `.bib` file is `includes/bibliography.bib`. Please add your reference to the existing list. In-text citations are then achieved as:
 
 ``` pango
-According to Newhall and Self (1982)[@newhall82]
+According to Newhall and Self (1982)[@Newhall82]
 ```
 
 ### Abbreviations    
 
 A glossary exists in `includes/glossary.md`. Each entry will automatically be formatted at the bottom of the page that contains the term following [this](https://squidfunk.github.io/mkdocs-material/reference/tooltips/#adding-abbreviations). Add your own abbreviations to this list. 
 
-### Extra files 
+### Colors 
+
+- The primary colour is lime: `#cbdd37`
+- The secondary colour is pink: `#d63964`
 
 
 

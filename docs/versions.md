@@ -11,3 +11,4 @@
 | `2024.1`      | Mar 2024 | 2024 BSc 3rd year Risques géologiques                                                                |
 | `2025.1`      | Feb 2025 | 2025 BSc 3rd year Risques géologiques                                                                |
 | `2025.2`      | Feb 2025 | 2025 BSc 2rd year Physical Volcanology - Significantly changed the tephra characterisation practical |
+| `2025.3`      | Apr 2025 | 2025 CERG-C - Added a computer setup section |

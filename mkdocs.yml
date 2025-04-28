@@ -9,6 +9,8 @@ theme:
       # - navigation.sections
       # - navigation.expand
       - content.code.copy
+      - highlightjs
+      - mermaid2
 
   logo: img/volcano.svg
   icon:
@@ -52,6 +54,11 @@ nav:
           # - The story of a pyroclast: 
     - CERG-C:
       - Teaching/CERG/index.md
+      - Setup: 
+        - Teaching/CERG/Setup/index.md
+        - Matlab: Teaching/CERG/Setup/matlab.md
+        - QGIS: Teaching/CERG/Setup/qgis.md
+      - Computer setup: Teaching/CERG/setup.md
       - Lava hazard: 
         - Teaching/CERG/Lava/index.md
         - QGIS basics: Teaching/CERG/Lava/QGIS_Intro.md
@@ -111,8 +118,8 @@ markdown_extensions:
   - md_in_html
   - footnotes
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       toc_depth: 4
   - pymdownx.tabbed:
@@ -152,4 +159,4 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2023 / CERG-C / University of Geneva / CC BY-NC-SA
+copyright: Copyright &copy; 2025 / CERG-C / University of Geneva / CC BY-NC-SA
