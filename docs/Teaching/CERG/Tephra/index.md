@@ -1,10 +1,7 @@
 # Probabilistic hazard assessment for tephra accumulation
 
 > **Lecturer**: Sébastien Biass 
- 
-> **Assistants**: Riccardo Simionato, Carolina Diaz-Vecino 
-
-> Spring semester, 2024
+> Spring semester, 2025
 
 ---
 
@@ -83,7 +80,7 @@ Tephra deposits are **a direct reflection of the eruptive conditions** occurring
 
 !!! info "Field-based methods"
 
-        For recent eruption, direct observation methods can infer ESP in near-real time (e.g., satellite imagery for plume height, infrasound for mass eruption rate (MER)). However, field-based approaches remain the main approach to extract knowledge from old tephra deposits.
+    For recent eruption, direct observation methods can infer ESP in near-real time (e.g., satellite imagery for plume height, infrasound for mass eruption rate (MER)). However, field-based approaches remain the main approach to extract knowledge from old tephra deposits.
 
 <figure markdown>
 ![strati](img/tephra/strati.png)
@@ -92,11 +89,11 @@ Tephra deposits are **a direct reflection of the eruptive conditions** occurring
 
 !!! info "Volcanic explosivity index"
 
-        ![vei](img/tephra/vei.png){ width="300", align=left }
+    ![vei](img/tephra/vei.png){ width="300", align=left }
 
-        The **Volcanic explosivity index**[^2] - or **VEI** - is a *"measure"* of eruption size based on the **volume** of tephra produced during an eruption. Despites its limitations (i.e., it is a stepwise measure and largely aggregates small but frequent eruptive styles into a *non-explosive* category), it remains the most commonly used metrics. Bear in mind that its primary purpose was *communication*, and it does a great job at it. For measures that better account for the dynamics of eruption, the combined use of **magnitude** and **intensity**[^3] might be more appropriate. More information can be found [here](https://geology.com/stories/13/volcanic-explosivity-index/). 
+    The **Volcanic explosivity index**[^2] - or **VEI** - is a *"measure"* of eruption size based on the **volume** of tephra produced during an eruption. Despites its limitations (i.e., it is a stepwise measure and largely aggregates small but frequent eruptive styles into a *non-explosive* category), it remains the most commonly used metrics. Bear in mind that its primary purpose was *communication*, and it does a great job at it. For measures that better account for the dynamics of eruption, the combined use of **magnitude** and **intensity**[^3] might be more appropriate. More information can be found [here](https://geology.com/stories/13/volcanic-explosivity-index/). 
 
-        
+    
 #### Field mapping toolbox 
 
 These sketches provide an overview of the general process followed to characterize tephra deposits.

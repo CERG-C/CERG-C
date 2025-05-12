@@ -88,7 +88,7 @@ Amongst non-newtonian fluids:
     - Pseudoplastic fluids: apparent *viscosity* decreases with increasing *shear rate* &rarr; *shear thinning fluids*
 - **Bingham** fluids are a special type of non-newtonian fluids characterized by a *yield strength* and a linear *shear stress*/*strain rate* relationship
 
-!!! tip "Lava flows"
+!!! question "Lava flows"
 
     Lava flows are typically **non-newtonian**, **pseudoplastic** fluids with a **yield strength**.
 
@@ -256,9 +256,11 @@ This limited ability to predict the evolution of lava flow crises result in high
 
 ## :material-check-bold:{ .icn } Summary
 
-- **Lava flows** are non-newtonian fluids with a **yield strength**. 
-- Their emplacement is controlled by **source conditions**, **topographic control** and **rheological properties**.
-- No unified model for flow emplacement exists, and modelling approaches follow two main directions: **physical** and **stochastic** strategies.
+In this lesson, we have reviewed how:
+
+- [x] **Lava flows** are non-newtonian fluids with a **yield strength**. 
+- [x] Their emplacement is controlled by **source conditions**, **topographic control** and **rheological properties**.
+- [x] No unified model for flow emplacement exists, and modelling approaches follow two main directions: **physical** and **stochastic** strategies.
 
 
 ## :fontawesome-solid-book:{ .icn } References

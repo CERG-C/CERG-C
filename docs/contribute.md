@@ -38,7 +38,7 @@ conda activate teaching
 Install the following Python dependencies:
 
 ```
-pip install mkdocs-material mike mkdocstrings livereload mkdocs-jupyter mkdocs-bibtex mkdocs-encryptcontent-plugin
+pip install mkdocs-material mike mkdocstrings livereload mkdocs-jupyter mkdocs-bibtex mkdocs-encryptcontent-plugin mkdocs-git-committers-plugin-2
 ```
 
 !!! tip "Python versions on Mac OS"

@@ -1,16 +1,13 @@
 # Probabilistic hazard assessment for lava flow inundation 
 
 > **Lecturer**: Sébastien Biass 
- 
-> **Assistants**: Riccardo Simionato, Carolina Diaz-Vecino 
-
-> Spring semester, 2024
+> Spring semester, 2025
 
 ---
 
 Lava flows - beside being mesmerising to watch - are highly destructive volcanic phenomena. Over the past years, volcanic crises in [Hawaii](https://www.usgs.gov/volcanoes/kilauea/2018-lower-east-rift-zone-eruption-and-summit-collapse) in 2018, in [DRC](https://en.wikipedia.org/wiki/2021_Mount_Nyiragongo_eruption) and [La Palma](https://en.wikipedia.org/wiki/2021_Cumbre_Vieja_volcanic_eruption) in 2021 have demonstrated the difficulty in managing these long–lasting crises. This is due to the fact that lava flows are governed by complex rheological processes, making their paths hard to predict. As a result, forecasts are often associated with large uncertainties that makes them unusable *during* crisis management.
 
-!!! help "Does this mean that we are helpless in reducing the risk associated with lava flows?"
+!!! question "Does this mean that we are helpless in reducing the risk associated with lava flows?"
 
 Well, no, not entirely. In this exercise, we will differentiate between various purposes of hazard (and risk!) assessments for different parts of the *risk cycle*, contrasting between actions taken *long before* the event during the **prevention** phase - where the idea here is to *plan ahead* to reduce the risk - and actions taken *short before* or *during* the event in the **preparedness** and **response** phases - where the aim is to minimise immediate impacts. We will discuss these concepts throughout the exercise and in the field, but refer to the [ADVISE](https://appliedvolc.biomedcentral.com/articles/10.1186/s13617-021-00108-5)[^1] approach for an overview of the risk framework we are applying here.
  

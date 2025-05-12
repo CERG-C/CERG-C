@@ -26,7 +26,7 @@ This tutorial takes you through the steps to install QGIS. We will then install 
 
 If the above procedure produces an error, follow these steps:
 
-- Unzip `Qlavha_v3.zip`
+- Unzip `Qlavha_v3.zip` (:warning: this means actually unzipping it, not only double clicking on it!)
 - Make sure QGIS is closed
 - In the *Finder* (MacOS) or *Explorer* (Windows), navigate to this location:
 

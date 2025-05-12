@@ -91,8 +91,8 @@ For the case of lava flow inundation hazard in La Palma, we will explore how the
 
 Here, we have reviewed how probabilistic modelling allows to[^1]:
 
-- Account for *uncertainties* in the model's input parameters.
-- Quantify hazard outputs as *probabilities* rather than *occurrences*.
+- [x] Account for *uncertainties* in the model's input parameters.
+- [x] Quantify hazard outputs as *probabilities* rather than *occurrences*.
 
 In the next exercise, we will use `Q-LavHA`, a probabilistic model, to quantify the probability of lava flow inundation for various vents in La Palma.
 

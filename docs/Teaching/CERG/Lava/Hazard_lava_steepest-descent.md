@@ -178,9 +178,9 @@ However, its **deterministic** nature prevents its ability to systematically acc
 
 In this exercise, we:
 
-- Used hydrological modeling tools to obtain a first-order estimate of the possible extent of lava flow inundation. 
-- Compared this approach with historical and recent lava flows at La Palma. 
-- Discussed its limitations and its domain of applicability.
+- [x] Used hydrological modeling tools to obtain a first-order estimate of the possible extent of lava flow inundation. 
+- [x] Compared this approach with historical and recent lava flows at La Palma. 
+- [x] Discussed its limitations and its domain of applicability.
 
 ## :fontawesome-solid-book:{ .icn } References
 

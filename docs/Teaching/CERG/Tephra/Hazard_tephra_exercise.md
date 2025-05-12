@@ -14,7 +14,7 @@ Tephra describes all fragments of rocks of any size or composition that are inje
 
 ## :material-format-list-checks:{ .icn } Objectives
 
-The aim of this exercise is to compile a probabilistic hazard assessment for tephra accumulation for a future eruption at La Palma. Probabilistic modeling will be performed using the model [Tephra2](https://github.com/geoscience-community-codes/tephra2)[^1] and the Matlab toolbox [TephraProb](https://github.com/e5k/TephraProb)[^2]. 
+The aim of this exercise is to compile a probabilistic hazard assessment for tephra accumulation for a future eruption at La Palma. Probabilistic modeling will be performed using the model [Tephra2](https://github.com/geoscience-community-codes/tephra2) [@Bonadonna2005] and the Matlab toolbox [TephraProb](https://github.com/e5k/TephraProb) [@Biass2016]. 
 
 In this exercise, you will use the user-friendly Matlab toolbox called `TephraProb` to:
 
@@ -147,7 +147,7 @@ Let's try and forget what we know about the 2021 eruption and put ourselves in t
 
 1. We need to assess the hazard associated with tephra accumulation for a future eruption along the Cumbre Vieja rift. 
 2. From the historical record, most eruptions are **VEI 2**. However, since what we observed in the field deposits seems larger than VEI 2 eruptions, we decide to focus on a **VEI 3** eruption. 
-3. However, the deposits we observed do not look like **short-lasting, subplinian VEI 3** eruptions. We suspect that these eruptions were less intense and longer-lastin. We therefore model an eruption lasting between **3 days to one week** with plume heights varying between **1-5** km.
+3. However, the deposits we observed do not look like **short-lasting, subplinian VEI 3** eruptions. We suspect that these eruptions were less intense and longer-lasting. We therefore model an eruption lasting between **3 days to one week** with plume heights varying between **1-5** km.
 4. We have **no information** regarding the **grain-size** distribution of the observed deposits, and therefore decide to use an **analogue eruption** to inform us. We chose the 2002 eruption of Etna volcano.
 
 
@@ -406,22 +406,22 @@ Relevant points to each vent regarding the hazard to roof collapse are presented
     | Road leading to Los Canarios from W | -17.82308 | 28.51489 | -->
     
 
-[Figure 1](#fig1) represents fragility curves for various European roofs (Spence et al., 2005[^5]), and estimate a median probability of roof collapse as a function of tephra accumulation. Use these curves to answer the following questions. 
+[Figure 1](#fig1) represents fragility curves for various European roofs [@Spence2005], and estimate a median probability of roof collapse as a function of tephra accumulation. Use these curves to answer the following questions. 
 
 <figure markdown>
 ![roofs](img/tephra/fragility.png){#fig1}
-<figcaption>Figure 1: Fragility curves of Spence et al. (2005) expressing the median probability of roof collapse for various European roofs. The different curves represent various roof typologies: *WE:* Weak (e.g., Tiled roof, old or in poor condition); *MW:* Medium Weak (e.g., Tiled roof, average or good condition); *MS:* Medium Strong (e.g., Flat RC roof); *ST:* Strong (e.g., Flat RC roof designed for access, younger than 20 years). </figcaption>
+<figcaption>Figure 1: Fragility curves of Spence et al. (2005) expressing the median probability of roof collapse for various European roofs. The different curves represent various roof typologies: WE: Weak (e.g., Tiled roof, old or in poor condition); MW: Medium Weak (e.g., Tiled roof, average or good condition); MS: Medium Strong (e.g., Flat RC roof); ST: Strong (e.g., Flat RC roof designed for access, younger than 20 years). </figcaption>
 </figure>
 
 !!! question "Question 4: Hazard curves"
 
-    For the point attributed to your vent, use the model of Spence et al. (2005)[^5] to estimate a probability of occurrence of roof collapse. To convert a mass per unit area ($M$, $kg/m^2$) to a load ($L$, $kPa$), use:
+    For the point attributed to your vent, use the model of Spence et al. (2005)[^Spence2005] to estimate a probability of occurrence of roof collapse. To convert a mass per unit area ($M$, $kg/m^2$) to a load ($L$, $kPa$), use:
 
     $$
     L = M \times 9.81 \times 10^{-3} 
     $$
     
-    1. Assuming that the considered buildings are of a **MS** fragility class, what are the probabilities of roof collapse for associated with mass loads for 25% and 75% probability of occurrence?
+    1. Assuming that the considered buildings are of a **MS** fragility class, what are the probabilities of roof collapse for associated with mass loads for 25% and 75% probability of occurrence? 
 
 
     !!! tip "Accessing hazard curves with **data tips**"
@@ -440,11 +440,11 @@ Relevant points to each vent regarding the hazard to roof collapse are presented
             P = normcdf(log(L), log(4.5), 0.2)
         ```
 
-        Note that the MS class according to Spence et al. (2005)[^5] is characterised by:
+        Note that the MS class according to Spence et al. (2005)[^Spence2005] is characterised by:
         
-            1. A normal cumulative density function 
-            2. A mean value of 4.5 kPa
-            3. A standard deviation of 20% 
+         1. A normal cumulative density function 
+         2. A mean value of 4.5 kPa
+         3. A standard deviation of 20% 
 
         Refer to the original paper for more information.
 
@@ -475,11 +475,11 @@ This module provided a practical application of the concepts introduced in the p
 
 ## :fontawesome-solid-book:{ .icn } References
 
-[^1]: Bonadonna, C., Connor, C.B., Houghton, B.F., Connor, L., Byrne, M., Laing, A., Hincks, T.K., 2005. Probabilistic modeling of tephra dispersal: Hazard assessment of a multiphase rhyolitic eruption at Tarawera, New Zealand. J. Geophys. Res 110, 2156–2202.
+<!-- [^1]: Bonadonna, C., Connor, C.B., Houghton, B.F., Connor, L., Byrne, M., Laing, A., Hincks, T.K., 2005. Probabilistic modeling of tephra dispersal: Hazard assessment of a multiphase rhyolitic eruption at Tarawera, New Zealand. J. Geophys. Res 110, 2156–2202.
 [^2]: Biass, S., Bonadonna, C., Connor, L., Connor, C., 2016. TephraProb: a Matlab package for probabilistic hazard assessments of tephra fallout. Journal of Applied Volcanology 5, 1–16. 
 [^3]: Simkin, T., Siebert, L., Simkin, T., Kimberly, P., 2010. Volcanoes of the World. University of California Press, Tucson, AZ.
 [^4]: Jenkins, S.F., Wilson, T.M., Magill, C., Miller, V., Stewart, C., Blong, R., Marzocchi, W., Boulton, M., Bonadonna, C., Costa, A., 2015. Volcanic ash fall hazard and risk, in: Loughlin, S., Sparks, S., Brown, S., Jenkins, S., Vye-Brown, C. (Eds.), Global Volcanic Hazards and Risk. Cambridge University Press, pp. 173–222.
-[^5]: Spence, R.J.S., Kelman, I., Baxter, P.J., Zuccaro, G., Petrazzuoli, S., 2005. Residential building and occupant vulnerability to tephra fall. Natural Hazards and Earth System Sciences 5, 477–494.
+[^5]: Spence, R.J.S., Kelman, I., Baxter, P.J., Zuccaro, G., Petrazzuoli, S., 2005. Residential building and occupant vulnerability to tephra fall. Natural Hazards and Earth System Sciences 5, 477–494. -->
 
 *[ESP]: Eruption source parameter &rarr; most important initial conditions to a model
 *[TGSD]: Total grain-size distribution
