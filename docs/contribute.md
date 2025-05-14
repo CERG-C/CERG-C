@@ -53,8 +53,9 @@ pip install mike -->
 ## Contributing to the course
 
 The teaching content is located in the folder `docs/Teaching`, where sub-folder contain `Bachelor`, `Master` and `CERG`. Create a sub-folder in the relevant folder and create the following sub-folders
-    - A sub-folder named `img/` that will contain all images
-    - A file called `index.md` that will be the landing page of your course.
+
+- A sub-folder named `img/` that will contain all images
+- A file called `index.md` that will be the landing page of your course.
 
 
 

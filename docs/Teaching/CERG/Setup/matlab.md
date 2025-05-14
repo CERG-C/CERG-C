@@ -11,7 +11,8 @@ This tutorial takes you through the steps to download Matlab from the UNIGE serv
 
 ## Step 2: Install Matlab 
 
-- Visit one of these pages and follow the instructions:
+- If you are a **CERG-C student**, go to <a href="https://plone.unige.ch/distic/pub/logiciels/matlab/matlab-installation-classroom" target="_blank">this page</a> and follow the instructions
+- If you are a **Master student**, visit one of these pages and follow the instructions:
     - <a href="https://plone-unige-ch.translate.goog/distic/pub/logiciels/matlab/comment-installer-matlab-r2024a-sur-macos?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp", target="_blank">MacOS</a> → On the installation procedure, follow **Step 1a** and *not* 1b
     - <a href="https://plone-unige-ch.translate.goog/distic/pub/logiciels/matlab/comment-installer-matlab-2024a-sur-windows?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp", target="_blank">Windows</a> → You might need to right click on `setup.exe` and choose `Run as administrator`
     - <a href="https://plone-unige-ch.translate.goog/distic/pub/logiciels/matlab/comment-installer-matlab-2024x-sur-linux?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp", target="_blank">Linux</a>

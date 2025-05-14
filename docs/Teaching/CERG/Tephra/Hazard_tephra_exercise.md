@@ -1,4 +1,4 @@
-# Probabilistic tephra hazard assessment
+# Probabilistic tephra hazard modelling
 
 Tephra describes all fragments of rocks of any size or composition that are injected into the atmosphere during explosive volcanic eruptions. Although tephra is not one of the main causes of casualties in the context of volcanic crisis (tephra are responsible for only 2% of all volcano-related deaths), it can cover wide areas and disrupt a broad range of socio-economic activities. Examples are health problems, collapse of roofs, death of vegetation, blockage of roads and disruption of airports and air traffic. Some hazardous tephra thresholds are shown in the table below. These ranges are wide due to the range of typologies of crops, vegetation, buildings that can be impacted, as well as external factors (e.g. time of the year for crops). Refer to the references provided in the [previous lesson](index.md) for more information on how to quantify physical vulnerability to tephra fallout.
 
@@ -36,8 +36,14 @@ Running the full workflow for probabilistic hazard assessment in the computer la
 
 ## Getting started
 
-### Setup TephraProb
+Due to the logistics of installing Matlab on PC's, we might encounter some issues. Throughout the exercise, you will see tabs similar to the one below. If you have access to Matlab and can use `TephraProb`, use the `With TephraProb` tab. Otherwise, we have extracted the figures required for the exercise in the `Without TephraProb` tab.
 
+=== "With TephraProb"
+    Make sure Matlab and `TephraProb` are setup according to [this guide](../Setup/matlab.md#step-3-install-tephraprob)
+
+=== "Without TephraProb"
+    Just sit tight for now!
+<!-- 
 The `VolcanicRisk2024.zip` located on `Moodle` contains folder named `TephraProb`, which we will use throughout the exercise. 
 
 !!! tip "Alternative link"
@@ -49,7 +55,7 @@ The `VolcanicRisk2024.zip` located on `Moodle` contains folder named `TephraProb
 
 !!! danger "Use your user disk!"
 
-    If you are using the PC of the computer lab, make sure **your files are saved on your personal drive!** This is typically the `H:\` drive. Otherwise, your files **will be deleted every time you logout!**
+    If you are using the PC of the computer lab, make sure **your files are saved on your personal drive!** This is typically the `H:\` drive. Otherwise, your files **will be deleted every time you logout!** -->
 
 <!-- ### Get the eruption data 
 
@@ -95,16 +101,6 @@ As already introduced, the [GVP](https://volcano.si.edu) database compiles the e
     3. What is the **annual frequency of eruption** for the recent history? -->
 
 
-!!! info "VEI and plume height"
-
-    The VEI scale suggests *very approximative* indications of plume height for each VEI class. For instance, it suggests heights of 1-5 km for VEI 2 and 3-15 km for VEI 3 eruptions. However, the VEI scale does not include any information about **intensity** of the eruption (&rarr; **duration** over which the VEI volume was erupted). 
-
-    The volume associated with the 2021 VEI 3 eruption was erupted over the course of **a few months**, but plume heights were in the 1-5 km range rather than the 3-15 km range. Therefore, let's consider here the following plume heights:
-
-    - **VEI 2**: 1-5 km.
-    - **VEI 3 - low intensity**: 1-5 km (→ long-lasting eruption lasting for days/weeks).
-    - **VEI 3 - high intensity**: 3-15 km (&rarr; intense eruption lasting for hours).
-
 ### Wind data analysis
 
 In order to take into account the aleatoric variability of atmospheric conditions in the hazard assessment, a large population of wind profiles is required from which a different wind profile is randomly sampled at each model run. The atmospheric database used here is the [EMCWF ERA-5](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5) database.
@@ -117,19 +113,72 @@ Downloading atmospheric data takes time - we have therefore already prepared the
 
 #### Analysing wind patterns
 
-You can now display wind profiles. Keep your eyes opened for *seasonal trends* in both wind direction and speed.
+You can now display wind profiles. We use two formats to analyse wind conditions:
 
-1. On the main `TephraProb` window, click `Input>Wind>Analyze wind`
-2. Select the `wind.mat` file located in `WIND/CumbreVieja_1721/`
-3. A new panel opens, on which you can explore wind profiles either using `wind profiles` or `wind roses`. 
+- **Wind profiles** show `wind velocity` and `wind direction` as a function of altitude. Wind profiles can be plotted either *separately* (e.g., one wind profile per year or per month) or *averaged* (e.g., mean ± standard deviation).
+- **Wind roses** show the probability (concentric circles) of the wind blowing in each direction [0 - 360 degrees]. Colours indicate wind velocity. Wind roses are plotted for **a given elevation**, so explore a few. 
 
-!!! note "Wind profiles"
+Keep your eyes opened for *seasonal trends* in both wind direction and speed.
 
-    Wind profiles show `wind velocity` and `wind direction` as a function of altitude. Wind profiles can be plotted either *separately* (e.g., one wind profile per year or per month) or *averaged* (e.g., mean ± standard deviation). 
+=== "With TephraProb"
+      1. On the main `TephraProb` window, click `Input>Wind>Analyze wind`
+      2. Select the `wind.mat` file located in `WIND/CumbreVieja_1721/`
+      3. A new panel opens, on which you can explore wind profiles either using `wind profiles` or `wind roses`. 
 
-!!! note "Wind rose" 
+=== "Without TephraProb"
+      
+    ??? info "Wind profiles"
 
-    Wind roses show the probability (concentric circles) of the wind blowing in each direction [0 - 360 degrees]. Colours indicate wind velocity. Wind roses are plotted for **a given elevation**, so explore a few. 
+        <figure markdown>
+        ![height](img/tephraprob/profile_average.png){width='450px'}
+        </figure>
+        <figcaption>Average wind profiles for the period 2017-2021.</figcaption>
+        
+        <figure markdown>
+        ![height](img/tephraprob/profile_months.png){width='450px'}
+        </figure>
+        <figcaption>Monthly averaged profiles for the period 2017-2021.</figcaption>
+
+    ??? info "Wind Roses"
+
+        <figure markdown>
+        ![height](img/tephraprob/rose_1.png){width='450px'}
+        </figure>
+        <figcaption>Wind rose at 1 km asl for the period 2017-2021.</figcaption>
+        
+        <figure markdown>
+        ![height](img/tephraprob/rose_2.png){width='450px'}
+        </figure>
+        <figcaption>Wind rose at 2 km asl for the period 2017-2021.</figcaption>
+        
+        <figure markdown>
+        ![height](img/tephraprob/rose_4.png){width='450px'}
+        </figure>
+        <figcaption>Wind rose at 4 km asl for the period 2017-2021.</figcaption>
+        
+        <figure markdown>
+        ![height](img/tephraprob/rose_6.png){width='450px'}
+        </figure>
+        <figcaption>Wind rose at 6 km asl for the period 2017-2021.</figcaption>
+        
+        <figure markdown>
+        ![height](img/tephraprob/rose_8.png){width='450px'}
+        </figure>
+        <figcaption>Wind rose at 8 km asl for the period 2017-2021.</figcaption>
+<!--         
+        <figure markdown>
+        ![height](img/tephraprob/rose_10.png){width='450px'}
+        </figure>
+        <figcaption>Wind rose at 10 km asl for the period 2017-2021.</figcaption>
+        
+        <figure markdown>
+        ![height](img/tephraprob/rose_15.png){width='450px'}
+        </figure>
+        <figcaption>Wind rose at 15 km asl for the period 2017-2021.</figcaption>
+         -->
+
+
+
 
 !!! question "Question 1: Wind conditions"
 
@@ -151,6 +200,28 @@ Let's try and forget what we know about the 2021 eruption and put ourselves in t
 4. We have **no information** regarding the **grain-size** distribution of the observed deposits, and therefore decide to use an **analogue eruption** to inform us. We chose the 2002 eruption of Etna volcano.
 
 
+See what we just did? We just defined an **eruption scenario**! The table below summarises the **ESP** for our **low-intensity VEI 3** eruption.
+
+| ESP           | Value                  | Description                                                                                                        |
+|:--------------|:-----------------------|:-------------------------------------------------------------------------------------------------------------------|
+| VEI           | 3                      | Similar to the 2021 eruption                                                                                       |
+| Mass          | 10$^{10}$–10$^{11}$ kg | Using the volume ranges of a VEI 3 eruption and conversion to mass using a bulk deposit density of 1000 $kg/m^{3}$ |
+| Height        | 1-5 km                 | Low intensity VEI 3 eruption occurring over a few days                                                             |
+| Duration      | 3-7 days               | Paroxysmal phase of a longer eruptive sequence                                                                     |
+| Md$_\Phi$     | 0-1 $\Phi$             | Center of the grain-size distribution, based on Etna 2002                                                          |
+| $\sigma_\Phi$ | 1-2 $\Phi$             | Spread of the grain-size distribution, based on Etna 2002                                                          |
+
+
+!!! tip "VEI and plume height"
+
+    The VEI scale suggests *very approximative* indications of plume height for each VEI class. For instance, it suggests heights of 1-5 km for VEI 2 and 3-15 km for VEI 3 eruptions. However, the VEI scale does not include any information about **intensity** of the eruption (&rarr; **duration** over which the VEI volume was erupted). 
+
+    The volume associated with the 2021 VEI 3 eruption was erupted over the course of **a few months**, but plume heights were in the 1-5 km range rather than the 3-15 km range. Therefore, let's consider here the following plume heights:
+
+    - **VEI 2**: 1-5 km.
+    - **VEI 3 - low intensity**: 1-5 km (→ long-lasting eruption lasting for days/weeks).
+    - **VEI 3 - high intensity**: 3-15 km (&rarr; intense eruption lasting for hours).
+
 ??? info "Grain size distribution"
 
     For clarity, we haven't touched yet on the concept of **grain-size distribution** or GSD. This is an important ESP for tephra dispersal as it controls *how fine* (or *coarse*) the tephra generated at [fragmentation level](Hazard_tephra_modeling.md#model-parametrisation) will be, and therefore will control *how far particles will go*. 
@@ -162,18 +233,6 @@ Let's try and forget what we know about the 2021 eruption and put ourselves in t
     - Particles **finer** than 1 mm have **positive** $\Phi$ values. 
 
     In `Tephra2` the GSD of the model deposit is considered to be a **Gaussian** distribution centered on $Md_\Phi$ (i.e., mean) and varying by $\sigma_\Phi$ (i.e., standard deviation). 
-
-
-See what we just did? We just defined an **eruption scenario**! The table below summarises the **ESP** for our **low-intensity VEI 3** eruption.
-
-| ESP           | Value                  | Description                                                                                                        |
-|:--------------|:-----------------------|:-------------------------------------------------------------------------------------------------------------------|
-| VEI           | 3                      | Similar to the 2021 eruption                                                                                       |
-| Mass          | 10$^{10}$–10$^{11}$ kg | Using the volume ranges of a VEI 3 eruption and conversion to mass using a bulk deposit density of 1000 $kg/m^{3}$ |
-| Height        | 1-5 km                 | Low intensity VEI 3 eruption occurring over a few days                                                             |
-| Duration      | 3-7 days               | Paroxysmal phase of a longer eruptive sequence                                                                     |
-| Md$_\Phi$     | 0-1 $\Phi$             | Center of the grain-size distribution, based on Etna 2002                                                          |
-| $\sigma_\Phi$ | 1-2 $\Phi$             | Spread of the grain-size distribution, based on Etna 2002                                                          |
 
 
 #### ESP sampling 
@@ -268,14 +327,26 @@ Now that we have defined the ranges of ESP, `TephraProb` applies the algorithm b
         - 50 $kg/m^2$?
         - 100 $kg/m^2$?
         - 150 $kg/m^2$?
-  
-    | Simulation | Tephra accumulation ($kg/m^2$) | Simulation | Tephra accumulation ($kg/m^2$) |
-    |------------|--------------------------------|------------|--------------------------------|
-    | 1          | 115                            | 6          | 156                            |
-    | 2          | 80                             | 7          | 102                            |
-    | 3          | 151                            | 8          | 104                            |
-    | 4          | 65                             | 9          | 85                             |
-    | 5          | 112                            | 10         | 123                            |
+        
+    <div class="grid" markdown>
+
+    | Simulation | Tephra accumulation ($kg/m^2$) |
+    |------------|--------------------------------|
+    | 1          | 115                            |
+    | 2          | 80                             |
+    | 3          | 151                            |
+    | 4          | 65                             |
+    | 5          | 112                            |
+
+    | Simulation | Tephra accumulation ($kg/m^2$) |
+    |------------|--------------------------------|
+    | 6          | 156                            |
+    | 7          | 102                            |
+    | 8          | 104                            |
+    | 9          | 85                             |
+    | 10         | 123                            |
+
+    </div>
 
     2. Similarly, we also learned how to estimate a **typical accumulation** associated with a given probability of occurrence. The figure below shows the [survivor function](Hazard_probabilistic2.md#hazard-outputs) for the data in the table above. Estimate the approximative load associated with probability values of:
 
@@ -290,7 +361,7 @@ Now that we have defined the ranges of ESP, `TephraProb` applies the algorithm b
 
     **One single vent** was assigned to each of you. For the rest of the exercise, **make sure you refer only this one**.
 
-    Let's now load your assigned scenario, where `runName` goes from `vent1` to `vent5`:
+    **If you use TephraProb**, let's now load your assigned scenario, where `runName` goes from `vent1` to `vent5`:
 
     -  On the main `TephraProb` window, click `File>Open`
     -  Select the `.mat` file located in `RUNS/runName/1/`
@@ -298,24 +369,101 @@ Now that we have defined the ranges of ESP, `TephraProb` applies the algorithm b
 
 #### Probability maps
 
-Probability maps fix a critical value of tephra accumulation ($kg/m^2$) to allow the contouring of the spatial probability of exceeding this critical threshold. These maps are useful to see the dispersion of probabilities across an area, but only for **one given tephra accumulation threshold at the time**. 
+!!! tip "Hazard outputs"
+    You can always refer the previous lesson where we reviewed how the different [outputs](Hazard_probabilistic2.md#hazard-outputs) are compiled from probabilistic hazard assessments.
 
-Let's plot probability maps: 
+Probability maps fix a critical value of tephra accumulation ($kg/m^2$) to allow the contouring of the spatial probability of exceeding this critical threshold. These maps are useful to see the dispersion of probabilities across an area, but only for **one given tephra accumulation threshold at the time**. Let's now look at them.
 
-1. Make sure the scenario for the vent that was attributed to you is loaded (`File > Load`). 
-2. From the main `TephraProb` window, click `Display > Probability Maps`. 
-3. A new window opens, from which you can select pre-defined accumulation threshold (you can select multiple using the ++cmd++ (Mac) or the ++ctrl++ (Windows) keyboard buttons). **Do not open all maps!** Select only the **1** **10**, **100** $kg/m^2$.
-4. Click `Ok` - `Google Earth should now open`. 
+=== "With TephraProb"
+      1. Make sure the scenario for the vent that was attributed to you is loaded (`File > Load`). 
+      2. From the main `TephraProb` window, click `Display > Probability Maps`. 
+      3. A new window opens, from which you can select pre-defined accumulation threshold (you can select multiple using the ++cmd++ (Mac) or the ++ctrl++ (Windows) keyboard buttons). **Do not open all maps!** Select only the **1** **10**, **100** $kg/m^2$.
+      4. Click `Ok` - `Google Earth should now open`. 
 
-??? warning "Troubleshooting Google Earth" 
+        ??? warning "Troubleshooting Google Earth" 
 
-    **If Google Earth is in French**: 
+            **If Google Earth is in French**: 
 
-    - `Google Earth` is in French by default. To change the language, go to `Outils/Options/General/Parametres de langue` and choose your language.
+            - `Google Earth` is in French by default. To change the language, go to `Outils/Options/General/Parametres de langue` and choose your language.
 
-    **If Google Earth does not open:**
+            **If Google Earth does not open:**
 
-    - From the main `TephraProb` window, select `File > Preferences` and make sure the `Show Google Earth` option is selected.
+            - From the main `TephraProb` window, select `File > Preferences` and make sure the `Show Google Earth` option is selected.
+
+=== "Without TephraProb"
+
+    === "Vent 1"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V1/V1%20-%20Probability%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V1/V1_prob_all_1_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V1/V1_prob_all_10_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V1/V1_prob_all_100_kg_m2.png)
+        </figure>
+
+        
+    === "Vent 2"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V2/V2%20-%20Probability%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V2/V2_prob_all_1_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V2/V2_prob_all_10_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V2/V2_prob_all_100_kg_m2.png)
+        </figure>
+
+    === "Vent 3"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V3/V3%20-%20Probability%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V3/V3_prob_all_1_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V3/V3_prob_all_10_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V3/V3_prob_all_100_kg_m2.png)
+        </figure>
+
+    === "Vent 4"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V4/V4%20-%20Probability%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V4/V4_prob_all_1_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V4/V4_prob_all_10_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V4/V4_prob_all_100_kg_m2.png)
+        </figure>
+
+    === "Vent 5"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V5/V5%20-%20Probability%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V5/V5_prob_all_1_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V5/V5_prob_all_10_kg_m2.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V5/V5_prob_all_100_kg_m2.png)
+        </figure>
+
+
 
 
 !!! question "Probability maps"
@@ -328,13 +476,69 @@ Let's plot probability maps:
 
 #### Probabilistic isomass maps
 
-Probabilistic isomass maps fix a probability threshold to represent a typical tephra accumulation given a probability of occurrence of the hazardous phenomenon. The choice of the probability threshold, which can be regarded as an acceptable level of hazard, is a critical aspect that is the resort of decision-makers. Scientists should therefore communicate results from probabilistic isomass maps with care.
+Probabilistic isomass maps fix a probability threshold to represent a typical tephra accumulation given a probability of occurrence of the hazardous phenomenon. The choice of the probability threshold, which can be regarded as an acceptable level of hazard, is a critical aspect that is the resort of decision-makers. Scientists should therefore communicate results from probabilistic isomass maps with care. Plot a few probabilistic isomass maps and analyse them.
 
-To plot probabilistic isomass maps:
+=== "With TephraProb"
+    1. From the main `TephraProb` window, click `Display > Isomass Maps`. 
+    2. A new window opens, from which you can select pre-defined probability thresholds. Choose the **25%** and **75%**.
+    3. Click `Ok` - `Google Earth` should now open. 
 
-1. From the main `TephraProb` window, click `Display > Isomass Maps`. 
-2. A new window opens, from which you can select pre-defined probability thresholds. Choose the **25%** and **75%**.
-3. Click `Ok` - `Google Earth should now open`. 
+=== "Without TephraProb"
+
+    === "Vent 1"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V1/V1%20-%20Probabilistic%20isomass%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V1/V1_IM_all_25_%25.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V1/V1_IM_all_75_%25.png)
+        </figure>
+
+    === "Vent 2"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V2/V2%20-%20Probabilistic%20isomass%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V2/V2_IM_all_25_%25.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V2/V2_IM_all_75_%25.png)
+        </figure>
+
+    === "Vent 3"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V3/V3%20-%20Probabilistic%20isomass%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V3/V3_IM_all_25_%25.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V3/V3_IM_all_75_%25.png)
+        </figure>
+
+    === "Vent 4"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V4/V4%20-%20Probabilistic%20isomass%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V4/V4_IM_all_25_%25.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V4/V4_IM_all_75_%25.png)
+        </figure>
+
+    === "Vent 5"
+
+        [Download KMZ file :fontawesome-solid-globe:](files/V5/V5%20-%20Probabilistic%20isomass%20map.kmz){ .md-button }
+
+        <figure markdown>
+        ![height](files/V5/V5_IM_all_25_%25.png)
+        </figure>
+        <figure markdown>
+        ![height](files/V5/V5_IM_all_75_%25.png)
+        </figure>
 
 
 !!! question "Probabilistic isomass maps"
@@ -346,16 +550,8 @@ To plot probabilistic isomass maps:
 
 #### Hazard curves
 
-Let's now look at hazard curves. For each vent, hazard curves for three points have been processed. To visualise them:
+Let's now look at hazard curves. Hazard curves fix a spatial locations (i.e., a single point) and continuously express the probability to exceed any threshold of hazard intensity. The table below shows the location of hazard curves extracted for each vent.
 
-1. From the main `TephraProb` window, choose `Input > Points`. 
-2. From the new window, chose `File > Load` and select the `GRID/LaPalma_ventX/LaPalma_ventX.points` file. 
-3. The points appear, click `Plot` to visualise them.
-
-Relevant points to each vent regarding the hazard to roof collapse are presented in the table below. To plot hazard curves:
-
-1. From the main `TephraProb` window, click `Display > Hazard curves`
-2. Choose the point for your own vent as named in the table below.
 
 === "Vent 1"
 
@@ -406,6 +602,37 @@ Relevant points to each vent regarding the hazard to roof collapse are presented
     | Road leading to Los Canarios from W | -17.82308 | 28.51489 | -->
     
 
+Let's now visualise and analyse the information retained by hazard curves.
+
+
+=== "With TephraProb"
+    1. From the main `TephraProb` window, click `Display > Hazard curves`
+    2. Choose the point for your own vent as named in the table above.  
+
+=== "Without TephraProb"
+
+    === "Vent 1"
+        <figure markdown>
+        ![height](files/V1/V1_curve.png)
+        </figure>
+    === "Vent 2"
+        <figure markdown>
+        ![height](files/V2/V2_curve.png)
+        </figure>
+    === "Vent 3"
+        <figure markdown>
+        ![height](files/V3/V3_curve.png)
+        </figure>
+    === "Vent 4"
+        <figure markdown>
+        ![height](files/V4/V4_curve.png)
+        </figure>
+    === "Vent 5"
+        <figure markdown>
+        ![height](files/V5/V5_curve.png)
+        </figure>
+
+
 [Figure 1](#fig1) represents fragility curves for various European roofs [@Spence2005], and estimate a median probability of roof collapse as a function of tephra accumulation. Use these curves to answer the following questions. 
 
 <figure markdown>
@@ -424,7 +651,7 @@ Relevant points to each vent regarding the hazard to roof collapse are presented
     1. Assuming that the considered buildings are of a **MS** fragility class, what are the probabilities of roof collapse for associated with mass loads for 25% and 75% probability of occurrence? 
 
 
-    !!! tip "Accessing hazard curves with **data tips**"
+    ??? tip "Accessing hazard curves with **data tips**"
 
         On the hazard curve figure, you can activate the `Data Tips` tool. This allows you to click on the curve and directly get the underlying data. It is hard to get exact probabilities, **so anything within a ± 5% range is ok**.
 
@@ -456,7 +683,7 @@ Well done - you have successfully completed a **scenario-based probabilistic haz
 - The **scenario-based** part implies that this hazard is **contitional** to the occurrence of the eruption scenario. This contrasts with a *fully* **probabilistic volcanic hazard assessment**, where the *spatio-temporal* probability of occurrence of given volcanic phenomena also need to be accounted for. 
 - Having pretty maps is great... but knowing how to communicate the hazard output and the associated assumptions and uncertainties is often *equally important*. Keep that in mind for the rest of the exercises, both in the lab and in the field. 
 
-### Getting the hazard data 
+<!-- ### Getting the hazard data 
 
 As displayed in `Matlab`, you can save the maps displayed within `TephraProb` by simply typing `saveAllMaps('png')`, which will save all opened maps to `TephraProb/MAPS`. The raw output data for both *probability* and *isomass* maps are saved as `ascii` raster file with a UTM 28 N projection. Probability (`PROB`) and isomass (`IM`) data are located in:
 
@@ -467,7 +694,7 @@ TephraProb/RUNS/ventX/1/IM/all/RASTER/*.txt
 
 These are useful for use in external softwares (e.g., `QGIS`). Similarly, `kml` files are stored in the `KML` folder of your run.
 
-Hazard curves must be saved from within `Matlab`.
+Hazard curves must be saved from within `Matlab`. -->
 
 ## :material-check-bold:{ .icn } Summary
 

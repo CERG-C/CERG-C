@@ -1,17 +1,20 @@
 site_name: Physical Volcanology and Volcanic Risk @ UNIGE
 site_url: https://cerg-c.github.io/CERG-C/
 repo_name: CERG-C/CERG-C
+repo_url: https://github.com/CERG-C/CERG-C
+
 theme:
   name: material
   features:
       - navigation.tabs
       - navigation.indexes
       - navigation.footer
-      # - navigation.sections
-      # - navigation.expand
       - content.code.copy
-      - highlightjs
-      - mermaid2
+      - content.tabs.link
+      # - highlightjs
+      # - mermaid2
+      # - content.action.edit
+      # - content.action.view
 
   logo: img/volcano.svg
   icon:
