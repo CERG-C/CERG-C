@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#q-lavha" class="md-skip">
+        <a href="#hazard-assessment-for-lava-flow-inundation-using-q-lavha" class="md-skip">
           Skip to content
         </a>
       
@@ -1497,13 +1497,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-several-vents" class="md-nav__link">
+  <a href="#exploring-uncertainties-on-vent-location" class="md-nav__link">
     <span class="md-ellipsis">
-      Using several vents
+      Exploring uncertainties on vent location
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using several vents">
+    <nav class="md-nav" aria-label="Exploring uncertainties on vent location">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2153,13 +2153,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-several-vents" class="md-nav__link">
+  <a href="#exploring-uncertainties-on-vent-location" class="md-nav__link">
     <span class="md-ellipsis">
-      Using several vents
+      Exploring uncertainties on vent location
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Using several vents">
+    <nav class="md-nav" aria-label="Exploring uncertainties on vent location">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2269,8 +2269,8 @@
   
 
 
-<h1 id="q-lavha">Q-LavHA</h1>
-<p>With the knowledge gained on <a href="../Hazard_lava_steepest-descent/">topographic controls</a> and <a href="../Hazard_lava_modeling/">modeling</a> from the previous exercise, we will now apply the <code>Q-LavHA</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> model to estimate the hazard associated with lava flow inundation. This part of the exercise assumes that:</p>
+<h1 id="hazard-assessment-for-lava-flow-inundation-using-q-lavha">Hazard assessment for lava flow inundation using Q-LavHA</h1>
+<p>With the knowledge gained on <a href="../Hazard_lava_steepest-descent/">topographic controls</a> and <a href="../Hazard_lava_modeling/">modeling</a>, we will now apply the <code>Q-LavHA</code><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> model to estimate the hazard associated with lava flow inundation. This part of the exercise assumes that:</p>
 <ul>
 <li>You have understood the philosophy behind <code>Q-LavHA</code> according to <a href="../Hazard_lava_Q-LavHA_intro/">this guide</a>.</li>
 <li>You have already installed <a href="../../Setup/qgis/#step-1-download-and-install-qgis"><code>QGIS</code></a> and <a href="../../Setup/qgis/#step-2-install-qlavha"><code>Q-LavHA</code></a>.</li>
@@ -2283,6 +2283,10 @@
 <li>Account for the uncertainty in vent locations in hazard assessments.</li>
 </ul>
 <h2 id="exercise"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3C9.2 3 6.2 6 6 9.7l-1.9 2.5c-.2.3 0 .8.4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.7c2.4-1.1 4-3.5 4-6.3 0-3.9-3.1-7-7-7m2 6-3.1 6 .6-4h-2l2-5H15l-1.5 3z"/></svg></span> Exercise</h2>
+<div class="admonition warning">
+<p class="admonition-title">Exercise</p>
+<p>Please answer the <a href="../../../../files/Exercise.docx", target="_blank">question sheet</a> and <strong>submit it back to Moodle</strong>.</p>
+</div>
 <h3 id="running-q-lavha-for-single-vents">Running Q-LavHA for single vents</h3>
 <p>In <code>QGIS</code>, start by activating the <code>Vents for Exercise</code> layer group. These vents correspond to those indicated in the Table below. <code>Q-LavHA</code> requires <a href="https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system">projected UTM coordinates</a>, which are shown in the <code>Easting</code> and <code>Northing</code> columns (<code>x</code> and <code>y</code> columns, respectively). The UTM zone for La Palma is <code>28N</code>, or <a href="https://epsg.io/32628">EPSG:3268</a>.</p>
 <table>
@@ -2426,7 +2430,7 @@
 <!-- 4. Analyse and discuss the spatial distribution of inundation probability. How do they compare to flow accumulation rasters and the path of steepest descent approach?
 2. Where do branching occur? --></p>
 </div>
-<h3 id="using-several-vents">Using several vents</h3>
+<h3 id="exploring-uncertainties-on-vent-location">Exploring uncertainties on vent location</h3>
 <p>In the case of fissure eruptions, one eruptive episode can consist of multiple satellite vents. This was certainly the case for the 2021 eruption of La Palma. In fact, as you can see from the <code>2021 Vents</code> layer in <code>QGIS</code>, <a href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR546">CEMS</a> identified that ~10 vents opened over a 500 x 500 m area. Here, we won't attempt predicting the <strong>number</strong> or the <strong>location</strong> of each vent. Instead, we will model lava flow inundation from <strong>a grid of vents</strong> within a surface area and explore how vent location affects the lava flow simulation hazard.</p>
 <div class="admonition warning">
 <p class="admonition-title">Probability of vent opening</p>
@@ -2604,7 +2608,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2025 / CERG-C / University of Geneva / CC BY-NC-SA
+      Copyright &copy; 2022-2025 / CERG-C / University of Geneva / CC BY-NC-SA
     </div>
   
   
