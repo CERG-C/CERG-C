@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../../../resources/">
+        <link rel="next" href="../field_notes/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -1737,6 +1737,8 @@
       
         
       
+        
+      
     
     
     
@@ -1861,6 +1863,39 @@
       Hazard data
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Hazard data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tephra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tephra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lava" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lava
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-hazard-hazard-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-hazard hazard map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2002,6 +2037,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../field_notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    [Protected] Instructor's notes
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2229,6 +2287,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Hazard data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tephra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tephra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lava" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lava
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-hazard-hazard-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-hazard hazard map
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2435,23 +2526,18 @@
 </div>
 <h3 id="hazard-data">Hazard data</h3>
 <p>For the hazard data, you are provided with the result of the probabilistic hazard modelling.</p>
+<h4 id="tephra">Tephra</h4>
 <ul>
-<li>
-<p>For <em>tephra</em>:</p>
+<li><code>Probability maps</code>: <a href="../../Tephra/Hazard_probabilistic2/#__tabbed_4_1">Probability maps</a> (%) to exceed specific tephra accumulation</li>
+<li><code>Probabilistic isomass maps</code>: <a href="../../Tephra/Hazard_probabilistic2/#__tabbed_4_2">Probabilistic isomass maps</a> (kg/m²) for a given probability of occurrence of the hazard </li>
+<li><code>Points group X</code>: Locations of <a href="../../Tephra/Hazard_probabilistic2/#__tabbed_4_3">hazard curves</a>. In the folder <code>GroupX</code> (i.e., not in QGIS), there is also an Excel file called <code>tephra_hazard_curves.xlsx</code> containing the hazard curve data for specific locations in your area</li>
+</ul>
+<h4 id="lava">Lava</h4>
 <ul>
-<li>Probability maps (%) to exceed specific tephra accumulation (<code>Probability maps</code> layers)</li>
-<li>Probabilistic isomass maps (kg/m²) for a given probability of occurrence of the hazard (<code>Probabilistic isomass maps</code> layers)</li>
-<li>In the folder <code>GroupX</code> (i.e., not in QGIS), there is also an Excel file called <code>tephra_hazard_curves.xlsx</code> containing the hazard curves for specific locations in your area. The location of the points for the hazard curves is shown in the layer <code>Points group X</code></li>
+<li><code>Lava inundation probability</code>: Probability of lava flow inundation (%)</li>
+<li><code>Flow outline</code>: A lava flow outline corresponding to an inundation probability ≥ 0.1%</li>
 </ul>
-</li>
-<li>
-<p>For <em>lava</em>:</p>
-<ul>
-<li>Probability of lava flow inundation (<code>Lava inundation probability</code> layer)</li>
-<li>A lava flow outline corresponding to an inundation probability ≥ 0.1% (<code>Flow outline</code> layer)</li>
-</ul>
-</li>
-</ul>
+<h4 id="multi-hazard-hazard-map">Multi-hazard hazard map</h4>
 <p>In addition, we have prepared <strong>a multi-hazard hazard</strong> map (<code>Multi-hazard hazard map</code> layer) that defines four zones based on the assumptions below. Hazard zones I-V are stored in the <code>HazardZone</code> field.</p>
 <table>
 <thead>
@@ -2489,7 +2575,7 @@
 <li><code>lava_probability</code>: Probability of lava flow inundation (%)</li>
 <li><code>tephra_load_25pct</code>: Tephra load (kg/m²) extracted for a 25% probability of occurrence</li>
 </ul>
-<p>All groups contain a layer with the buildings footprints (<code>Buildings and population</code> layer) with the number of residents in each household (<code>POP_resid</code> field). In addition, you are provided with specific layers for each group related to the systems you must consider.</p>
+<p>All groups contain a layer with the buildings footprints (<code>Buildings and population</code> layer) with the number of residents in each household (<code>POP_resid</code> field). In addition, you are provided with specific layers for each group related to the systems you must consider. The folder also contains an Excel file containing the description of all the attributes of the exposure layers (<code>Exposure_metadata.pdf</code>).</p>
 <h2 id="exercise"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M308.5 135.3c7.1-6.3 9.9-16.2 6.2-25-2.3-5.3-4.8-10.5-7.6-15.5l-3.1-5.4c-3-5-6.3-9.9-9.8-14.6-5.7-7.6-15.7-10.1-24.7-7.1L241.3 77c-10.7-8.8-23-16-36.2-20.9l-6.1-29c-1.9-9.3-9.1-16.7-18.5-17.8-6.6-.9-13.3-1.3-20.1-1.3h-.7q-10.2 0-20.1 1.2c-9.4 1.1-16.6 8.6-18.5 17.8L115 56.1c-13.3 5-25.5 12.1-36.2 20.9l-28.3-9.2c-9-3-19-.5-24.7 7.1-3.5 4.7-6.8 9.6-9.9 14.6l-3 5.3c-2.8 5-5.3 10.2-7.6 15.6-3.7 8.7-.9 18.6 6.2 25l22.2 19.8c-1.1 6.7-1.7 13.7-1.7 20.8s.6 14.1 1.7 20.9l-22.2 19.8c-7.1 6.3-9.9 16.2-6.2 25 2.3 5.3 4.8 10.5 7.6 15.6l3 5.2c3 5.1 6.3 9.9 9.9 14.6 5.7 7.6 15.7 10.1 24.7 7.1l28.2-9.3c10.7 8.8 23 16 36.2 20.9l6.1 29.1c1.9 9.3 9.1 16.7 18.5 17.8q10.05 1.2 20.4 1.2c10.35 0 13.7-.4 20.4-1.2 9.4-1.1 16.6-8.6 18.5-17.8l6.1-29.1c13.3-5 25.5-12.1 36.2-20.9l28.2 9.3c9 3 19 .5 24.7-7.1 3.5-4.7 6.8-9.5 9.8-14.6l3.1-5.4c2.8-5 5.3-10.2 7.6-15.5 3.7-8.7.9-18.6-6.2-25l-22.2-19.8c1.1-6.8 1.7-13.8 1.7-20.9s-.6-14.1-1.7-20.9l22.2-19.8zM112 176a48 48 0 1 1 96 0 48 48 0 1 1-96 0m392.7 324.5c6.3 7.1 16.2 9.9 25 6.2 5.3-2.3 10.5-4.8 15.5-7.6l5.4-3.1c5-3 9.9-6.3 14.6-9.8 7.6-5.7 10.1-15.7 7.1-24.7l-9.3-28.2c8.8-10.7 16-23 20.9-36.2L613 391c9.3-1.9 16.7-9.1 17.8-18.5q1.2-10.05 1.2-20.4c0-10.35-.4-13.7-1.2-20.4-1.1-9.4-8.6-16.6-17.8-18.5l-29.1-6.2c-5-13.3-12.1-25.5-20.9-36.2l9.3-28.2c3-9 .5-19-7.1-24.7-4.7-3.5-9.6-6.8-14.6-9.9l-5.3-3c-5-2.8-10.2-5.3-15.6-7.6-8.7-3.7-18.6-.9-25 6.2l-19.8 22.2c-6.8-1.1-13.8-1.7-20.9-1.7s-14.1.6-20.9 1.7l-19.8-22.2c-6.3-7.1-16.2-9.9-25-6.2-5.3 2.3-10.5 4.8-15.6 7.6l-5.2 3c-5.1 3-9.9 6.3-14.6 9.9-7.6 5.7-10.1 15.7-7.1 24.7l9.3 28.2c-8.8 10.7-16 23-20.9 36.2l-29.1 6c-9.3 1.9-16.7 9.1-17.8 18.5q-1.2 10.05-1.2 20.4c0 10.35.4 13.7 1.2 20.4 1.1 9.4 8.6 16.6 17.8 18.5l29.1 6.1c5 13.3 12.1 25.5 20.9 36.2l-9.3 28.2c-3 9-.5 19 7.1 24.7 4.7 3.5 9.5 6.8 14.6 9.8l5.4 3.1c5 2.8 10.2 5.3 15.5 7.6 8.7 3.7 18.6.9 25-6.2l19.8-22.2c6.8 1.1 13.8 1.7 20.9 1.7s14.1-.6 20.9-1.7l19.8 22.2zM464 304a48 48 0 1 1 0 96 48 48 0 1 1 0-96"/></svg></span> Exercise</h2>
 <p>The objective of the exercise is to produce a poster that <strong>presents the results of your hazard assessment</strong> and put them in the <strong>perspective of the nature and number of assets exposed</strong> to the  volcanic hazards. Your presentation should cover the following topics:</p>
 <ul class="task-list">
@@ -2508,7 +2594,7 @@
 <ol>
 <li>Present the assumptions behind the eruption scenarios - you can use some of the figures produced in class if needed</li>
 <li>Reproduce the <strong>multi-hazard hazard map</strong> on two transparent papers, both for the <em>island</em> scale and for the <em>local</em> area defined for your own group</li>
-<li>Draw the <strong>hazard curves</strong> for the locations associated with your group. It is probably a good idea to clearly show these locations on a map too!</li>
+<li>Draw the <strong>hazard curves</strong> for the locations associated with your group (see Table below). It is probably a good idea to clearly show these locations on a map too!</li>
 <li>Explain the spatial distribution of hazards (e.g., in which direction is the hazard going? what is the shape of the hazard footprint? what controls direction and shape? how far from the source is the hazard footprint extending from the vent?)</li>
 <li>Put the hazard assessment in the context of <strong>exposure</strong> (see <a href="#task-ii-exposure-analysis">Task 2</a>)</li>
 </ol>
@@ -2598,7 +2684,17 @@
 </div>
 <h4 id="required-output_1"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9S63.9 115 63.9 128v256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg></span> Required output</h4>
 <ol>
-<li>Only one task: find a creative way to <strong>display</strong> and <strong>communicate</strong> the results of your exposure analysis. Plots are a good idea, or maybe tables? In any case, make sure that the fonts are large enough for the audience to read them.</li>
+<li>Find a creative way to <strong>display</strong> and <strong>communicate</strong> the results of your exposure analysis. Plots are a good idea, or maybe tables? In any case, make sure that the fonts are large enough for the audience to read them. You should <strong>at least</strong> present the exposure analysis associated with the different hazard zones.</li>
+<li>
+<p>If you have time, it might be a good idea to also illustrate the <strong>variability</strong> of your exposure analysis associated with the <strong>uncertainties</strong> of your hazard assessment? If you decide to do so, <strong>focus on tephra</strong> and on <strong>the following thresholds</strong>:</p>
+<ul>
+<li><strong>Group 1</strong>: 10 kg/m² </li>
+<li><strong>Group 2</strong>: 10 kg/m² </li>
+<li><strong>Group 3</strong>: 1 kg/m²  </li>
+<li><strong>Group 4</strong>: 1 kg/m²  </li>
+<li><strong>Group 5</strong>: 100 kg/m² </li>
+</ul>
+</li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">What type of plot?</p>
@@ -2710,13 +2806,13 @@
         
         
           
-          <a href="../../../../resources/" class="md-footer__link md-footer__link--next" aria-label="Next: Resources">
+          <a href="../field_notes/" class="md-footer__link md-footer__link--next" aria-label="Next: [Protected] Instructor&#39;s notes">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Resources
+                [Protected] Instructor's notes
               </div>
             </div>
             <div class="md-footer__button md-icon">
