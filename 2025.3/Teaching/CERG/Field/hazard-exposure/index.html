@@ -2658,6 +2658,9 @@
 <li>Then add the the field you would like to aggregate.<ul>
 <li>To <em>count</em> assets, you can select any field in <code>source expression</code></li>
 <li>For other operators, you need to select the relevant field</li>
+<li>To count the <strong>maximum length</strong>, we have to do an additional trick:</li>
+<li><strong>Source expression</strong>: Enter <code>length(@geometry)</code></li>
+<li><strong>Aggregate function</strong>: <code>sum</code></li>
 </ul>
 </li>
 </ul>
