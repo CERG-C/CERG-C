@@ -2648,31 +2648,49 @@
 <p>This step quantifies the exposure of populations asset in each hazard zone. Think carefully which operator is required for each type of exposure layer. Typically, <code>point</code> geometries must be aggregated using the <em>count</em> function. Some <code>polygon</code> geometries also need a <em>count</em> (i.e., number of buildings), but perhaps other aggregation function need to be used in different contexts (e.g., population per building). For <code>polyline</code> geometries, we are typically interested in the exposed length.</p>
 <p>In the <code>Processing Toolbox</code>, search for the <code>Aggregate</code> tool:</p>
 <ul>
-<li><strong>Input layer</strong>: The layer created at the previous step</li>
-<li><strong>Group by expression</strong>: The categorical field used for aggregation (i.e., <code>HazardZone</code>)</li>
-<li>In the <strong>Aggregate</strong> window, delete all fields if any are present and add a first field structured as such:<ul>
-<li><strong>Source expression</strong>: <code>HazardZone</code></li>
-<li><strong>Aggregate function</strong>: <code>first_value</code></li>
-<li><strong>Name</strong>: Hazard zone</li>
+<li><code>Input layer</code>: The layer created at the previous step</li>
+<li><code>Group by expression</code>: The categorical field used for aggregation (i.e., <code>HazardZone</code>)</li>
+<li>In the <code>Aggregate</code> window, delete all fields if any are present.</li>
+<li>Add a first field that will be used as an <em>index</em>. In this case, we want to use the hazard zone as the index. Structure it as such:<ul>
+<li><code>Source expression</code>: <code>HazardZone</code></li>
+<li><code>Aggregate function</code>: <code>first_value</code></li>
+<li><code>Name</code>: Hazard zone</li>
 </ul>
 </li>
 <li>Then add the the field you would like to aggregate.<ul>
-<li>To <em>count</em> assets, you can select any field in <code>source expression</code></li>
-<li>For other operators, you need to select the relevant field</li>
-<li>To count the <strong>maximum length</strong>, we have to do an additional trick:</li>
-<li><strong>Source expression</strong>: Enter <code>length(@geometry)</code></li>
-<li><strong>Aggregate function</strong>: <code>sum</code></li>
+<li><code>Source expression</code>:<ul>
+<li>To <em>count</em> assets, select <strong>any field</strong></li>
+<li>To <em>sum</em> values contained in a specific field, select the relevant field</li>
+<li>To estimate the <strong>length</strong> of polylines or the <strong>area</strong> of polygon, <em>expressions</em> are required:<ul>
+<li><strong>Length</strong>: <code>length(@geometry)</code></li>
+<li><strong>Area</strong>: <code>area(@geometry)</code></li>
+<li>In both cases, remember that the unit of the resulting quantity is the same as the unit of the coordinate system of the project</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Aggregate function</code>: <code>sum</code></li>
+<li><code>Name</code>: The name of the field in the created layer</li>
 </ul>
 </li>
 </ul>
 <p>This creates a new layer that has no geometry information. Inspect its attribute table to display the result of the aggregation.</p>
 <details class="tip">
 <summary>Aggregate using multiple fields</summary>
-<p>If you want to aggregate using multiple attributes (e.g., count the crop type in each zone), we need to use more complex <strong>expressions</strong>. In this case, <strong>source expression</strong> must be written as <code>array("HazardZone", "item")</code>, where <code>item</code> is the name of the secondary attribute your would like to use.</p>
-<p>Note that in this case, you need to create two index fields:</p>
+<p>If you want to aggregate using multiple attributes (e.g., count the crop type in each hazard zone), we need to use an <strong>expressions</strong> for the grouping condition:</p>
+<ul>
+<li><code>Group by expression</code>: <code>array("HazardZone", "item")</code>, where <code>item</code> is the name of the secondary attribute to use (e.g., <code>crop_type</code>). Note that both fields must be <strong>categorical</strong> (e.g., contain text or discrete values, not continuous values).</li>
+</ul>
+<p>Secondly, create <strong>a second index field</strong> (i.e., a second column in the created layer that will contain the other categorical attribute used to further split aggregation):</p>
+<ul>
+<li><code>Source expression</code>: <code>field_name</code> (e.g., <code>crop_type</code>)</li>
+<li><code>Aggregate function</code>: <code>first_value</code></li>
+<li><code>Name</code>: Name of the seconday index column (e.g., <code>crop</code>)</li>
+</ul>
+<p>Finally, add a the field to aggregate as above.</p>
 <p><figure markdown>
 <img alt="height" src="../img/aggregate_multiple.png" width="450px" />
-<figcaption>Aggregate window.</figcaption>
+<figcaption>Aggregation using more than one grouping variable.</figcaption>
 </figure></p>
 </details>
 <figure>

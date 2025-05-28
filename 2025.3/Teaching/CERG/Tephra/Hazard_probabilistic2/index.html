@@ -1698,16 +1698,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hazard-output-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hazard output example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#summary_1" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
     </span>
@@ -2310,16 +2301,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hazard-output-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hazard output example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#summary_1" class="md-nav__link">
     <span class="md-ellipsis">
       Summary
     </span>
@@ -2587,27 +2569,76 @@ flowchart LR
 <li><code>Tephra accumulation</code>. </li>
 <li><code>Probability of occurrence</code>.</li>
 </ul>
-<p>However, it is difficult to represent more than <strong>3 quantities</strong> on such a 2D canvas as a map, and we therefore need to <strong>fix one quantity</strong>, which provides us with 3 different approaches to express hazard. </p>
-<div class="admonition example">
-<p class="admonition-title">Method 1: Probabilistic hazard maps</p>
-<p>&rarr; Fixed threshold of <strong>tephra accumulation</strong>.</p>
-<p>&rarr; Other quantities are expressed continuously. </p>
-<p>&rarr; Display the spatial distribution of exceedence probabilities <strong>of a single threshold of tephra accumulation</strong> (i.e., there are as many maps as accumulation thresholds). </p>
+<p>However, it is difficult to represent more than <strong>3 quantities</strong> on such 2D canvas as a map, and we therefore need to <strong>fix at least one quantity</strong>, which provides us with 3 different approaches to express hazard. </p>
+<p>Let's change volcanoes and continents: The examples below illustrate a hazard assessment for a <abbr title="Volcanic explosivity index">VEI</abbr> 4 Plinian eruption at <a href="https://en.wikipedia.org/wiki/Sakurajima">Sakurajima</a> volcano<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> in Japan, developed around the 1914 Taisho eruption<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>. Note that the hazard modeling procedure was exactly the same as for Cotopaxi.</p>
+<h5 id="option-1-probability-maps">Option 1: Probability maps</h5>
+<div class="admonition tip">
+<p class="admonition-title">Probability maps</p>
+<ul>
+<li>Fixed threshold of <strong>tephra accumulation</strong></li>
+<li>Other quantities are expressed continuously</li>
+<li>Display the spatial distribution of exceedence probabilities <strong>of a single threshold of tephra accumulation</strong></li>
+<li>There are as many maps as accumulation thresholds </li>
+</ul>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Method 2: Probabilistic isomass maps</p>
-<p>&rarr; Fixed threshold of <strong>exceedence probability</strong>.</p>
-<p>&rarr; Other quantities are expressed continuously. </p>
-<p>&rarr; Display the spatial distribution of tephra accumulation <strong>for a single exceedence probability value</strong> (i.e., there are as many maps as probability values). </p>
+<p>These maps show the spatial probability to exceed accumulations of 1 (left) and 100 (right) <span class="arithmatex">\(kg/m^2\)</span>. The top and bottom maps illustrate the impact of wind variability on the computed dispersal as a function of the season. The general dispersal is towards the E, but the summer shows a higher variability in directions and lower wind velocities, increasing the hazard on the city of Kagoshima (point number 3).</p>
+<p><img alt="sk1" src="../img/sakurajima/prob.png" /></p>
+<h5 id="option-2-probabilistic-isomass-maps">Option 2: Probabilistic isomass maps</h5>
+<div class="admonition tip">
+<p class="admonition-title">Probabilistic isomass maps</p>
+<ul>
+<li>Display the spatial distribution of tephra accumulation <strong>for a single exceedence probability value</strong> </li>
+<li>Fixed threshold of <strong>exceedence probability</strong></li>
+<li>Other quantities are expressed continuously</li>
+<li>There are as many maps as exceedence probability thresholds</li>
+</ul>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Method 3: Hazard curves</p>
-<p>&rarr; Fixed latitude and longitude.</p>
-<p>&rarr; Other quantities are expressed continuously. </p>
-<p>&rarr; Display the probability of occurrence of a given tephra accumulation <strong>for a single location</strong> (i.e., there are as many curves as points of interest). </p>
+<p>These maps show the typical tephra accumulations for probabilities of occurrences of 25% (left) and 75% (right).</p>
+<p><img alt="sk2" src="../img/sakurajima/im.png" /></p>
+<h5 id="option-3-hazard-curves">Option 3: Hazard curves</h5>
+<div class="admonition tip">
+<p class="admonition-title">Hazard curves</p>
+<ul>
+<li>Display the probability of occurrence of a given tephra accumulation <strong>for a single location</strong></li>
+<li>Fixed latitude and longitude</li>
+<li>Other quantities are expressed continuously</li>
+<li>There are as many curves as points of interest</li>
+</ul>
 </div>
-<p>Is the difference between <strong>probability</strong> and <strong>isomass</strong> maps are? Lets look at these sketches:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Graphically...</label><label for="__tabbed_3_2">More formally...</label></div>
+<p>This plot shows hazard curves computed for three different locations (see the maps for reference):</p>
+<ol>
+<li>Tarumizu City Hall</li>
+<li>Kagoshima airport</li>
+<li>Tarumizu central station</li>
+</ol>
+<p>Curves show a continuous relationship between tephra accumulation and their respective probabilities of occurrences. The advantage of hazard curves is that they can represent <strong>more than a single eruption scenario</strong>, which helps comparison. For instance, these plots contain the modelling of the <abbr title="Volcanic explosivity index">VEI</abbr> 4 eruption scenario using wind profiles for i) all seasons combined (solid line), the summer (dashed line) and spring, fall and winter (dotted line). </p>
+<p>To read these plots, start by identifying one tephra accumulation for which you want to estimate the associated probability of occurrence. From the plot's x axis, go straight up until the intersection with the curve representing the scenario of interest. From the point of intersection, go straight left and read the probability value on the y axis.</p>
+<p>For instance, the Tarumizu City Hall has a ~8% probability of exceeding accumulations of 100 <span class="arithmatex">\(kg/m^2\)</span> following a <abbr title="Volcanic explosivity index">VEI</abbr> 4 eruption of Sakurajima volcano.</p>
+<p><img alt="sk3" src="../img/sakurajima/curves.png" /></p>
+<div class="admonition question">
+<p class="admonition-title">Reflecting uncertainties in hazard output</p>
+<p>How are <strong>uncertainties</strong> on <a href="#identify-esp-ranges"><abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr></a> reflected on hazard outputs? Look at the sketches below and think about which of the orange or purple lines show <strong>high</strong>/<strong>low</strong> <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr> uncertainties.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Probability maps</label><label for="__tabbed_3_2">Probabilistic isomass maps</label><label for="__tabbed_3_3">Hazard curves</label><label for="__tabbed_3_4">Answers</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="uncertainty_prob" src="../img/esp_uncertainty_prob.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="uncertainty_im" src="../img/esp_uncertainty_IM.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="uncertainty_curves" src="../img/esp_uncertainty_curve.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Purple</strong> line show relatively <strong>lower</strong> <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr> uncertainties than <strong>orange</strong> ones.</p>
+<p><img alt="uncertainty_esp" src="../img/esp_uncertainty_ESP.png" /></p>
+</div>
+</div>
+</div>
+<h5 id="difference-between-probability-and-isomass-maps">Difference between probability and isomass maps</h5>
+<p>The sketches below illustrate the difference between <strong>probability</strong> and <strong>isomass</strong> maps are.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Graphically...</label><label for="__tabbed_4_2">More formally...</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><img alt="pim1" src="../img/pim/prob2im1.png" /></p>
@@ -2631,32 +2662,69 @@ flowchart LR
 <p class="admonition-title">Rule of thumb</p>
 <p>Bear in mind: <strong>large</strong> tephra accumulations usually have <strong>lower</strong> probabilities of occurrence than <strong>smaller</strong> accumulations.</p>
 </div>
-<h2 id="hazard-output-example"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.5 19A1.5 1.5 0 0 1 5 20.5 1.5 1.5 0 0 1 3.5 22 1.5 1.5 0 0 1 2 20.5 1.5 1.5 0 0 1 3.5 19m5-3a2.5 2.5 0 0 1 2.5 2.5A2.5 2.5 0 0 1 8.5 21 2.5 2.5 0 0 1 6 18.5 2.5 2.5 0 0 1 8.5 16m6-1c-1.19 0-2.27-.5-3-1.35-.73.85-1.81 1.35-3 1.35-1.96 0-3.59-1.41-3.93-3.26A4.02 4.02 0 0 1 2 8a4 4 0 0 1 4-4c.26 0 .5.03.77.07C7.5 3.41 8.45 3 9.5 3c1.19 0 2.27.5 3 1.35.73-.85 1.81-1.35 3-1.35 1.96 0 3.59 1.41 3.93 3.26A4.02 4.02 0 0 1 22 10a4 4 0 0 1-4 4l-.77-.07c-.73.66-1.68 1.07-2.73 1.07"/></svg></span> Hazard output example</h2>
-<p>Let's change volcanoes and continents: The examples below illustrate a hazard assessment for a <abbr title="Volcanic explosivity index">VEI</abbr> 4 Plinian eruption at <a href="https://en.wikipedia.org/wiki/Sakurajima">Sakurajima</a> volcano<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> in Japan, developed around the 1914 Taisho eruption<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>. Note that the hazard modeling procedure was exactly the same as for Cotopaxi.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Probability maps</label><label for="__tabbed_4_2">Isomass maps</label><label for="__tabbed_4_3">Hazard curves</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>These maps show the spatial probability to exceed accumulations of 1 (left) and 100 (right) <span class="arithmatex">\(kg/m^2\)</span>. The top and bottom maps illustrate the impact of wind variability on the computed dispersal as a function of the season. The general dispersal is towards the E, but the summer shows a higher variability in directions and lower wind velocities, increasing the hazard on the city of Kagoshima (point number 3).</p>
-<p><img alt="sk1" src="../img/sakurajima/prob.png" /></p>
-</div>
-<div class="tabbed-block">
-<p>These maps show the typical tephra accumulations for probabilities of occurrences of 25% (left) and 75% (right). Compared to probability maps, we can use the famous saying used in SE Asia: <em>Same same, but different</em>.</p>
-<p><img alt="sk2" src="../img/sakurajima/im.png" /></p>
-</div>
-<div class="tabbed-block">
-<p>This plot shows hazard curves computed for three different locations (see the maps for reference):</p>
-<ol>
-<li>Tarumizu City Hall</li>
-<li>Kagoshima airport</li>
-<li>Tarumizu central station</li>
-</ol>
-<p>Curves show a continuous relationship between tephra accumulation and their respective probabilities of occurrences. The advantage of hazard curves is that they can represent <strong>more than a single eruption scenario</strong>, which helps comparison. For instance, these plots contain the modelling of the <abbr title="Volcanic explosivity index">VEI</abbr> 4 eruption scenario using wind profiles for i) all seasons combined (solid line), the summer (dashed line) and spring, fall and winter (dotted line). </p>
-<p>To read these plots, start by identifying one tephra accumulation for which you want to estimate the associated probability of occurrence. From the plot's x axis, go straight up until the intersection with the curve representing the scenario of interest. From the point of intersection, go straight left and read the probability value on the y axis.</p>
-<p>For instance, the Tarumizu City Hall has a ~8% probability of exceeding accumulations of 100 <span class="arithmatex">\(kg/m^2\)</span> following a <abbr title="Volcanic explosivity index">VEI</abbr> 4 eruption of Sakurajima volcano.</p>
-<p><img alt="sk3" src="../img/sakurajima/curves.png" /></p>
-</div>
-</div>
-</div>
+<h5 id="summary">Summary</h5>
+<p>In summary, we have:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Probability map</strong></th>
+<th><strong>Probabilistic isomass map</strong></th>
+<th><strong>Hazard curves</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spatial coordinates</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> Continuous</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> Continuous</td>
+<td><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Fixed</td>
+</tr>
+<tr>
+<td><strong>Exceedence probability</strong></td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> Continuous</td>
+<td><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> Fixed</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> Continuous</td>
+</tr>
+<tr>
+<td><strong>Tephra accumulation</strong></td>
+<td><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" />  Fixed</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> Continuous</td>
+<td><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> Continuous</td>
+</tr>
+</tbody>
+</table>
+<!-- 
+## :material-thought-bubble:{ .icn } Hazard output example
+
+=== "Probability maps"
+
+    These maps show the spatial probability to exceed accumulations of 1 (left) and 100 (right) $kg/m^2$. The top and bottom maps illustrate the impact of wind variability on the computed dispersal as a function of the season. The general dispersal is towards the E, but the summer shows a higher variability in directions and lower wind velocities, increasing the hazard on the city of Kagoshima (point number 3).
+
+    ![sk1](img/sakurajima/prob.png)
+
+=== "Isomass maps"
+
+    These maps show the typical tephra accumulations for probabilities of occurrences of 25% (left) and 75% (right). Compared to probability maps, we can use the famous saying used in SE Asia: *Same same, but different*.
+
+    ![sk2](img/sakurajima/im.png)
+
+=== "Hazard curves"
+
+    This plot shows hazard curves computed for three different locations (see the maps for reference):
+
+    1. Tarumizu City Hall
+    2. Kagoshima airport
+    3. Tarumizu central station
+
+    Curves show a continuous relationship between tephra accumulation and their respective probabilities of occurrences. The advantage of hazard curves is that they can represent **more than a single eruption scenario**, which helps comparison. For instance, these plots contain the modelling of the VEI 4 eruption scenario using wind profiles for i) all seasons combined (solid line), the summer (dashed line) and spring, fall and winter (dotted line). 
+
+    To read these plots, start by identifying one tephra accumulation for which you want to estimate the associated probability of occurrence. From the plot's x axis, go straight up until the intersection with the curve representing the scenario of interest. From the point of intersection, go straight left and read the probability value on the y axis.
+
+    For instance, the Tarumizu City Hall has a ~8% probability of exceeding accumulations of 100 $kg/m^2$ following a VEI 4 eruption of Sakurajima volcano.
+
+    ![sk3](img/sakurajima/curves.png) -->
+
 <!-- ## Various approaches for hazard assessment
 
 ### Deterministic scenarios
@@ -2669,7 +2737,7 @@ flowchart LR
 
 Probabilistic volcanic hazard assessments - or **PVHA** -->
 
-<h2 id="summary"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83z"/></svg></span> Summary</h2>
+<h2 id="summary_1"><span class="twemoji icn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9 20.42-6.21-6.21 2.83-2.83L9 14.77l9.88-9.89 2.83 2.83z"/></svg></span> Summary</h2>
 <p>That was a long module, where we reviewed: </p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> How <abbr title="Eruption source parameter &rarr; most important initial conditions to a model">ESP</abbr> obtained from tephra deposits help framing future <strong>eruption scenarios</strong>.</li>
