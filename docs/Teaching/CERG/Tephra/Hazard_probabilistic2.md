@@ -264,34 +264,85 @@ For tephra fallout, we have **4 quantities** to represent that are:
 - `Tephra accumulation`. 
 - `Probability of occurrence`.
 
-However, it is difficult to represent more than **3 quantities** on such a 2D canvas as a map, and we therefore need to **fix one quantity**, which provides us with 3 different approaches to express hazard. 
+However, it is difficult to represent more than **3 quantities** on such 2D canvas as a map, and we therefore need to **fix at least one quantity**, which provides us with 3 different approaches to express hazard. 
 
-!!! example "Method 1: Probabilistic hazard maps"
+Let's change volcanoes and continents: The examples below illustrate a hazard assessment for a VEI 4 Plinian eruption at [Sakurajima](https://en.wikipedia.org/wiki/Sakurajima) volcano[^7] in Japan, developed around the 1914 Taisho eruption[^8]. Note that the hazard modeling procedure was exactly the same as for Cotopaxi.
 
-    &rarr; Fixed threshold of **tephra accumulation**.
+##### Option 1: Probability maps
 
-    &rarr; Other quantities are expressed continuously. 
+!!! tip "Probability maps"
 
-    &rarr; Display the spatial distribution of exceedence probabilities **of a single threshold of tephra accumulation** (i.e., there are as many maps as accumulation thresholds). 
+    - Fixed threshold of **tephra accumulation**
+    - Other quantities are expressed continuously
+    - Display the spatial distribution of exceedence probabilities **of a single threshold of tephra accumulation**
+    - There are as many maps as accumulation thresholds 
+
+These maps show the spatial probability to exceed accumulations of 1 (left) and 100 (right) $kg/m^2$. The top and bottom maps illustrate the impact of wind variability on the computed dispersal as a function of the season. The general dispersal is towards the E, but the summer shows a higher variability in directions and lower wind velocities, increasing the hazard on the city of Kagoshima (point number 3).
+
+![sk1](img/sakurajima/prob.png)
+
+##### Option 2: Probabilistic isomass maps
+
+!!! tip "Probabilistic isomass maps"
+
+    - Display the spatial distribution of tephra accumulation **for a single exceedence probability value** 
+    - Fixed threshold of **exceedence probability**
+    - Other quantities are expressed continuously
+    - There are as many maps as exceedence probability thresholds
+
+These maps show the typical tephra accumulations for probabilities of occurrences of 25% (left) and 75% (right).
+
+![sk2](img/sakurajima/im.png)
+
+##### Option 3: Hazard curves
+
+!!! tip "Hazard curves"
+
+    - Display the probability of occurrence of a given tephra accumulation **for a single location**
+    - Fixed latitude and longitude
+    - Other quantities are expressed continuously
+    - There are as many curves as points of interest
+
+This plot shows hazard curves computed for three different locations (see the maps for reference):
+
+1. Tarumizu City Hall
+2. Kagoshima airport
+3. Tarumizu central station
+
+Curves show a continuous relationship between tephra accumulation and their respective probabilities of occurrences. The advantage of hazard curves is that they can represent **more than a single eruption scenario**, which helps comparison. For instance, these plots contain the modelling of the VEI 4 eruption scenario using wind profiles for i) all seasons combined (solid line), the summer (dashed line) and spring, fall and winter (dotted line). 
+
+To read these plots, start by identifying one tephra accumulation for which you want to estimate the associated probability of occurrence. From the plot's x axis, go straight up until the intersection with the curve representing the scenario of interest. From the point of intersection, go straight left and read the probability value on the y axis.
+
+For instance, the Tarumizu City Hall has a ~8% probability of exceeding accumulations of 100 $kg/m^2$ following a VEI 4 eruption of Sakurajima volcano.
+
+![sk3](img/sakurajima/curves.png)
 
 
-!!! example "Method 2: Probabilistic isomass maps"
+!!! question "Reflecting uncertainties in hazard output"
 
-    &rarr; Fixed threshold of **exceedence probability**.
+    How are **uncertainties** on [ESP](#identify-esp-ranges) reflected on hazard outputs? Look at the sketches below and think about which of the orange or purple lines show **high**/**low** ESP uncertainties.
 
-    &rarr; Other quantities are expressed continuously. 
+=== "Probability maps"
 
-    &rarr; Display the spatial distribution of tephra accumulation **for a single exceedence probability value** (i.e., there are as many maps as probability values). 
+    ![uncertainty_prob](img/esp_uncertainty_prob.png)
 
-!!! example "Method 3: Hazard curves"
+=== "Probabilistic isomass maps"
 
-    &rarr; Fixed latitude and longitude.
+    ![uncertainty_im](img/esp_uncertainty_IM.png)
 
-    &rarr; Other quantities are expressed continuously. 
+=== "Hazard curves"
 
-    &rarr; Display the probability of occurrence of a given tephra accumulation **for a single location** (i.e., there are as many curves as points of interest). 
+    ![uncertainty_curves](img/esp_uncertainty_curve.png)
 
-Is the difference between **probability** and **isomass** maps are? Lets look at these sketches:
+=== "Answers"
+
+    **Purple** line show relatively **lower** ESP uncertainties than **orange** ones.
+
+    ![uncertainty_esp](img/esp_uncertainty_ESP.png)
+
+##### Difference between probability and isomass maps
+
+The sketches below illustrate the difference between **probability** and **isomass** maps are.
 
 === "Graphically..."
 
@@ -315,9 +366,21 @@ Is the difference between **probability** and **isomass** maps are? Lets look at
 
     Bear in mind: **large** tephra accumulations usually have **lower** probabilities of occurrence than **smaller** accumulations.
 
-## :material-thought-bubble:{ .icn } Hazard output example
 
-Let's change volcanoes and continents: The examples below illustrate a hazard assessment for a VEI 4 Plinian eruption at [Sakurajima](https://en.wikipedia.org/wiki/Sakurajima) volcano[^7] in Japan, developed around the 1914 Taisho eruption[^8]. Note that the hazard modeling procedure was exactly the same as for Cotopaxi.
+
+##### Summary
+
+In summary, we have:
+
+
+| **Parameter**              | **Probability map**                              | **Probabilistic isomass map** | **Hazard curves**             |
+|----------------------------|--------------------------------------------------|-------------------------------|-------------------------------|
+| **Spatial coordinates**    | :white_check_mark: Continuous | :white_check_mark: Continuous | :warning: Fixed               |
+| **Exceedence probability** | :white_check_mark: Continuous                    | :warning: Fixed                         | :white_check_mark: Continuous |
+| **Tephra accumulation**    | :warning:  Fixed                                            | :white_check_mark: Continuous | :white_check_mark: Continuous |
+
+<!-- 
+## :material-thought-bubble:{ .icn } Hazard output example
 
 === "Probability maps"
 
@@ -345,7 +408,7 @@ Let's change volcanoes and continents: The examples below illustrate a hazard as
 
     For instance, the Tarumizu City Hall has a ~8% probability of exceeding accumulations of 100 $kg/m^2$ following a VEI 4 eruption of Sakurajima volcano.
 
-    ![sk3](img/sakurajima/curves.png)
+    ![sk3](img/sakurajima/curves.png) -->
 
 
 <!-- ## Various approaches for hazard assessment

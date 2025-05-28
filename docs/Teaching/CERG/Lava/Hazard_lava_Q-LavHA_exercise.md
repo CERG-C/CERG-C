@@ -1,6 +1,6 @@
-# Q-LavHA
+# Hazard assessment for lava flow inundation using Q-LavHA
 
-With the knowledge gained on [topographic controls](Hazard_lava_steepest-descent.md) and [modeling](Hazard_lava_modeling.md) from the previous exercise, we will now apply the `Q-LavHA`[^1] model to estimate the hazard associated with lava flow inundation. This part of the exercise assumes that:
+With the knowledge gained on [topographic controls](Hazard_lava_steepest-descent.md) and [modeling](Hazard_lava_modeling.md), we will now apply the `Q-LavHA`[^1] model to estimate the hazard associated with lava flow inundation. This part of the exercise assumes that:
 
 - You have understood the philosophy behind `Q-LavHA` according to [this guide](Hazard_lava_Q-LavHA_intro.md).
 - You have already installed [`QGIS`](../Setup/qgis.md#step-1-download-and-install-qgis) and [`Q-LavHA`](../Setup/qgis.md#step-2-install-qlavha).
@@ -14,6 +14,10 @@ Alternatively, the [Q-LavHA user manual](../../../files/Usersguide_Q-LavHA_V3_20
 - Account for the uncertainty in vent locations in hazard assessments.
   
 ## :material-head-flash:{ .icn } Exercise
+
+!!! warning "Exercise"
+
+    Please answer the <a href="../../../../files/Exercise.docx", target="_blank">question sheet</a> and **submit it back to Moodle**.
 
 ### Running Q-LavHA for single vents
 
@@ -97,7 +101,7 @@ The output file now shows the **spatial distribution** of **inundation probabili
 !!! question "Question 1: Single-vent simulations"
 
     1. In one sentence, describe what the color at any given pixel expresses.
-    2. How do modelled flows compare to the closest <a href="../../../files/GeologicalmapofLaPalma.pdf", target="_blank">historical lava flows</a> in terms of length and width?
+    2. How do modelled flows compare to the closest <a href="../../../../files/GeologicalmapofLaPalma.pdf", target="_blank">historical lava flows</a> in terms of length and width?
     3. Analyse and discuss the spatial distribution of inundation probability. How do they compare to the path of steepest descent?
 
 
@@ -107,7 +111,7 @@ The output file now shows the **spatial distribution** of **inundation probabili
     2. Where do branching occur? -->
 
 
-### Using several vents
+### Exploring uncertainties on vent location
 
 In the case of fissure eruptions, one eruptive episode can consist of multiple satellite vents. This was certainly the case for the 2021 eruption of La Palma. In fact, as you can see from the `2021 Vents` layer in `QGIS`, [CEMS](https://emergency.copernicus.eu/mapping/list-of-components/EMSR546) identified that ~10 vents opened over a 500 x 500 m area. Here, we won't attempt predicting the **number** or the **location** of each vent. Instead, we will model lava flow inundation from **a grid of vents** within a surface area and explore how vent location affects the lava flow simulation hazard.
 

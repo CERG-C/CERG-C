@@ -84,6 +84,10 @@ nav:
       - Hazard assessments: 
         - Teaching/CERG/HazardMaps/index.md
         - Understanding hazard maps: Teaching/CERG/HazardMaps/hazard_maps.md
+      - Field:
+        - Teaching/CERG/Field/index.md
+        - Hazard and exposure: Teaching/CERG/Field/hazard-exposure.md
+        - Instructor's notes: Teaching/CERG/Field/field_notes.md
   - Resources: resources.md
   - Contribute:
     - Contribute: contribute.md
@@ -167,4 +171,4 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2025 / CERG-C / University of Geneva / CC BY-NC-SA
+copyright: Copyright &copy; 2022-2025 / CERG-C / University of Geneva / CC BY-NC-SA

@@ -10,6 +10,11 @@ This page contains the teaching material for the Physical Volcanology and Volcan
 - [Hazard assessment for lava flows](Lava/index.md) 
 - [Hazard assessment for tephra fallout](Tephra/index.md)
 
+
+There are also useful resources for the field exercise:
+
+- [Hazard and exposure exercise](Field/hazard-exposure)
+
 --- 
 
 <figure markdown>

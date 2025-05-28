@@ -1,4 +1,4 @@
-# Q-LavHA
+# Introduction to Q-LavHA
 
 With the knowledge gained on [topographic controls](Hazard_lava_steepest-descent.md) and [modeling](Hazard_lava_modeling.md) from the previous exercise, we will now look at `Q-LavHA`[^1] as an alternative approach for probabilistic hazard assessments for lava flow inundation. This part of the exercise assumes that you have already [installed](../Setup/qgis.md) both `QGIS` and `Q-LavHA`. The [Q-LavHA user manual](../../../files/Usersguide_Q-LavHA_V3_2020.pdf) contains some important information about how to configure the model and the data, so we encourage you to have a look at it at some point. 
 

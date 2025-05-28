@@ -76,6 +76,10 @@ This exercise is structured in 3 parts:
 3. Defining an eruption scenario and associated ESP. 
 4. Analysing the hazard output.
 
+!!! warning "Exercise"
+
+    Please answer the <a href="../../../../files/Exercise.docx", target="_blank">question sheet</a> and **submit it back to Moodle**.
+
 <!-- 
 ### Eruption history
 
@@ -131,40 +135,40 @@ Keep your eyes opened for *seasonal trends* in both wind direction and speed.
 
         <figure markdown>
         ![height](img/tephraprob/profile_average.png){width='450px'}
-        </figure>
         <figcaption>Average wind profiles for the period 2017-2021.</figcaption>
+        </figure>
         
         <figure markdown>
         ![height](img/tephraprob/profile_months.png){width='450px'}
-        </figure>
         <figcaption>Monthly averaged profiles for the period 2017-2021.</figcaption>
+        </figure>
 
     ??? info "Wind Roses"
 
         <figure markdown>
         ![height](img/tephraprob/rose_1.png){width='450px'}
-        </figure>
         <figcaption>Wind rose at 1 km asl for the period 2017-2021.</figcaption>
+        </figure>
         
         <figure markdown>
         ![height](img/tephraprob/rose_2.png){width='450px'}
-        </figure>
         <figcaption>Wind rose at 2 km asl for the period 2017-2021.</figcaption>
+        </figure>
         
         <figure markdown>
         ![height](img/tephraprob/rose_4.png){width='450px'}
-        </figure>
         <figcaption>Wind rose at 4 km asl for the period 2017-2021.</figcaption>
+        </figure>
         
         <figure markdown>
         ![height](img/tephraprob/rose_6.png){width='450px'}
-        </figure>
         <figcaption>Wind rose at 6 km asl for the period 2017-2021.</figcaption>
+        </figure>
         
         <figure markdown>
         ![height](img/tephraprob/rose_8.png){width='450px'}
-        </figure>
         <figcaption>Wind rose at 8 km asl for the period 2017-2021.</figcaption>
+        </figure>
 <!--         
         <figure markdown>
         ![height](img/tephraprob/rose_10.png){width='450px'}
