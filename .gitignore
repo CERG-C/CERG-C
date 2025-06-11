@@ -2,4 +2,7 @@
 *.DS_Store
 site/
 *.html
-working_ai/
+*.ai
+*.py
+data/
+.cache

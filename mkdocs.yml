@@ -1,7 +1,7 @@
-site_name: Physical Volcanology and Volcanic Risk @ UNIGE
-site_url: https://cerg-c.github.io/CERG-C/
-repo_name: CERG-C/CERG-C
-repo_url: https://github.com/CERG-C/CERG-C
+site_name: Program for the 2025 IAVCEI SA
+# site_url: https://cerg-c.github.io/CERG-C/
+# repo_name: CERG-C/CERG-C
+# repo_url: https://github.com/CERG-C/CERG-C
 
 theme:
   name: material
@@ -11,111 +11,61 @@ theme:
       - navigation.footer
       - content.code.copy
       - content.tabs.link
+      - toc.integrate
       # - highlightjs
       # - mermaid2
       # - content.action.edit
       # - content.action.view
 
-  logo: img/volcano.svg
+  logo: img/logo.svg
   icon:
     repo: fontawesome/brands/github
   palette:
     - scheme: default
-      accent: pink
-      primary: lime
+      accent: red
+      primary: deep orange
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
     - scheme: slate
-      accent: pink
-      primary: lime
+      accent: red
+      primary: deep orange
       toggle:
         icon: material/weather-night
         name: Switch to light mode
 
 nav:
   - Home: index.md
-  - Teaching:
-    - Teaching/index.md
-    - Bachelor:
-      - 2nd Year:
-        - Physical Volcanology: 
-          - Teaching/Bachelor/2ndYear/PhysicalVolcanology/index.md
-          - Deposit characterisation: Teaching/Bachelor/2ndYear/PhysicalVolcanology/deposit_characterisation.md
-      - 3rd Year:
-        - Risques volcaniques: 
-          - Teaching/Bachelor/3rdYear/RisquesGeologiques/index.md
-          - Aléas et impacts des balistiques: Teaching/Bachelor/3rdYear/RisquesGeologiques/lapalma_ballistiques.md
-    - Master:
-      - Modelling volcanic processes:
-        - Teaching/Master/Modelling-volcanic-processes/index.md
-        # - Introduction: modelling_intro.md
-        - Eruption characterization: Teaching/Master/Modelling-volcanic-processes/Pyroclast_story_intro.md
-        - Analogue modelling:
-          - Introduction: Teaching/Master/Modelling-volcanic-processes/Analogue_modelling_intro.md
-          - Scaling analysis: Teaching/Master/Modelling-volcanic-processes/Analogue_modelling_scaling.md
-          - Modelling pyroclastic density currents in the laboratory: Teaching/Master/Modelling-volcanic-processes/Analogue_modelling_PDC.md
-          # - The story of a pyroclast: 
-    - CERG-C:
-      - Teaching/CERG/index.md
-      - Setup: 
-        - Teaching/CERG/Setup/index.md
-        - Matlab: Teaching/CERG/Setup/matlab.md
-        - QGIS: Teaching/CERG/Setup/qgis.md
-      - Lava hazard: 
-        - Teaching/CERG/Lava/index.md
-        # - QGIS basics: Teaching/CERG/Lava/QGIS_Intro.md
-        # - Setting up QGIS: Teaching/CERG/Lava/QGIS_Setup.md
-        # - Setting up the exercise: Teaching/CERG/Lava/Hazard_lava_config.md
-        - Path of steepest descent: Teaching/CERG/Lava/Hazard_lava_steepest-descent.md
-        - Modelling lava flows: Teaching/CERG/Lava/Hazard_lava_modeling.md
-        - Probabilistic modeling part I: Teaching/CERG/Lava/Hazard_probabilistic1.md 
-        - Q-LavHA intro: Teaching/CERG/Lava/Hazard_lava_Q-LavHA_intro.md
-        - Exercise: Teaching/CERG/Lava/Hazard_lava_Q-LavHA_exercise.md
-        - Instructor's notes: Teaching/CERG/Lava/Hazard_lava_notes.md
-      - Tephra hazard:
-        - Teaching/CERG/Tephra/index.md
-        - Modeling tephra transport: Teaching/CERG/Tephra/Hazard_tephra_modeling.md
-        - Probabilistic modeling part II: Teaching/CERG/Tephra/Hazard_probabilistic2.md 
-        - Exercise: Teaching/CERG/Tephra/Hazard_tephra_exercise.md 
-        - The temporal component: Teaching/CERG/Tephra/Hazard_tephra_temporal.md
-        # - Beyond scenarios: Hazard_tephra_beyond.md
-        - Instructor's notes: Teaching/CERG/Tephra/Hazard_tephra_notes.md
-      - Hazard assessments: 
-        - Teaching/CERG/HazardMaps/index.md
-        - Understanding hazard maps: Teaching/CERG/HazardMaps/hazard_maps.md
-      - Field:
-        - Teaching/CERG/Field/index.md
-        - Hazard and exposure: Teaching/CERG/Field/hazard-exposure.md
-        - Instructor's notes: Teaching/CERG/Field/field_notes.md
-  - Resources: resources.md
-  - Contribute:
-    - Contribute: contribute.md
-    - Versions: versions.md
-    - Changelog: changelog.md
-  # - Demo: MASTER_example.py
-  # - Tips: tips.md
-  # - volcGIS API:
-  #   - Module eruption: volcGIS_eruption.md
-  #   - Module exposureAnalysis: volcGIS_exposureAnalysis.md
+  - Program: 
+      - sessions_comparison.md
+      - Per theme: sessions_theme.md
+      - Per day: sessions_day.md
+  - Maps: 
+      - maps.md
+      - Poster boards: map_poster_boards.md
 
 plugins:
     - search
+    - blog
+    - meta
     - mkdocstrings
-    - bibtex:
-        bib_file: "includes/bibliography.bib"
-        csl_file: "includes/bibliography.cls"
-    - mkdocs-jupyter:
-        execute: True
-        include_source: True
-        enabled: !ENV [CI, false]
-    - git-committers:
-        repository: CERG-C/CERG-C
-        branch: main
-    - encryptcontent: {}
+    # - bibtex:
+    #     bib_file: "includes/bibliography.bib"
+    #     csl_file: "includes/bibliography.cls"
+    # - mkdocs-jupyter:
+    #     execute: True
+    #     include_source: True
+    #     enabled: !ENV [CI, false]
+    # - git-committers:
+    #     repository: CERG-C/CERG-C
+    #     branch: main
+    # - encryptcontent: {}
     # - with-pdf
 
 markdown_extensions:
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.highlight
   - pymdownx.superfences:
       custom_fences:
@@ -133,7 +83,7 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
-      toc_depth: 4
+      toc_depth: 2
   - pymdownx.tabbed:
       alternate_style: true 
   - abbr
@@ -149,7 +99,9 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+
+
+
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -171,4 +123,4 @@ extra:
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2022-2025 / CERG-C / University of Geneva / CC BY-NC-SA
+copyright: Copyright &copy; 2025 / International Association of Volcanology and Chemistry of the Earth's Interior (IAVCEI)
